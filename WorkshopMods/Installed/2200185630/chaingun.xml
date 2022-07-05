@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <Item name="" identifier="chaingunbolt" category="Misc" scale="0.3" sonarsize="2" hideinmenus="true">
+      <Sprite texture="%ModDir%/TurretsAndDepthCharges.png" sourcerect="143,310,369,66" depth="0.55" />
+      <Body width="170" height="10" density="10" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+      <Deconstruct time="1"></Deconstruct>
+      <Projectile characterusable="false" launchimpulse="100" spread="9.5" removeonhit="true">
+        <Attack structuredamage="12" itemdamage="12" severlimbsprobability="0.1" penetration="0.35">
+          <Affliction identifier="gunshotwound" strength="16" />
+          <Affliction identifier="bleeding" strength="4" />
+        </Attack>
+        <StatusEffect type="OnActive" target="This">
+          <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="50" initialdelay="0.05" colormultiplier="240,200,50" />
+        </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This" stackable="false" delay="2">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" copyentityangle="true" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2.0" scalemax="3.0" />
+          <ParticleEmitter particle="weldspark" copyentityangle="true" anglemin="-40" anglemax="40" particleamount="8" velocitymin="-300" velocitymax="-800" scalemin="1" scalemax="2" />
+          <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="500" scalemin="0.4" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item name="" identifier="chaingunboltphysicorium" nameidentifier="chaingunbolt" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true" spritecolor="255,150,100,255">
+      <Sprite texture="%ModDir%/TurretsAndDepthCharges.png" sourcerect="143,310,369,66" depth="0.55" />
+      <Body width="170" height="10" density="15" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+      <Deconstruct time="1"></Deconstruct>
+      <Projectile characterusable="false" launchimpulse="100" spread="9.5" removeonhit="true">
+        <Attack structuredamage="18" itemdamage="18" severlimbsprobability="0.15" penetration="0.35">
+          <Affliction identifier="gunshotwound" strength="25" />
+          <Affliction identifier="bleeding" strength="4" />
+          <Affliction identifier="stun" strength="2" probability="0.1" />
+        </Attack>
+        <StatusEffect type="OnActive" target="This">
+          <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="50" initialdelay="0.05" colormultiplier="255,120,50" />
+        </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This" stackable="false" delay="2">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" copyentityangle="true" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2.0" scalemax="3.0" />
+          <ParticleEmitter particle="weldspark" copyentityangle="true" anglemin="-40" anglemax="40" particleamount="8" velocitymin="-300" velocitymax="-800" scalemin="1" scalemax="2" />
+          <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="500" scalemin="0.4" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+  </Items>
+</Override>

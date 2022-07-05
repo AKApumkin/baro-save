@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!--	Der Schnitter™ - Unterwasser Scooter	-->
+  <Item name="" identifier="oxygear_scooter" category="Equipment" Tags="mediumitem,provocative,oxygear" cargocontaineridentifier="metalcrate" Scale="0.5" sonarsize="20" impactsoundtag="impact_metal_heavy" health="200" DamagedByProjectiles="true" DamagedByMeleeWeapons="true" DamagedByMonsters="true" DamagedByExplosions="true" ExplosionDamageMultiplier="0.5" fireproof="false" isshootable="true" ImpactTolerance="1.0">
+    <!-- Verworfen: ImpactTolerance="10.0" -->
+    <Sprite texture="oxygear_scooter_v2.png" depth="0.55" sourcerect="0,0,170,85" />
+    <!-- Die Dichte bestimmt, wie schnell ein Objekt sinkt	-->
+    <Body width="170" height="85" density="10.10" />
+    <!-- Akustische und Optische Wahrnehmbarkeit durch Kreaturen / Sonaridentifizierung	-->
+    <AiTarget soundrange="4000" maxsightrange="4000" sonarlabel="entityname.oxygear_scooter" />
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="90,0" handle1="-25,32" handle2="-27,34" controlpose="false" msg="ItemMsgPickUpSelect">
+      <!-- Lichtsteuerung #1 - Trage- und Batterieerkennung	-->
+      <StatusEffect type="OnContained" target="This,Character" Voltage="1.0" setvalue="true">
+        <Conditional IsDead="false" />
+        <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This,Character" Voltage="0.0" setvalue="true" />
+    </Holdable>
+    <!-- Lichtsteuerung #2 - Wasser-Erkennung - steuert JEDE Lichtquelle an -->
+    <ItemComponent characterusable="false">
+      <StatusEffect type="InWater" target="This" targetitemcomponent="LightComponent" IsOn="true" delay="0.5" checkconditionalalways="true">
+        <RequiredItem item="mobilebattery" type="Contained" mincondition="0.01" />
+      </StatusEffect>
+      <StatusEffect type="NotInWater" target="This" targetitemcomponent="LightComponent" IsOn="false" delay="2.5" />
+    </ItemComponent>
+    <!--
+						Schadensoutput-Position über "barrelpos" einstellen = Offset von der Objektmitte aus in Pixeln
+						Benutzbarkeit einstellen über "usablein" = Air/Water/Both/None
+			-->
+    <RepairTool range="20" usablein="Both" repairmultiple="true" barrelpos="45,10" structuredamage="10" itemdamage="10" targetimpulse="10" targetforce="400" allowhitmultiple="true" hitscan="true" spread="0" unskilledspread="0" combatpriority="10" fireprobability="0.0" structurefixamount="0.0" repairthroughwalls="false" repairthroughholes="false">
+      <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" />
+      <StatusEffect type="OnUse" target="UseTarget" severlimbsprobability="0.5">
+        <Affliction identifier="stun" strength="0.5" />
+        <Affliction identifier="bleeding" strength="1" />
+        <Affliction identifier="lacerations" strength="1" />
+      </StatusEffect>
+      <!-- Der Schnitter ™ - Trefferfeedback -->
+      <StatusEffect type="OnUse" targettype="UseTarget" stackable="true" disabledeltatime="true">
+        <Conditional entitytype="eq Character" />
+        <ParticleEmitter particle="blood" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="4" velocitymin="-10" velocitymax="-200" scalemin="0.3" scalemax="0.6" />
+        <Sound file="%ModDir%/Sounds/oxyscooter_schnittern.ogg" type="UseTarget" selectionmode="All" range="800" loop="true" />
+      </StatusEffect>
+    </RepairTool>
+    <!-- Positionslicht	(ohne Stromverbrauch) -->
+    <LightComponent range="45.0" lightcolor="160,40,0,255" IsOn="false" powerconsumption="0" blinkfrequency="0.0" flicker="0.1" flickerspeed="0.8" castshadows="false" allowingameediting="false" vulnerabletoemp="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_scooter_light.png" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Lights/oxygear_scooter_light.png" sourcerect="0,0,170,85" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <Propulsion force="300" usablein="water" particles="bubbles">
+      <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      <StatusEffect type="OnUse" target="Contained" Condition="-0.50">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" Condition="-0.255">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" Condition="-0.50">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <sound file="Content/Items/Diving/ScooterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+      <!-- Warnton bei niedriger Batterieleistung -->
+      <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <Conditional condition="lt 10.0" />
+        <Sound file="%ModDir%/Sounds/oxyscooter_warning.ogg" range="250" />
+      </StatusEffect>
+      <!-- Frontscheinwerfer - Kaltweiss (mit Stromverbrauch) -->
+      <LightComponent lightcolor="235,245,255,255" range="1000" powerconsumption="0.01" allowingameediting="false">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="-0.01, 0.5" size="1.0,1.0" />
+      </LightComponent>
+    </Propulsion>
+    <ItemContainer capacity="1" maxstacksize="1" containedstateindicatorstyle="battery" hideitems="true">
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+    <PreferredContainer primary="divingcab,locker" minamount="1" maxamount="1" spawnprobability="0.33" />
+    <!--	Reparatureinstellungen -->
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" Msg="ItemMsgRepairWrench" hudpriority="5" deteriorationspeed="0" mindeteriorationdelay="0" maxdeteriorationdelay="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,200" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="42" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="1" scalemin="2" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="1" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="500" />
+        <Affliction identifier="lacerations" strength="1" />
+      </StatusEffect>
+      <!-- Der Schnitter™ explodiert wenn er zerstört wird (Kondition = 0) -->
+      <StatusEffect type="OnBroken" targettype="This" checkconditionalalways="true" delay="2.0">
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="5000" selectionmode="All" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" range="5000" />
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" range="5000" />
+        <Explosion range="500.0" structuredamage="100" itemdamage="50" force="400.0" severlimbsprobability="1.0" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="explosiondamage" strength="100" />
+          <Affliction identifier="stun" strength="15" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Repairable>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Price baseprice="250">
+      <Price locationtype="outpost" multiplier="1.25" minavailable="2" />
+      <Price locationtype="city" multiplier="1.00" minavailable="4" />
+      <Price locationtype="research" multiplier="1.50" minavailable="2" />
+      <Price locationtype="military" multiplier="0.75" minavailable="10" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" />
+    </Price>
+  </Item>
+  <!--	Bergungs-Container - (OxyGear Version)		-->
+  <Item name="" identifier="oxygear_transportbox" tags="crate,mobilecontainer,oxygear" category="Equipment" scale="0.5" linkable="true" InteractPriority="50.0" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" sonarsize="20" waterproof="true" fireproof="true">
+    <Sprite texture="oxygear_transportbox.png" depth="0.54" sourcerect="0,0,196,121" origin="0.5,0.5" CanFlipX="false" CanFlipY="false" />
+    <!-- Skaliertes Sprite für die Einlagerung in ein Regal -->
+    <ContainedSprite name="Eingelagert in Regal" allowedcontainertags="container" texture="oxygear_transportbox_contained.png" sourcerect="0,0,154,95" depth="0.55" origin="0.5,0.5" />
+    <Body width="196" height="121" density="100" />
+    <AiTarget sightrange="1000" soundrange="0" sonarlabel="entityname.oxygear_transportbox" />
+    <!-- Interface zur Aktivierung und Beschriftung des Sonarsignals
+			<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+				<GuiFrame relativesize="0.18,0.15" anchor="BottomLeft" absoluteoffset="20,20" style="ItemUI" />
+				<TickBox text="sonarbeacon.beaconactive">
+					<StatusEffect type="OnUse" targettype="This" IsOn="true" />
+					<StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+				</TickBox>
+				<TextBox text="sonarbeacon.beaconsignal" propertyname="SonarLabel"/>
+			</CustomInterface>
+			-->
+    <!--
+				[Vector 2] Aus der Sauce:
+
+				HandlePos: The position(s) in the item that the Character grabs.
+			
+				HoldPos: The position the character holds the item at (in pixels, as an offset from the character's shoulder).
+				For example, a value of 10,-100 would make the character hold the item 100 pixels below the shoulder and 10 pixels forwards.
+
+				AimPos: The position is rotated according to the direction the player is aiming at. 
+				For example, a value of 10,-100 would make the character hold the item 100 pixels below the shoulder and 10 pixels forwards when aiming directly to the right.
+			-->
+    <MeleeWeapon msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" controlpose="true" aimable="false" holdangle="2" handle1="-15,-5" holdpos="50,-10" aimpos="120,-60" allowhitmultiple="true" reload="1" range="75" combatpriority="5">
+      <Attack structuredamage="5" itemdamage="5" stun="3.0" targetimpulse="2" targetforce="25" severlimbsprobability="0.5">
+        <Affliction identifier="blunttrauma" strength="4" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="1500" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="6" canbeselected="false" hideitems="true" keepopenwhenequipped="false" movableframe="true">
+      <!-- Vom Container unterstützte Ausrüstung/Objekte - Anti-Matrjoschka -->
+      <Containable items="oxygear_scooter,oxygear_ammobag,oxygear_bandagebag,coilgunequipment,coilgunammo,railgunequipment,railgunammo,depthchargeammo,divingsuit,underwaterscooter,metalcrate,securemetalcrate,explosivecrate,chemicalcrate,mediccrate,sealedsupplycrate,toolbox,alienartifact,toolbelt" excludeditems="oxygear_transportbox,hd_transportbox"></Containable>
+      <!-- Das Tragen des Containers reduziert die Bewegungsgeschwindigkeit um 60% -->
+      <StatusEffect type="OnContained" target="Character" SpeedMultiplier="0.4" setvalue="true" disabledeltatime="true" />
+      <!-- Zugriffsberechtigung mit ID Karte -->
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+    </ItemContainer>
+    <!--	Shiny Blinklicht v2 ™	-->
+    <LightComponent range="150.0" lightcolor="200,70,0,255" IsOn="true" powerconsumption="0" blinkfrequency="0.4" flicker="0.1" flickerspeed="0.5" castshadows="false" allowingameediting="false" vulnerabletoemp="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_transportbox_light_active.png" origin="0.5,0.53" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_transportbox_light.png" sourcerect="0,0,196,121" alpha="1.0" origin="0.5,0.5" />
+      <!-- Licht wird aktiviert wenn das Objekt nicht getragen wird -->
+      <StatusEffect type="OnNotContained" target="This" IsOn="true" disabledeltatime="true" delay="0.5" />
+      <!-- Licht wird deaktiviert wenn das Objekt getragen wird -->
+      <StatusEffect type="OnContained" target="This" IsOn="false" disabledeltatime="true" delay="0.5" />
+    </LightComponent>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="lightcomponent" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="lightcomponent" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="1" minavailable="2" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1" minavailable="1" />
+    </Price>
+  </Item>
+  <!--	Verbandstasche		-->
+  <Item name="" identifier="oxygear_bandagebag" category="Equipment" tags="smallitem,mobilecontainer,oxygear" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" waterproof="true" impactsoundtag="impact_soft">
+    <Sprite texture="oxygear_bandagebag.png" sourcerect="0,0,73,100" depth="0.6" />
+    <Body width="73" height="100" density="12" />
+    <!--
+					[Vector 2] Aus der Sauce:
+		
+					HoldPos: The position the character holds the item at (in pixels, as an offset from the character's shoulder).
+					For example, a value of 10,-100 would make the character hold the item 100 pixels below the shoulder and 10 pixels forwards.
+
+				-->
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="20,-60" handle1="0,30" msg="ItemMsgPickUpSelect" />
+    <!-- Auf Ausrüstungsslot beschränkt (Deaktiviert)
+			<Wearable slots="Bag" msg="ItemMsgPickUpSelect" >
+					<sprite name="Sanitasche" texture="KEINE TEXTUR" sourcerect="0,0,0,0" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
+			</Wearable> 
+			-->
+    <!-- Tasche ist auf Verbände beschränkt -->
+    <ItemContainer capacity="6" depth="0.5" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="antibleeding1,antibleeding2" />
+    </ItemContainer>
+    <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="0.50" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.03" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <Item identifier="ballisticfiber" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+    </Deconstruct>
+    <Price baseprice="50">
+      <Price locationtype="outpost" multiplier="1.25" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1.0" minavailable="1" />
+      <Price locationtype="military" multiplier="0.9" minavailable="8" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
+  </Item>
+  <!--	Ro´s Munitionstasche	-->
+  <Item name="" identifier="oxygear_ammobag" category="Equipment" tags="smallitem,mobilecontainer,oxygear" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" waterproof="true" impactsoundtag="impact_soft">
+    <Sprite texture="oxygear_ammobag.png" sourcerect="0,0,73,100" depth="0.6" />
+    <Body width="73" height="100" density="12" />
+    <!--
+					[Vector 2] Aus der Sauce:
+		
+					HoldPos: The position the character holds the item at (in pixels, as an offset from the character's shoulder).
+					For example, a value of 10,-100 would make the character hold the item 100 pixels below the shoulder and 10 pixels forwards.
+
+				-->
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="20,-60" handle1="0,30" msg="ItemMsgPickUpSelect" />
+    <!-- Tasche ist auf Munition beschränkt -->
+    <ItemContainer capacity="12" depth="0.5" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="revolverround,smgmagazine,shotgunshell,stungundart" />
+      <Containable items="sw_pc629_speedloader,hal_cartridge" />
+      <!-- <Containable items="stungrenade,empgrenade,fraggrenade,incendiumgrenade,40mmgrenade,40mmstungrenade" /> -->
+    </ItemContainer>
+    <PreferredContainer primary="armcab" minamount="1" maxamount="2" spawnprobability="0.50" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.10" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.15" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <Item identifier="ballisticfiber" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+    </Deconstruct>
+    <Price baseprice="70">
+      <Price locationtype="outpost" multiplier="1.25" minavailable="1" />
+      <Price locationtype="city" multiplier="1.00" minavailable="4" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="0.50" minavailable="20" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
+  </Item>
+  <!--	ToDo: Vollständig Entfernen - Materialcontainer -->
+  <Item name="" identifier="oxygear_materialbox" tags="crate,metalcrate,mobilecontainer,oxygear" category="Equipment" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="false" InteractPriority="50.0" impactsoundtag="impact_metal_heavy" sonarsize="20" health="200" waterproof="false" fireproof="false" isshootable="true" DamagedByProjectiles="true" DamagedByMeleeWeapons="true" DamagedByMonsters="true" DamagedByExplosions="true" ExplosionDamageMultiplier="1.5" ImpactTolerance="1.0">
+    <Sprite texture="oxygear_materialbox.png" depth="0.54" sourcerect="0,0,200,130" origin="0.5,0.5" CanFlipX="false" CanFlipY="false" />
+    <!-- Skaliertes Sprite für die Einlagerung in ein Regal -->
+    <ContainedSprite name="Eingelagert in Regal" allowedcontainertags="container" texture="oxygear_materialbox_contained.png" sourcerect="0,0,146,95" depth="0.55" origin="0.5,0.5" />
+    <Body width="200" height="130" density="200" />
+    <AiTarget sightrange="2000" soundrange="1000" fadeouttime="1" />
+    <MeleeWeapon msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" controlpose="true" aimable="false" holdangle="2" handle1="-20,-10" holdpos="50,-10" aimpos="120,-60" allowhitmultiple="true" reload="1" range="75" combatpriority="5">
+      <Attack structuredamage="5" itemdamage="5" stun="3.0" targetimpulse="2" targetforce="25" severlimbsprobability="0.5">
+        <Affliction identifier="blunttrauma" strength="4" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="1500" />
+      </Attack>
+      <!-- Das Tragen des Containers reduziert die Bewegungsgeschwindigkeit um 70% -->
+      <StatusEffect type="OnContained" target="Character" SpeedMultiplier="0.30" setvalue="true" disabledeltatime="true" />
+      <!-- Schadensart: Feuer -->
+      <StatusEffect type="OnFire" targettype="This" Condition="-20.0" checkconditionalalways="true" stackable="true">
+        <ParticleEmitter particle="weldspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="weldsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      </StatusEffect>
+      <!-- Schadensart: Wasser -->
+      <StatusEffect type="InWater" targettype="This" Condition="-10.0" checkconditionalalways="true" stackable="true">
+        <ParticleEmitter particle="risingbubbles" particlespersecond="120" />
+      </StatusEffect>
+      <!-- Schadensart: Physisch -->
+      <StatusEffect type="OnImpact" targettype="This" Condition="-5.0" checkconditionalalways="true" stackable="true">
+        <ParticleEmitterHitStructure particle="spark" copyentityangle="true" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" scalemax="1" />
+      </StatusEffect>
+      <!-- Der Container explodiert (verheerend) wenn er zerstört wird (Kondition = 0) -->
+      <StatusEffect type="OnBroken" targettype="This" checkconditionalalways="true">
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="5000" selectionmode="All" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" range="5000" />
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" range="5000" />
+        <Explosion range="1000.0" structuredamage="400" itemdamage="800" force="400.0" severlimbsprobability="1.0" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="100" />
+          <Affliction identifier="explosiondamage" strength="400" />
+          <Affliction identifier="stun" strength="50" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+      <!-- 	[GAME-CRASH!] <StatusEffect type="OnUse" targettype="This" Condition="-5.0" disabledeltatime="true" />
+								Der Container nimmt Schaden wenn man ihn als Nahkampfwaffe benutzt
+								Das Spiel mag es scheinbar nicht wenn Objekte die man in der Hand trägt explodieren. ^^*
+						-->
+    </MeleeWeapon>
+    <ItemContainer capacity="100" maxstacksize="8" canbeselected="false" hideitems="true" keepopenwhenequipped="false" movableframe="true" ShowContainedStateIndicator="true" ShowConditionInContainedStateIndicator="true">
+      <!-- Elemente ************************************************************************************************** -->
+      <Containable items="carbon,iron,tin,lead,phosphorus,copper,zinc,sodium,silicon,calcium,aluminium,uranium,          potassium,titanium,magnesium,lithium,chlorine,thorium"></Containable>
+      <!-- Verbundstoffe ********************************************************************************************* -->
+      <Containable items="steel,titaniumaluminiumalloy,plastic,ballisticfiber,organicfiber,rubber,flashpowder,incendium,          fulgurium,physicorium,dementonite,paralyxis"></Containable>
+      <!-- Mineralien ************************************************************************************************ -->
+      <Containable items="titanite,brockite,thorianite,amblygonite,sphalerite,pyromorphite,quartz,diamond,hydroxyapatite,          uraniumore,ilmenite,stannite,chalcopyrite,esperite,galena,triphylite,langbeinite,chamosite,ironore,          polyhalite,graphite,sylvite,lazulite,bornite,cassiterite,cryolite,aragonite,chrysoprase"></Containable>
+      <!-- Biologisch ************************************************************************************************ -->
+      <Containable items="fiberplant,elastinplant,aquaticpoppy,yeastshroom,slimebacteria"></Containable>
+      <!-- Verschiedenes / Herstellungsmaterial*********************************************************************** -->
+      <Containable items="scrap,alienblood,huskeggs,swimbladder,adrenalinegland,smallmudraptoregg,mediummudraptoregg,          largemudraptoregg,pomegrenadeextract,elastin,opium,antibiotics,stabilozine,adrenaline,sulphuricacid,          antiparalysis,tonicliquid,ethanol,batterycell,fulguriumbatterycell,wire,redwire,bluewire,          orangewire,greenwire,blackwire,brownwire,fpgacircuit,andcomponent,equalscomponent,greatercomponent,          addercomponent,colorcomponent,subtractcomponent,multiplycomponent,dividecomponent,powcomponent,          orcomponent,xorcomponent,notcomponent,sincomponent,coscomponent,tancomponent,asincomponent,          acoscomponent,atancomponent,roundcomponent,ceilcomponent,floorcomponent,factorialcomponent,          abscomponent,squarerootcomponent,modulocomponent,relaycomponent,delaycomponent,memorycomponent,          lightcomponent,lightcomponent90,oxygendetector,waterdetector,smokedetector,motiondetector,          signalcheckcomponent,regexcomponent,oscillator,wificomponent,emergencysiren,alarmbuzzer"></Containable>
+      <!-- Anti-Matrjoschka ****************************************************************************************** -->
+      <Containable excludeditems="Oxygear_MaterialBox,Oxygear_TransportBox"></Containable>
+      <!-- *********************************************************************************************************** -->
+      <!-- Zugriffsberechtigung mit ID Karte -->
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+    </ItemContainer>
+    <!--	Shiny Ambientlicht ™	-->
+    <LightComponent range="25.0" lightcolor="0,50,100,100" IsOn="true" powerconsumption="0" blinkfrequency="0.0" flicker="0.5" flickerspeed="1.0" castshadows="false" allowingameediting="false" vulnerabletoemp="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_materialbox_light.png" origin="0.5,0.5" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_materialbox_light.png" sourcerect="0,0,200,130" alpha="1.0" origin="0.5,0.5" />
+      <!-- Licht wird aktiviert wenn das Objekt nicht getragen wird -->
+      <StatusEffect type="OnNotContained" target="This" IsOn="true" disabledeltatime="true" delay="0.5" />
+      <!-- Licht wird deaktiviert wenn das Objekt getragen wird -->
+      <StatusEffect type="OnContained" target="This" IsOn="false" disabledeltatime="true" delay="0.5" />
+    </LightComponent>
+    <ItemComponent>
+      <!-- Warnton bei kritischem Zustand -->
+      <StatusEffect type="Always" target="this" checkconditionalalways="true">
+        <Conditional condition="lt 50.0" />
+        <Sound file="%ModDir%/Sounds/oxyscooter_warning.ogg" range="1000" />
+      </StatusEffect>
+    </ItemComponent>
+    <!--	Reparatureinstellungen (Deaktiviert)
+			<Repairable
+						selectkey="Action" header="mechanicalrepairsheader" Msg="ItemMsgRepairWrench" hudpriority="5"
+						deteriorationspeed="0.0" mindeteriorationdelay="0" maxdeteriorationdelay="0" RepairThreshold="80" 
+						fixDurationHighSkill="5" fixDurationLowSkill="10" >
+
+						<GuiFrame relativesize="0.2,0.16" minsize="400,200" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+						<RequiredSkill identifier="mechanical" level="50" />
+						<RequiredItem items="wrench" type="Equipped" />
+						<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+						<ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="1" scalemin="2" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+						<ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+						<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+							<Sound file="Content/Items/MechanicalRepairFail.ogg" range="500" />
+							<Affliction identifier="lacerations" strength="1" />
+						</StatusEffect>
+			</Repairable>
+			-->
+    <!--	Herstellung und Wiederverwertung (Deaktiviert)
+			<Fabricate suitablefabricators="fabricator" requiredtime="30" >
+						<RequiredSkill identifier="mechanical" level="50" />
+						<RequiredItem identifier="titaniumaluminiumalloy" />
+						<RequiredItem identifier="fpgacircuit" />
+						<RequiredItem identifier="fuelrod" />
+			</Fabricate>
+
+			<Deconstruct time="30" >
+						<Item identifier="titaniumaluminiumalloy" />
+						<Item identifier="fpgacircuit" />
+			</Deconstruct>
+			-->
+    <!--	Verfügbarkeit bei NPC Händlern (Deaktiviert)
+			<Price baseprice="990" soldeverywhere="false" >
+						<Price locationtype="outpost" multiplier="1" sold="false" />
+						<Price locationtype="city" multiplier="1" sold="false" />
+						<Price locationtype="research" multiplier="1" minavailable="1" />
+						<Price locationtype="military" multiplier="1" sold="false" />
+						<Price locationtype="mine" multiplier="1" sold="false" />
+			</Price>
+			-->
+  </Item>
+</Items>

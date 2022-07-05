@@ -1,0 +1,41 @@
+﻿Barotrauma Dedicated Server crash report (generated on 20/04/2022 13:12:09)
+
+
+Barotrauma seems to have crashed. Sorry for the inconvenience! 
+
+
+Game version 0.17.12.0 (ReleaseWindows, branch master, revision 2b5d077d0)
+Language: None
+Selected content packages: None
+Level seed: no level loaded
+Loaded submarine: None
+Selected screen: None
+
+
+System info:
+    Operating system: Microsoft Windows NT 6.2.9200.0 64 bit
+
+
+Exception: Could not find a part of the path 'D:\Games\steamapps\common\Barotrauma\LocalMods\Lua For Barotrauma\Binary\Content\ContentPackages\Vanilla.xml'. (System.IO.DirectoryNotFoundException)
+Target site: Microsoft.Win32.SafeHandles.SafeFileHandle ValidateFileHandle(Microsoft.Win32.SafeHandles.SafeFileHandle)
+Stack trace: 
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)
+   at Barotrauma.ContentPackageManager.LoadVanillaFileList() in <DEV>\Barotrauma\BarotraumaShared\SharedSource\ContentManagement\ContentPackageManager.cs:line 432
+   at Barotrauma.ContentPackageManager.Init()+MoveNext() in <DEV>\Barotrauma\BarotraumaShared\SharedSource\ContentManagement\ContentPackageManager.cs:line 446
+   at Barotrauma.Extensions.IEnumerableExtensions.Consume[T](IEnumerable`1 enumerable) in <DEV>\Barotrauma\BarotraumaShared\SharedSource\Extensions\IEnumerableExtensions.cs:line 149
+   at Barotrauma.GameMain.Init() in <DEV>\Barotrauma\BarotraumaServer\ServerSource\GameMain.cs:line 113
+   at Barotrauma.GameMain.Run() in <DEV>\Barotrauma\BarotraumaServer\ServerSource\GameMain.cs:line 304
+   at Barotrauma.Program.Main(String[] args) in <DEV>\Barotrauma\BarotraumaServer\ServerSource\Program.cs:line 79
+
+
+Last debug messages:

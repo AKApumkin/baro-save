@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Combinable Coilgun Ammo (Last Update Oct 2021) ABANDONED" steamworkshopid="2200185630" corepackage="false" modversion="1.0.0" gameversion="0.15.12.0" installtime="1635562953" altnames="CombinableCoilgunAmmo">
+  <Item file="%ModDir%/containers.xml" />
+  <Item file="%ModDir%/coilgun.xml" />
+  <Item file="%ModDir%/engineer_talent_items.xml" />
+  <None file="%ModDir%/weapons_new.png" />
+  <None file="%ModDir%/chaingun.xml" />
+  <None file="%ModDir%/TurretsAndDepthCharges.png" />
+</contentpackage>

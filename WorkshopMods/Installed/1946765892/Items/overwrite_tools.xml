@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <Item name="" identifier="weldingtool" category="Equipment" Tags="smallitem,weldingequipment,tool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="engcab" minamount="2" maxamount="4" spawnprobability="1" />
+      <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="0" maxamount="1" spawnprobability="0.2" />
+      <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.25" />
+      <Price baseprice="75">
+        <Price locationtype="outpost" multiplier="1" minavailable="3" />
+        <Price locationtype="city" multiplier="0.9" minavailable="5" />
+        <Price locationtype="research" multiplier="1.25" minavailable="2" />
+        <Price locationtype="military" multiplier="1.25" minavailable="2" />
+        <Price locationtype="mine" multiplier="0.9" minavailable="10" />
+      </Price>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Items/overwrite_tools.png" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" />
+      <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="plastic" />
+      </Fabricate>
+      <!-- physics body -->
+      <Body width="150" height="60" density="40" />
+      <!-- the character will hold the item 50 pixels in front of him, with his hands at the handle1 and handle2 positions -->
+      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-62,-16" handle2="-10,-6" msg="ItemMsgPickUpSelect" />
+      <RepairTool firedamage="15.0" structurefixamount="2.0" range="150" barrelpos="35,10" particles="weld" repairmultiple="true" repairthroughwalls="false" combatpriority="10" levelwallfixamount="-0.5" targetforce="10">
+        <!-- the item must contain a welding fuel tank for it to work -->
+        <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        <ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true" />
+        <ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitStructure particle="GlowDot" particlespersecond="60" emitinterval="0.7" particleamount="10" scalemin="0.9" scalemax="1.0" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" />
+        <ParticleEmitterHitStructure particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="GlowDot" particlespersecond="60" emitinterval="0.7" particleamount="10" scalemin="0.9" scalemax="1.0" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="10" velocitymax="100" />
+        <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+        <sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
+        <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-1.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-0.6" />
+        <!-- welding a door, it will get stuck after a while -->
+        <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock" Stuck="5.0" Condition="3.0" />
+        <!-- do burn damage to characters -->
+        <StatusEffect type="OnUse" targettype="Limb">
+          <Affliction identifier="burn" amount="3" />
+          <Affliction identifier="explosiondamage" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="25" force="3.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="55" force="6.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="75" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <!-- the tool can fix structures, i.e. walls and windows -->
+        <Fixable identifier="structure" />
+        <!-- mechanic skill 20 required to use the item -->
+        <RequiredSkill identifier="mechanical" level="20" />
+        <!-- if the skill requirement isn't met the welding fuel will be used 3 times as fast -->
+        <StatusEffect type="OnFailure" targettype="Contained" targets="weldingfueltank" Condition="-2.0" />
+        <StatusEffect type="OnFailure" targettype="Contained" targets="incendiumfueltank" Condition="-1.0" />
+        <LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5">
+          <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+        </LightComponent>
+      </RepairTool>
+      <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
+      <!--
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="8,-35" containedspritedepth="0.56">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,96,120,24" />
+      <Containable items="weldingtoolfuel,oxygensource" />
+    </ItemContainer>
+	-->
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="8,-35" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+        <Containable items="weldingtoolfuel,oxygensource" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+      <Quality>
+        <QualityStat stattype="RepairToolStructureRepairMultiplier" value="0.2" />
+      </Quality>
+    </Item>
+    <Item name="" identifier="plasmacutter" category="Equipment" Tags="smallitem,cuttingequipment,tool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="divingcab" minamount="1" maxamount="2" spawnprobability="1" />
+      <PreferredContainer primary="engcab" minamount="1" maxamount="2" spawnprobability="1" />
+      <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="2" spawnprobability="0.125" />
+      <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.25" />
+      <Price baseprice="75">
+        <Price locationtype="outpost" multiplier="1" minavailable="3" />
+        <Price locationtype="city" multiplier="0.9" minavailable="5" />
+        <Price locationtype="research" multiplier="1.25" minavailable="2" />
+        <Price locationtype="military" multiplier="1.25" minavailable="2" />
+        <Price locationtype="mine" multiplier="0.9" minavailable="10" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="plastic" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Items/overwrite_tools.png" sourcerect="0,166,159,87" depth="0.55" origin="0.5,0.5" />
+      <Body radius="40" width="60" density="40" />
+      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-60,-21" handle2="-21,-20" msg="ItemMsgPickUpSelect" />
+      <RepairTool firedamage="25.0" structurefixamount="-0.2" range="150" barrelpos="45,10" combatpriority="30" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0" targetforce="10">
+        <RequiredItems items="oxygensource,weldingtoolfuel" type="Contained" msg="ItemMsgOxygenTankRequired" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" Condition="-1.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.5" />
+        <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-20.0" Condition="-3.0" />
+        <StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
+        <StatusEffect type="OnUse" targettype="UseTarget" targettags="damageableitem" Condition="-3.0" />
+        <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.005">
+          <Affliction identifier="burn" amount="5" />
+          <Affliction identifier="explosiondamage" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank,incendiumfueltank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="25" force="3.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="55" force="6.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="75" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true" />
+        <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+        <ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+        <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+        <sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+        <Fixable identifier="structure" />
+        <RequiredSkill identifier="mechanical" level="30" />
+        <StatusEffect type="OnFailure" targettype="Contained" targets="oxygentank" Condition="-3.0" />
+        <StatusEffect type="OnFailure" targettype="Contained" targets="oxygenitetank" Condition="-1.5" />
+        <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
+          <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+        </LightComponent>
+      </RepairTool>
+      <!--
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="0,-39" containedspritedepth="0.56">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,96,120,24" />
+      <Containable items="weldingtoolfuel,oxygensource" />
+    </ItemContainer>
+	-->
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="0,-39" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+        <Containable items="weldingtoolfuel,oxygensource" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+      <Quality>
+        <QualityStat stattype="RepairToolStructureDamageMultiplier" value="0.1" />
+        <QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.1" />
+      </Quality>
+    </Item>
+    <Item name="" identifier="fulguriumfuelrodvolatile" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
+      <Price baseprice="400" soldeverywhere="false">
+        <Price locationtype="outpost" multiplier="1" sold="false" />
+        <Price locationtype="city" multiplier="0.9" sold="false" />
+        <Price locationtype="research" multiplier="1.25" sold="false" />
+        <Price locationtype="military" multiplier="1.25" sold="false" />
+        <Price locationtype="mine" multiplier="1.1" sold="false" />
+      </Price>
+      <Deconstruct time="15">
+        <Item identifier="steel" />
+        <Item identifier="lead" />
+        <Item identifier="fulgurium" copycondition="true" />
+        <Item identifier="thorium" copycondition="true" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true">
+        <RequiredSkill identifier="electrical" level="70" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="lead" />
+        <RequiredItem identifier="fulgurium" />
+        <RequiredItem identifier="thorium" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="10" requiresrecipe="true">
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="fulgurium" />
+        <RequiredItem identifier="thorium" />
+        <RequiredItem identifier="fulguriumfuelrodvolatile" mincondition="0.0" usecondition="false" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="67,176,62,61" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="190,60,20,71" origin="0.5,0.5" />
+      <Body radius="6" height="55" density="20" />
+      <LightComponent allowingameediting="false" lightcolor="60,200,150,150" canbeselected="false" range="300.0" ison="true" />
+      <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+        <!-- Something seems to be wrong with 'and' comparison
+	  <StatusEffect type="Always" target="This,NearbyCharacters" range="250" comparison="and" checkconditionalalways="true">
+        <Conditional hastag="neq reactor" targetcontainer="true"/>
+        <Conditional hastag="neq container" targetcontainer="true"/>
+        <Affliction identifier="radiationsickness" strength="0.2" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This,NearbyCharacters" range="100" comparison="and" checkconditionalalways="true">
+        <Conditional hastag="neq reactor" targetcontainer="true"/>
+        <Conditional hastag="neq container" targetcontainer="true"/>
+        <Affliction identifier="radiationsickness" strength="0.8" />
+      </StatusEffect>
+	  -->
+        <StatusEffect type="Always" target="This,NearbyCharacters" range="250" checkconditionalalways="true">
+          <Conditional hastag="neq reactor" targetcontainer="true" />
+          <Affliction identifier="radiationsickness" strength="0.2" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This,NearbyCharacters" range="100" checkconditionalalways="true">
+          <Conditional hastag="neq reactor" targetcontainer="true" />
+          <Affliction identifier="radiationsickness" strength="0.8" />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
+        <Containable items="nucleargunbolt" />
+        <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true">
+          <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
+        </StatusEffect>
+      </ItemContainer>
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+  </Items>
+</Override>

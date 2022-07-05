@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Sigma Shipyards (PVP)" steamworkshopid="2394892349" corepackage="false" modversion="1.0.0" gameversion="0.15.22.1" installtime="1640300785" altnames="Sigma Shipyards">
+  <Submarine file="%ModDir%/Sigma Shipyards.sub" />
+  <Submarine file="%ModDir%/Sigma Shipyards B.sub" />
+</contentpackage>

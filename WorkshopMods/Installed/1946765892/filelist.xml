@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="EK | Utility" steamworkshopid="1946765892" corepackage="false" modversion="1.0.0" gameversion="0.16.6.1" installtime="1645724821" altnames="EK Utilities">
+  <Item file="%ModDir%/Items/overwrite_tools.xml" />
+  <Item file="%ModDir%/Items/overwrite_alienitems.xml" />
+  <Item file="%ModDir%/Items/Materials/ekutility_densifiedmaterials.xml" />
+  <Item file="%ModDir%/Items/Diving/ekutility_divinggear.xml" />
+  <Item file="%ModDir%/Items/Tools/ekutility_tools.xml" />
+  <Item file="%ModDir%/Items/Tools/ekutility_placeablemachines.xml" />
+  <Item file="%ModDir%/Items/Containers/ekutility_labels.xml" />
+  <Item file="%ModDir%/Items/Containers/ekutility_containers.xml" />
+  <Particles file="%ModDir%/Particles/ParticlePrefabs.xml" />
+  <Text file="%ModDir%/Texts/EnglishEKUtilities.xml" />
+</contentpackage>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Holey Diver" steamworkshopid="2660706273" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1645855845">
+  <Submarine file="%ModDir%/Holey Diver.sub" />
+</contentpackage>

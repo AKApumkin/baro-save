@@ -1,0 +1,32 @@
+﻿Barotrauma Dedicated Server crash report (generated on 28/04/2022 12:54:03)
+
+
+Barotrauma seems to have crashed. Sorry for the inconvenience! 
+
+
+Game version 0.15.22.1 (ReleaseWindows, branch master, revision c399da803)
+Level seed: no level loaded
+Loaded submarine: None
+Selected screen: None
+
+
+System info:
+    Operating system: Microsoft Windows NT 6.2.9200.0 64 bit
+
+
+Exception: Could not find a part of the path 'B:\SteamLibrary\steamapps\common\Barotrauma\LocalMods\Lua For Barotrauma\Binary\Data\ContentPackages'. (System.IO.DirectoryNotFoundException)
+Target site: IntPtr CreateDirectoryHandle(System.String, Boolean)
+Stack trace: 
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerator`1..ctor(String directory, Boolean isNormalized, EnumerationOptions options)
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at Barotrauma.ContentPackage.LoadAll() in <DEV>\Barotrauma\BarotraumaShared\SharedSource\ContentPackage.cs:line 783
+   at Barotrauma.GameSettings..ctor() in <DEV>\Barotrauma\BarotraumaShared\SharedSource\GameSettings.cs:line 781
+   at Barotrauma.GameMain..ctor(String[] args) in <DEV>\Barotrauma\BarotraumaServer\ServerSource\GameMain.cs:line 96
+   at Barotrauma.Program.Main(String[] args) in <DEV>\Barotrauma\BarotraumaServer\ServerSource\Program.cs:line 60
+
+
+Last debug messages:

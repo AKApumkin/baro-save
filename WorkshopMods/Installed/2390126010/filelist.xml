@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="EK | Gunnery" steamworkshopid="2390126010" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1645850160" altnames="EK Gunnery">
+  <Particles file="%ModDir%/Particles/ParticlePrefabs.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
+  <Item file="%ModDir%/Items/Command/ekgunnery_command.xml" />
+  <Item file="%ModDir%/Items/Electricity/ekgunnery_devices.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_loaders_legacy.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_turrets_legacy.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_loaders.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_turrets.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_heavyturrets.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_spinalweapons.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_auxiliary.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_ammunition.xml" />
+  <Item file="%ModDir%/Items/Containers/ekgunnery_containers.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_melee.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_modularmissile.xml" />
+  <Submarine file="%ModDir%/Submarines/EKM_MissileGuided_Mk-I.sub" />
+  <Text file="%ModDir%/Texts/EnglishEkGunnery.xml" />
+</contentpackage>

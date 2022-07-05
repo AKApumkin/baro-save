@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Cell spawn count and delay values are for the highest difficulty setting.
+  These are scaled down in lower difficulty levels.
+  For adjusting how much the difficulty level changes the values, use the DifficultyMultipliers. 1.0 is default.
+  -->
+<Override>
+  <WreckAIConfig Entity="thalamus2" DefensiveAgent="Leucocyte" OffensiveAgent="Terminalcell" Brain="thalamusbrain" Spawner="cellspawnorgan" BrainRoomBackground="brainroombackground" BrainRoomVerticalWall="thalamuswall_vertical" BrainRoomHorizontalWall="thalamuswall_horizontal" AgentSpawnDelay="10" AgentSpawnDelayRandomFactor="0.25" AgentSpawnDelayDifficultyMultiplier="2.0" AgentSpawnCountDifficultyMultiplier="2.0" MinAgentsPerBrainRoom="4" MaxAgentsPerRoom="10" MinAgentsOutside="15" MaxAgentsOutside="20" MinAgentsInside="15" MaxAgentsInside="20" MaxAgentCount="40" MinWaterLevel="90.0" KillAgentsWhenEntityDies="True" DeadEntityColorMultiplier="0.5" DeadEntityColorFadeOutTime="1" ForbiddenAmmunition=" " />
+</Override>

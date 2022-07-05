@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Glowstick Harpoon" description="A harpoon for the harpoon gun combined with a glowstick. The light makes it easier to retrieve." identifier="glowstickspear" category="Equipment" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Price baseprice="125" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false" />
+      <Price locationtype="city" multiplier="1.25" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="0.9" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="spear" outcondition="100" />
+      <Item identifier="bandage" outcondition="100" />
+      <Item identifier="glowstick" copycondition="true" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="5" />
+      <RequiredItem identifier="spear" />
+      <RequiredItem identifier="bandage" />
+      <RequiredItem identifier="glowstick" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Harpoons.png" sourcerect="0,81,55,55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Harpoons.png" sourcerect="0,0,181,25" depth="0.55" origin="0.5,0.5" />
+    <Body width="160" height="10" density="20" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <!-- light timer -->
+    <GreaterComponent TimeFrame="0">
+      <!-- Set condition to 0 if has burnt and is in deconstructor -->
+      <StatusEffect type="Always" targettype="this" condition="0" setvalue="true" comparison="and">
+        <Conditional HasTag="deconstructor" targetcontainer="true" />
+        <Conditional TimeFrame="gt 0" />
+      </StatusEffect>
+      <!-- Repair otherwise to allow stacking -->
+      <StatusEffect type="Always" targettype="this" condition="100" setvalue="true">
+        <Conditional HasTag="neq deconstructor" targetcontainer="true" />
+      </StatusEffect>
+    </GreaterComponent>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" stickpermanently="true">
+      <Attack structuredamage="10" itemdamage="100" targetforce="5" severlimbsprobability="0.1">
+        <Affliction identifier="bleeding" strength="30" />
+        <Affliction identifier="lacerations" strength="30" />
+        <Affliction identifier="stun" strength="0.3" />
+      </Attack>
+      <!-- start light timer -->
+      <StatusEffect type="OnUse" targettype="This" TimeFrame=".5" disabledeltatime="true">
+        <Conditional TimeFrame="0" />
+        <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+      </StatusEffect>
+      <LightComponent LightColor="50,255,50,255" Flicker="0.0" range="400" IsOn="false">
+        <sprite texture="%ModDir%/Harpoons.png" sourcerect="0,25,181,25" alpha="1.0" origin="0.5,0.5" />
+        <!-- light is on for 15 seconds -->
+        <StatusEffect type="Always" targettype="This" IsOn="true" comparison="and">
+          <Conditional TimeFrame="gt 0" />
+          <Conditional TimeFrame="lt 1600" />
+        </StatusEffect>
+        <StatusEffect type="Always" targettype="This" IsOn="false">
+          <Conditional TimeFrame="gte 1600" />
+        </StatusEffect>
+      </LightComponent>
+    </Projectile>
+    <LightComponent LightColor="50,255,50,255" Flicker="0.0" range="400" IsOn="false">
+      <sprite texture="%ModDir%/Harpoons.png" sourcerect="0,25,181,25" alpha="1.0" origin="0.5,0.5" />
+      <!-- light is on for 15 seconds, increase light timer -->
+      <StatusEffect type="Always" targettype="This" IsOn="true" comparison="and" TimeFrame="1">
+        <Conditional TimeFrame="gt 0" />
+        <Conditional TimeFrame="lt 1600" />
+      </StatusEffect>
+      <StatusEffect type="Always" targettype="This" IsOn="false">
+        <Conditional TimeFrame="gte 1600" />
+      </StatusEffect>
+    </LightComponent>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Floating Harpoon" description="A harpoon for the harpoon gun balanced out with some rubber. Flies slower but straighter and does not sink after it hits something." identifier="floatingspear" category="Equipment" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Price baseprice="100" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false" />
+      <Price locationtype="city" multiplier="1.25" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="0.9" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="spear" />
+      <Item identifier="rubber" />
+      <Item identifier="elastin" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="spear" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="elastin" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Harpoons.png" sourcerect="55,81,55,55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Harpoons.png" sourcerect="0,50,181,31" depth="0.55" origin="0.5,0.5" />
+    <Body width="160" height="10" density="10" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="13.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" stickpermanently="true">
+      <Attack structuredamage="10" itemdamage="100" targetforce="5" severlimbsprobability="0.1">
+        <Affliction identifier="bleeding" strength="30" />
+        <Affliction identifier="lacerations" strength="30" />
+        <Affliction identifier="stun" strength="0.3" />
+      </Attack>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Items>

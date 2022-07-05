@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="ek_pulselaserplasmaammobox" scale="0.5" tags="pulselaserequipment,pulselaserammo,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="ammocontainer" spawnprobability="0.0" />
+    <Price baseprice="325" soldeverywhere="false">
+      <!-- 290 -->
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" minavailable="1" />
+      <Price locationtype="military" multiplier="0.9" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	88
+	80
+	80
+	42
+	-->
+    <Deconstruct time="10">
+      <Item identifier="lithium" copycondition="true" />
+      <Item identifier="liquidoxygenite" copycondition="true" />
+      <Item identifier="fpgacircuit" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="lithium" />
+      <RequiredItem identifier="liquidoxygenite" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="0,0,112,80" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="ek_pulselaserplasmabolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true">
+        <RequiredItem items="ek_pulselaserplasmabolt" type="Contained" />
+      </StatusEffect>
+      <Containable items="ek_pulselaserplasmabolt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_pulselaserplasmabolt" category="Misc" scale="1" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,16,16" depth="0.55" />
+    <Body width="85" height="10" density="10" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" hitscan="false" launchimpulse="100.0" removeonhit="true">
+      <!--
+	  <ParticleEmitter particle="tracerpulselaser" particleamount="1" velocitymin="0" velocitymax="0"/>
+      <ParticleEmitter particle="FlareBubbles" emitacrossrayinterval="50"/>
+	  -->
+      <Attack structuredamage="35" targetforce="5" itemdamage="75" severlimbsprobability="0.5" penetration="1.0">
+        <!-- Trilaser is weird.
+        <Affliction identifier="explosiondamage" strength="20" />
+        <Affliction identifier="burn" strength="30" />
+        <Affliction identifier="bleeding" strength="5" />
+        <Affliction identifier="stun" strength="0.4" />
+		-->
+        <Affliction identifier="explosiondamage" strength="140" />
+        <Affliction identifier="burn" strength="100" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.4" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" condition="-35" />
+      <StatusEffect type="OnActive" target="This">
+        <Conditional condition="gt 60" />
+        <ParticleEmitter particle="FlareBubbles" particlespersecond="60" anglemin="0" anglemax="360" initialdelay="0.05" distancemin="0" distancemax="150" />
+        <ParticleEmitter particle="muzzleflashpulselaser" scalemin="0.6" scalemax="0.6" particlespersecond="60" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="GlowDot" scalemin="6.0" scalemax="6.0" particlespersecond="120" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="pulselasermist" scalemin="1" scalemax="1" particlespersecond="60" anglemin="0" anglemax="360" velocitymin="0" velocitymax="100" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" comparison="and">
+        <Conditional condition="gt 30" />
+        <Conditional condition="lt 60" />
+        <ParticleEmitter particle="FlareBubbles" particlespersecond="45" anglemin="0" anglemax="360" initialdelay="0.05" distancemin="0" distancemax="150" />
+        <ParticleEmitter particle="muzzleflashpulselaser" scalemin="0.5" scalemax="0.5" particlespersecond="50" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="GlowDot" scalemin="5.0" scalemax="5.0" particlespersecond="90" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="pulselasermist" scalemin="0.8" scalemax="0.8" particlespersecond="45" anglemin="0" anglemax="360" velocitymin="0" velocitymax="100" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <Conditional condition="lt 30" />
+        <ParticleEmitter particle="FlareBubbles" particlespersecond="30" anglemin="0" anglemax="360" initialdelay="0.05" distancemin="0" distancemax="150" />
+        <ParticleEmitter particle="muzzleflashpulselaser" scalemin="0.4" scalemax="0.4" particlespersecond="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="GlowDot" scalemin="4.0" scalemax="4.0" particlespersecond="60" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="pulselasermist" scalemin="0.6" scalemax="0.6" particlespersecond="30" anglemin="0" anglemax="360" velocitymin="0" velocitymax="100" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="muzzleflashpulselaser" anglemin="0" anglemax="360" particleamount="8" velocitymin="0" scalemin="1.2" scalemax="1.6" />
+        <ParticleEmitter particle="weldspark" particleamount="7" anglemin="0" anglemax="360" velocitymin="300" velocitymax="350" scalemin="2" scalemax="2.5" drawontop="true" colormultiplier="255,200,225,180" />
+        <ParticleEmitter particle="FlareBubbles" particleamount="3" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <Explosion range="300.0" structuredamage="20" itemdamage="25" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255">
+          <!-- Trilaser is weird.
+          <Affliction identifier="explosiondamage" strength="40" />
+          <Affliction identifier="burn" strength="20" />
+		  -->
+          <Affliction identifier="explosiondamage" strength="60" />
+          <Affliction identifier="burn" strength="40" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+</Items>

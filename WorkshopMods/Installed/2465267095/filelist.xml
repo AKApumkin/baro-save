@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="[BOS]Planting" steamworkshopid="2465267095" corepackage="false" modversion="1.0.0" gameversion="0.14.9.1" installtime="1634574216">
+  <Text file="%ModDir%/ChineseHydroponics.xml" />
+  <Text file="%ModDir%/EnglishHydroponics.xml" />
+  <Item file="%ModDir%/Planter.xml" />
+  <None file="%ModDir%/PlanterLight.png" />
+  <None file="%ModDir%/Planting.png" />
+  <Item file="%ModDir%/Planting.xml" />
+</contentpackage>

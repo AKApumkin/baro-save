@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Medical Headset" identifier="medheadset" scale="0.5" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Price baseprice="400" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" sold="false" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="healthscanner" />
+      <Item identifier="headset" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="healthscanner" />
+      <RequiredItem identifier="headset" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/MedHeadset/MedInventoryIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Medical Headset" texture="%ModDir%/MedHeadset/baromedhead.png" sourcerect="115,321,75,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="Medical Headset Wearable" texture="%ModDir%/MedHeadset/baromedhead.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="115,321,75,62" origin="0.55,0.85" />
+    </Wearable>
+    <StatusHUD drawhudwhenequipped="true" />
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" />
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+  </Item>
+  <Item name="Tactical Headset" identifier="tacheadset" scale="0.5" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Price baseprice="400" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" sold="false" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="thermalgoggles" />
+      <Item identifier="headset" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem identifier="thermalgoggles" />
+      <RequiredItem identifier="headset" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/MedHeadset/MedInventoryIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Tactical Headset" texture="%ModDir%/MedHeadset/baromedhead.png" sourcerect="115,321,75,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="Tactical Headset Wearable" texture="%ModDir%/MedHeadset/baromedhead.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="115,321,75,62" origin="0.55,0.85" />
+    </Wearable>
+    <StatusHUD drawhudwhenequipped="true" overlaycolor="176,0,0,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" />
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+  </Item>
+</Items>

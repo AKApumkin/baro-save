@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="PVP minimalist" steamworkshopid="2493214135" corepackage="false" modversion="1.0.0" gameversion="0.13.3.11" installtime="1621583314">
+  <Submarine file="%ModDir%/PVP minimalist.sub" />
+</contentpackage>

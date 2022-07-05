@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <entityname.planter>Hydroponics Planter</entityname.planter>
+  <entitydescription.planter>A tank used to simulate an ideal growth environment.</entitydescription.planter>
+  <entityname.fiberplantseed>Fiber Plant Cutting</entityname.fiberplantseed>
+  <entitydescription.fiberplantseed>If only we had some dirt.</entitydescription.fiberplantseed>
+  <entityname.elastinplantseed>Elastin Plant Cutting</entityname.elastinplantseed>
+  <entitydescription.elastinplantseed>If only we had some dirt.</entitydescription.elastinplantseed>
+  <entityname.aquaticpoppyseed>Aquatic Poppy Cutting</entityname.aquaticpoppyseed>
+  <entitydescription.aquaticpoppyseed>If only we had some dirt.</entitydescription.aquaticpoppyseed>
+  <entityname.slimebacteriaseed>Slime Bacteria Culture</entityname.slimebacteriaseed>
+  <entitydescription.slimebacteriaseed>If only we had some dirt.</entitydescription.slimebacteriaseed>
+  <entityname.yeastshroomseed>Yeast Shroom Sample</entityname.yeastshroomseed>
+  <entitydescription.yeastshroomseed>If only we had some dirt.</entitydescription.yeastshroomseed>
+</infotexts>

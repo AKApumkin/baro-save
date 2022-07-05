@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Editor -->
+  <entityname.oxygear_o2station>OxyGear Oxygen Tank Refilling-Station</entityname.oxygear_o2station>
+  <entitydescription.oxygear_o2station>At the OxyGear® Refilling-Station, 6 oxygen tanks can be refilled or stored at the same time.</entitydescription.oxygear_o2station>
+  <entityname.oxygear_divsuitlocker>OxyGear Diving Suit Locker</entityname.oxygear_divsuitlocker>
+  <entitydescription.oxygear_divsuitlocker>In this lockable OxyGear® special locker you can store a ready-to-use diving suit.</entitydescription.oxygear_divsuitlocker>
+  <entityname.oxygear_locker>OxyGear Steel Cabinet</entityname.oxygear_locker>
+  <entitydescription.oxygear_locker>In this lockable OxyGear® locker you can store small and medium-sized objects. The content is protected from fire and water.</entitydescription.oxygear_locker>
+  <entityname.oxygear_supplies>OxyGear Wall Cabinet</entityname.oxygear_supplies>
+  <entitydescription.oxygear_supplies>This wall-mounted and lockable OxyGear® storage container can be used to store small and medium-sized objects. The content is protected from fire and water.</entitydescription.oxygear_supplies>
+  <entityname.oxygear_wall-fabricator>OxyGear Fabricator</entityname.oxygear_wall-fabricator>
+  <entitydescription.oxygear_wall-fabricator>This compact fabricator version from OxyGear® has a wall mount and ID card recognition.</entitydescription.oxygear_wall-fabricator>
+  <entityname.oxygear_navterminal>OxyGear Navigation Terminal</entityname.oxygear_navterminal>
+  <entitydescription.oxygear_navterminal>Despite its compact design, this OxyGear® control and navigation terminal offers a total of 6 freely assignable signal outputs.</entitydescription.oxygear_navterminal>
+  <entityname.oxygear_statusmonitor>OxyGear Status Monitor</entityname.oxygear_statusmonitor>
+  <entitydescription.oxygear_statusmonitor>This OxyGear® status monitor enables the status of the submarine to be monitored.</entitydescription.oxygear_statusmonitor>
+  <entityname.oxygear_cargo>OxyGear Cargo Storage</entityname.oxygear_cargo>
+  <entitydescription.oxygear_cargo>This lockable OxyGear® cargo storage can be used to store cargo boxes and ammunition. The content is protected from fire and water.</entitydescription.oxygear_cargo>
+  <entityname.oxygear_buzzer>OxyGear Alarm Buzzer</entityname.oxygear_buzzer>
+  <entitydescription.oxygear_buzzer>This OxyGear® alarm buzzer generates an acoustic signal.</entitydescription.oxygear_buzzer>
+  <entityname.oxygear_weaponholder>OxyGear Weapon Holder</entityname.oxygear_weaponholder>
+  <entitydescription.oxygear_weaponholder>The OxyGear® weapon holder allows quick access to the inserted weapon. The integrated RFID only releases the weapon with a valid ID card.</entitydescription.oxygear_weaponholder>
+  <entityname.oxygear_floodlight>OxyGear High-Performance LED Floodlight</entityname.oxygear_floodlight>
+  <entitydescription.oxygear_floodlight>This OxyGear® high-performance floodlight with LED technology generates a wide beam of light with a power consumption of 1000 watts.</entitydescription.oxygear_floodlight>
+  <entityname.oxygear_textpanel>OxyGear LED Text Display</entityname.oxygear_textpanel>
+  <entitydescription.oxygear_textpanel>This OxyGear® panel with LED technology can display any text and color.</entitydescription.oxygear_textpanel>
+  <entityname.oxygear_chair>OxyGear Half Bucket Seat</entityname.oxygear_chair>
+  <entitydescription.oxygear_chair>This OxyGear® half bucket seat provides optimal grip at high G-forces.</entitydescription.oxygear_chair>
+  <entityname.oxygear_stool>OxyGear Stool</entityname.oxygear_stool>
+  <entitydescription.oxygear_stool>This OxyGear® stool provides good grip thanks to its special coating even at medium G-forces.</entitydescription.oxygear_stool>
+  <entityname.oxygear_engine>OxyGear Avalanche High-Efficiency Propulsion </entityname.oxygear_engine>
+  <entitydescription.oxygear_engine>The Avalanche™ high-performance drive from OxyGear® has an output of 3000 KW and is very efficient. However, it requires shorter maintenance intervals.</entitydescription.oxygear_engine>
+  <entityname.oxygear_bumper>OxyGear Impact Absorber </entityname.oxygear_bumper>
+  <entitydescription.oxygear_bumper>The OxyGear® impact damper has a ceramic core, which is encased in composite plastic.</entitydescription.oxygear_bumper>
+  <entityname.oxygear_lightbox>OxyGear Lightbox </entityname.oxygear_lightbox>
+  <entitydescription.oxygear_lightbox>An OxyGear® light box with wall mount.</entitydescription.oxygear_lightbox>
+  <entityname.oxygear_light>OxyGear Lighting</entityname.oxygear_light>
+  <entitydescription.oxygear_light>OxyGear® lighting with wall mount.</entitydescription.oxygear_light>
+  <entityname.oxygear_floorlight>OxyGear Indirect Lighting</entityname.oxygear_floorlight>
+  <entitydescription.oxygear_floorlight>OxyGear® lighting with indirect light and wall mount.</entitydescription.oxygear_floorlight>
+  <entityname.oxygear_signallight>OxyGear Signal Lighting</entityname.oxygear_signallight>
+  <entitydescription.oxygear_signallight>OxyGear® signal lighting.</entitydescription.oxygear_signallight>
+  <entityname.oxygear_frontlight>OxyGear Headlight</entityname.oxygear_frontlight>
+  <entitydescription.oxygear_frontlight>An OxyGear® headlamp for outdoor use.</entitydescription.oxygear_frontlight>
+  <entityname.oxygear_glass>OxyGear Special Glass</entityname.oxygear_glass>
+  <entitydescription.oxygear_glass>This OxyGear® special glass consists of quartz sand which was produced in connection with colorless crystals of the chemical boron oxide. That makes this material particularly resistant.</entitydescription.oxygear_glass>
+  <entityname.oxygear_glass_base>OxyGear Special Base</entityname.oxygear_glass_base>
+  <entitydescription.oxygear_glass_base>These OxyGear® bases are installed in connection with the glass elements. They are made of aluminum which, with the addition of magnesium, has been given increased resistance.</entitydescription.oxygear_glass_base>
+  <entityname.oxygear_hull>OxyGear Hull Element</entityname.oxygear_hull>
+  <entitydescription.oxygear_hull>A OxyGear® hull element.</entitydescription.oxygear_hull>
+  <entityname.oxygear_modernhull>OxyGear Hull Element made of High-Performance Thermoplastic</entityname.oxygear_modernhull>
+  <entitydescription.oxygear_modernhull>This OxyGear® hull element was largely made of high-performance thermoplastics and is particularly robust.</entitydescription.oxygear_modernhull>
+  <entityname.oxygear_coilgunloader>OxyGear Coilgun Dual-Loader</entityname.oxygear_coilgunloader>
+  <entitydescription.oxygear_coilgunloader>This OxyGear® loader with dual ammunition feed system enables ammunition to be fed from two containers at the same time.</entitydescription.oxygear_coilgunloader>
+  <entityname.oxygear_railgunloader>OxyGear Railgun Quad-Loader</entityname.oxygear_railgunloader>
+  <entitydescription.oxygear_railgunloader>This OxyGear® loader with quadruple ammunition storage and feed system enables four Railgun-grenades to be loaded and reloaded one after the other.</entitydescription.oxygear_railgunloader>
+  <entityname.oxygear_supercapacitor>OxyGear Ultracapacitor</entityname.oxygear_supercapacitor>
+  <entitydescription.oxygear_supercapacitor>This OxyGear® ultracapacitor uses organic electrolytes, which allow a higher operating voltage and do not freeze prematurely at low temperatures.</entitydescription.oxygear_supercapacitor>
+  <entityname.oxygear_coilgun>OxyGear Gaussgun</entityname.oxygear_coilgun>
+  <entitydescription.oxygear_coilgun>This OxyGear® rapid-fire Gaussian gun accelerates steel projectiles with electromagnets using current-carrying coils to a high velocity.</entitydescription.oxygear_coilgun>
+  <entityname.oxygear_periscope>OxyGear Periscope</entityname.oxygear_periscope>
+  <entitydescription.oxygear_periscope>This OxyGear® periscope is used to control monitoring equipment and on-board armament via electrical signals.</entitydescription.oxygear_periscope>
+  <entityname.oxygear_batteryloader>OxyGear Battery Fast-Charger</entityname.oxygear_batteryloader>
+  <entitydescription.oxygear_batteryloader>This OxyGear® charging station can charge up to 4 batteries at the same time.</entitydescription.oxygear_batteryloader>
+  <entityname.oxygear_comhub>OxyGear Command-Hub</entityname.oxygear_comhub>
+  <entitydescription.oxygear_comhub>This OxyGear® Command-Hub is used to organize and control signals and power lines.</entitydescription.oxygear_comhub>
+  <entityname.oxygear_distributor>OxyGear Junction Box</entityname.oxygear_distributor>
+  <entitydescription.oxygear_distributor>A OxyGear® junction box.</entitydescription.oxygear_distributor>
+  <entityname.oxygear_ladder>OxyGear Ladder</entityname.oxygear_ladder>
+  <entitydescription.oxygear_ladder>A OxyGear® ladder.</entitydescription.oxygear_ladder>
+  <entityname.oxygear_oxygenerator>OxyGear Oxygen Generator</entityname.oxygear_oxygenerator>
+  <entitydescription.oxygear_oxygenerator>This OxyGear® oxygen generator is more compact than the competition models due to the use of the latest technology.</entitydescription.oxygear_oxygenerator>
+  <entityname.oxygear_hybridpump>OxyGear Pump (Automatic Hybrid-Version)</entityname.oxygear_hybridpump>
+  <entitydescription.oxygear_hybridpump>This fully automatic OxyGear® hybrid pump activates itself automatically when it comes into contact with water and has an integrated water sensor with a signal output.</entitydescription.oxygear_hybridpump>
+  <entityname.oxygear_pump>OxyGear Pump</entityname.oxygear_pump>
+  <entitydescription.oxygear_pump>This OxyGear® bilge pump has been designed for use in air locks and can be used in many ways.</entitydescription.oxygear_pump>
+  <!-- Equipment -->
+  <entityname.oxygear_divingsuit>OxyGear Diving Suit</entityname.oxygear_divingsuit>
+  <entitydescription.oxygear_divingsuit>This OxyGear® diving suit has been reinforced to withstand the immense pressure in the deeper regions of Europa.</entitydescription.oxygear_divingsuit>
+  <entityname.oxygear_scooter>OxyGear Underwater Scooter</entityname.oxygear_scooter>
+  <entitydescription.oxygear_scooter>The OxyGear® underwater scooter, model Schnitter™ convinces with outstanding speed, but at the expense of battery power. The Schnitter™ model can also be used in emergencies to ward off aggressive creatures.</entitydescription.oxygear_scooter>
+  <entityname.oxygear_transportbox>OxyGear Salvage Container</entityname.oxygear_transportbox>
+  <entitydescription.oxygear_transportbox>This OxyGear® salvage container is designed for outdoor use and allows the simultaneous transport of 6 pieces of bulky equipment. The container is waterproof, fire-resistant and has a signal lighting.</entitydescription.oxygear_transportbox>
+  <entityname.oxygear_bandagebag>OxyGear Bandage Bag</entityname.oxygear_bandagebag>
+  <entitydescription.oxygear_bandagebag>This OxyGear® bandage bag offers space for 20 bandages and Plastomed-bandages. The bandage bag is made of a fire-resistant silica gel-glass fiber combination.</entitydescription.oxygear_bandagebag>
+  <entityname.oxygear_ammobag>OxyGear Ammunition Bag</entityname.oxygear_ammobag>
+  <entitydescription.oxygear_ammobag>This OxyGear® ammunition bag offers space for 24 rounds of ammunition or magazines. The ammunition bag is made of a fire-resistant silica gel-glass fiber combination.</entitydescription.oxygear_ammobag>
+  <!-- Aborted -->
+  <entityname.oxygear_sprayer>OxyGear Spray Gun</entityname.oxygear_sprayer>
+  <entitydescription.oxygear_sprayer>TBD</entitydescription.oxygear_sprayer>
+  <entityname.oxygear_materialbox>REMOVED!</entityname.oxygear_materialbox>
+  <entitydescription.oxygear_materialbox>...</entitydescription.oxygear_materialbox>
+</infotexts>

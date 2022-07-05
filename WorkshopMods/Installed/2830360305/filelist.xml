@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Caramellatching" steamworkshopid="2830360305" corepackage="false" modversion="1.0.2" gameversion="0.18.12.0" installtime="1656942287" altnames="CaramelldansenLatcher" expectedhash="E4A9D2A7446A5E644E60BD48A8625FA8">
+  <Character file="%ModDir%/Characters/Latcher/Latcher.xml" />
+  <Other file="%ModDir%/Sound/CaramelldansenLatcher.ogg" />
+</contentpackage>

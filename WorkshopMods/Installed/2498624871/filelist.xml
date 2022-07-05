@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Hemulen_PVP" steamworkshopid="2498624871" corepackage="false" modversion="1.0.0" gameversion="0.13.3.11" installtime="1623936290">
+  <Submarine file="%ModDir%/Hemulen_PVP.sub" />
+</contentpackage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Override>
+    <Item name="" identifier="toolbox" category="Equipment" tags="smallitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="engcab" />
+      <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.06" />
+      <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <Item identifier="steel" />
+      </Fabricate>
+      <Price baseprice="25">
+        <Price locationtype="outpost" multiplier="1" minavailable="4" />
+        <Price locationtype="city" multiplier="0.9" minavailable="6" />
+        <Price locationtype="research" multiplier="1.25" minavailable="1" />
+        <Price locationtype="military" multiplier="1.25" minavailable="1" />
+        <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+      </Price>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" />
+      <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+      <Body width="90" height="60" density="20" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,10" handle2="-15,10" holdangle="90" reload="1" range="50" combatpriority="5" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" stun="0.6" targetimpulse="2">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+        <Containable items="smallitem" excludeditems="toolbox" />
+      </ItemContainer>
+      <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+  </Override>
+</Items>

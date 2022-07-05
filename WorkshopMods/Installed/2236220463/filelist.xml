@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Toolbox Expanded" steamworkshopid="2236220463" corepackage="false" modversion="1.0.0" gameversion="0.12.0.2" installtime="1613320214">
+  <Item file="%ModDir%/tools.xml" />
+  <Item file="%ModDir%/Storagecrate.xml" />
+  <None file="%ModDir%/containers.png" />
+</contentpackage>

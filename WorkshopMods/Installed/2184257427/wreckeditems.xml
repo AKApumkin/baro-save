@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items itemtype="wrecked">
+    <Item name="" description="Rusty old coilgun that still somehow operational" identifier="coilgunwrecked" nameidentifier="coilgun" Tags="turret" category="Wrecked" interactthroughwalls="true" Scale="0.5" interactdistance="10" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="750" linkable="true" allowedlinks="coilgunequipment">
+      <MinimapIcon name="Command_Weapons_Coilgun" texture="Content/UI/CommandUIAtlas.png" sourcerect="768,0,128,128" />
+      <SwappableItem price="4000" replacementonuninstall="turrethardpoint" origin="128,215" swapidentifier="basicturret">
+        <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="256,0,256,389" />
+        <SwapConnectedItem tag="periscope" swapto="periscope" />
+        <SwapConnectedItem tag="turretammosource" swapto="coilgunloader" />
+      </SwappableItem>
+      <UpgradePreviewSprite scale="3.0" texture="Content/UI/WeaponUI.png" sourcerect="7,810,109,65" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.01" sourcerect="0,0,256,256" canflipy="false" />
+      <StaticBody width="80" radius="80" />
+      <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="128,88" rotationlimits="180,360" powerconsumption="1000.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="50" reload="0.25" springstiffnesslowskill="2" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
+        <sound file="Content/Items/Weapons/Coilgun1.ogg" range="10000" type="OnUse" />
+        <sound file="Content/Items/Weapons/Coilgun2.ogg" range="10000" type="OnUse" />
+        <sound file="Content/Items/Weapons/Coilgun3.ogg" range="10000" type="OnUse" />
+        <RailSprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.011" sourcerect="381,0,120,287" origin="0.64, 0.7" />
+        <BarrelSprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.012" sourcerect="256,0,125,333" origin="0.6, 0.8" />
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+        <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+        <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+        <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+        <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+        <RequiredSkill identifier="weapons" level="50" />
+        <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2500" IsOn="true" drawbehindsubs="true">
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+        </LightComponent>
+        <ParticleEmitter particle="muzzleflashcoilgun" particleamount="1" velocitymin="50" velocitymax="100" />
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="1000.0" structuredamage="0" force="0.01" camerashake="5.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+        </StatusEffect>
+      </Turret>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <input name="position_in" displayname="connection.turretaimingin" />
+        <input name="trigger_in" displayname="connection.turrettriggerin" />
+        <input name="toggle_light" displayname="connection.togglelight" />
+      </ConnectionPanel>
+    </Item>
+    <Item name="" identifier="dockingportwrecked" nameidentifier="dockingport" tags="dock,light" linkable="true" indestructible="false" requirecursorinsidetrigger="true" requirebodyinsidetrigger="false" category="Wrecked" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.1">
+      <Sprite texture="Content/Items/Shipwrecks/WreckedItems2.png" sourcerect="721,1,113,209" depth="0.94" origin="0.5,0.5" />
+      <trigger x="0" y="0" width="112" height="30" />
+      <trigger x="0" y="-179" width="112" height="30" />
+      <DockingPort IsHorizontal="true" DistanceTolerance="200,64" DockedDistance="172">
+        <StatusEffect type="OnSecondaryUse" target="This">
+          <sound file="Content/Items/Door/DockingPort2.ogg" type="OnSecondaryUse" range="15000.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="5000.0" camerashake="5" stun="0" force="0.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <sound file="Content/Items/Door/DockingPort1.ogg" type="OnUse" range="15000.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <sound file="Content/Items/Door/DoorBreak2.ogg" range="3000" />
+        </StatusEffect>
+      </DockingPort>
+      <PowerTransfer CanBeOverloaded="false" FireProbability="0.0" />
+      <Wire />
+      <LightComponent range="10.0" lightcolor="255,0,0,0" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+        <Upgrade gameversion="0.9.9000.0" lightcolor="255,0,0,0" />
+        <IsActive targetitemcomponent="DockingPort" docked="false" />
+        <Sprite texture="Content/Items/Door/dockingportlights.png" sourcerect="0,0,113,209" depth="0.9" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="10.0" lightcolor="0,255,0,0" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+        <Upgrade gameversion="0.9.9000.0" lightcolor="0,255,0,0" />
+        <IsActive targetitemcomponent="DockingPort" docked="true" />
+        <Sprite texture="Content/Items/Door/dockingportlights.png" sourcerect="0,0,113,209" depth="0.9" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem identifier="screwdriver" type="Equipped" />
+        <input name="toggle" displayname="connection.togglestate" />
+        <input name="set_state" displayname="connection.setstate" />
+        <output name="power" displayname="connection.power" maxwires="6" maxplayerconnectablewires="5" />
+        <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+        <output name="proximity_sensor" displayname="connection.dockingproximitysensor" fallbackdisplayname="label.readytodock" />
+      </ConnectionPanel>
+    </Item>
+    <Item name="" identifier="dockinghatchwrecked" nameidentifier="dockinghatch" tags="dock" linkable="true" indestructible="false" category="Wrecked" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.1" requirecursorinsidetrigger="true" requirebodyinsidetrigger="false">
+      <Sprite texture="Content/Items/Shipwrecks/WreckedItems2.png" sourcerect="571,379,128,112" depth="0.94" origin="0.5,0.5" />
+      <trigger x="0" y="0" width="30" height="112" />
+      <trigger x="79" y="0" width="30" height="112" />
+      <DockingPort IsHorizontal="false" DistanceTolerance="64,200" DockedDistance="172">
+        <StatusEffect type="OnSecondaryUse" target="This">
+          <sound file="Content/Items/Door/DockingPort2.ogg" type="OnSecondaryUse" range="15000.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="5000.0" camerashake="5" stun="0" force="0.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <sound file="Content/Items/Door/DockingPort1.ogg" type="OnUse" range="15000.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <sound file="Content/Items/Door/DoorBreak2.ogg" range="3000" />
+        </StatusEffect>
+      </DockingPort>
+      <PowerTransfer CanBeOverloaded="false" FireProbability="0.0" />
+      <Wire />
+      <LightComponent range="10.0" lightcolor="255,0,0,0" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+        <Upgrade gameversion="0.9.9000.0" lightcolor="255,0,0,0" />
+        <IsActive targetitemcomponent="DockingPort" docked="false" />
+        <Sprite texture="Content/Items/Door/dockingportlights.png" sourcerect="126,2,128,112" depth="0.9" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="10.0" lightcolor="0,255,0,0" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+        <Upgrade gameversion="0.9.9000.0" lightcolor="0,255,0,0" />
+        <IsActive targetitemcomponent="DockingPort" docked="true" />
+        <Sprite texture="Content/Items/Door/dockingportlights.png" sourcerect="126,2,128,112" depth="0.9" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="toggle" displayname="connection.togglestate" />
+        <input name="set_state" displayname="connection.setstate" />
+        <output name="power" displayname="connection.power" maxwires="6" maxplayerconnectablewires="5" />
+        <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+        <output name="proximity_sensor" displayname="connection.dockingproximitysensor" fallbackdisplayname="label.readytodock" />
+      </ConnectionPanel>
+    </Item>
+    <Item name="" identifier="railgunloaderwrecked" nameidentifier="railgunloader" tags="railgunequipment,railgunammosource" category="Wrecked" linkable="true" allowedlinks="railgun" scale="0.5" noninteractable="True">
+      <SwappableItem canbebought="false" origin="110,353" />
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.8" sourcerect="0,512,298,276" origin="0.5,0.5" />
+      <ItemContainer hideitems="false" drawinventory="true" capacity="5" slotsperrow="6" itempos="53,-140" iteminterval="48,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+        <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="railgunammo" />
+      </ItemContainer>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="20" mindeteriorationdelay="5" maxdeteriorationdelay="15" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairWrench" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="40" />
+        <RequiredItem items="wrench" type="Equipped" />
+        <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="15.0" maxcondition="35.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      </Repairable>
+    </Item>
+    <Item name="" identifier="railgunloadersingleverticalwrecked" nameidentifier="railgunloadersinglevertical" tags="railgunequipment,railgunammosource" category="Wrecked" linkable="true" allowedlinks="railgun" scale="0.5" noninteractable="True">
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.8" sourcerect="0,788,84,236" origin="0.5,0.5" />
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" slotsperrow="1" itempos="43,-130" iteminterval="0,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="railgunammo" />
+      </ItemContainer>
+    </Item>
+    <Item name="" identifier="railgunloadersinglehorizontalwrecked" nameidentifier="railgunloadersinglehorizontal" tags="railgunequipment,railgunammosource" category="Wrecked" linkable="true" allowedlinks="railgun" scale="0.5" noninteractable="True">
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.8" sourcerect="86,790,241,86" origin="0.5,0.5" />
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" slotsperrow="1" itempos="130,-43" iteminterval="0,0" itemrotation="180" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="railgunammo" />
+      </ItemContainer>
+    </Item>
+    <Item name="" identifier="coilgunloaderwrecked" nameidentifier="coilgunloader" tags="coilgunequipment" category="Wrecked" linkable="true" allowedlinks="coilgun" scale="0.5" noninteractable="True">
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.8" sourcerect="363,514,149,368" origin="0.5,0.5" />
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="10" mindeteriorationdelay="60" maxdeteriorationdelay="300" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairWrench" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="40" />
+        <RequiredItem items="wrench" type="Equipped" />
+        <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="15.0" maxcondition="35.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      </Repairable>
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" slotsperrow="6" itempos="74,-281" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="coilgunammo" />
+        <StatusEffect type="OnUse" target="Contained">
+          <RequiredItem items="coilgunammo" type="Contained" />
+          <Use />
+        </StatusEffect>
+      </ItemContainer>
+    </Item>
+    <Item name="" identifier="railgunwrecked" nameidentifier="railgun" description="Rusty old railgun that still somehow operational" Tags="turret" category="Wrecked" interactthroughwalls="true" interactdistance="10" focusonselected="true" offsetonselected="800" linkable="true" allowedlinks="railgunammosource">
+      <Sprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" depth="0.01" sourcerect="512,0,256,256" canflipy="false" />
+      <MinimapIcon name="Command_Weapons_Railgun" texture="Content/UI/CommandUIAtlas.png" sourcerect="640,0,128,128" />
+      <SwappableItem price="4000" replacementonuninstall="turrethardpoint" origin="256,438" swapidentifier="basicturret">
+        <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="0,0,256,389" />
+        <SwapConnectedItem tag="periscope" swapto="periscope" />
+        <SwapConnectedItem tag="turretammosource" swapto="railgunloadersmall" />
+      </SwappableItem>
+      <UpgradePreviewSprite scale="3.5" texture="Content/UI/WeaponUI.png" sourcerect="134,810,114,65" origin="0.5,0.5" />
+      <StaticBody width="80" radius="80" />
+      <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="126, 89" rotationlimits="180,360" powerconsumption="20000.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="100" springstiffnesslowskill="2" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
+        <StatusEffect type="OnUse" target="This">
+          <sound file="Content/Items/Weapons/Railgun1.ogg" range="10000" type="OnUse" />
+          <sound file="Content/Items/Weapons/Railgun2.ogg" range="10000" type="OnUse" />
+          <sound file="Content/Items/Weapons/Railgun3.ogg" range="10000" type="OnUse" />
+          <Explosion range="1000.0" structuredamage="0" force="0.01" camerashake="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+        </StatusEffect>
+        <RailSprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" origin="0.52, 0.59" sourcerect="512,256,164,256" depth="0.011" />
+        <BarrelSprite texture="Content/Items/Shipwrecks/TurretsWrecked.png" origin="0.5, 0.85" sourcerect="768,0,125,336" depth="0.012" />
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+        <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+        <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+        <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+        <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+        <RequiredSkill identifier="weapons" level="50" />
+        <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2048" IsOn="true" drawbehindsubs="true">
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+        </LightComponent>
+        <ParticleEmitter particle="muzzleflashrailgun" particleamount="1" velocitymin="50" velocitymax="100" />
+      </Turret>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <input name="position_in" displayname="connection.turretaimingin" />
+        <input name="trigger_in" displayname="connection.turrettriggerin" />
+        <input name="toggle_light" displayname="connection.togglelight" />
+      </ConnectionPanel>
+    </Item>
+    <Item name="" description="" identifier="periscopewrecked" nameidentifier="periscope" tags="periscope" category="Wrecked" type="Controller" disableitemusagewhenselected="true" scale="0.5" isshootable="true" requireaimtouse="false" requireaimtosecondaryuse="false">
+      <Sprite texture="Content/Items/Shipwrecks/WreckedItems.png" depth="0.1" sourcerect="193,818,134,203" origin="0.5,0.5" />
+      <Controller UserPos="-35.0, -50.0" direction="Right" canbeselected="true" msg="ItemMsgInteractSelect">
+        <limbposition limb="Head" position="-10,-135" />
+        <limbposition limb="Torso" position="-10,-200" />
+        <limbposition limb="LeftHand" position="67,-170" />
+        <limbposition limb="RightHand" position="67,-170" />
+      </Controller>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <output name="position_out" displayname="connection.turretaimingout" fallbackdisplayname="inputtype.aim" />
+        <output name="trigger_out" displayname="connection.turrettriggerout" fallbackdisplayname="inputtype.shoot" />
+      </ConnectionPanel>
+    </Item>
+  </Items>
+</Override>

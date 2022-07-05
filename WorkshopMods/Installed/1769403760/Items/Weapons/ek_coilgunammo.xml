@@ -1,0 +1,1375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="ek_coilgunammo_large" aliases="Extended Coilgun Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" minamount="0" maxamount="2" spawnprobability="0.1" />
+    <!--<Price locationtype="Outpost" buyprice="420" />-->
+    <!--<Price locationtype="Military" buyprice="280" />
+    <Price locationtype="City" buyprice="380" />-->
+    <Price baseprice="225">
+      <Price locationtype="outpost" multiplier="1.3" minavailable="1" />
+      <Price locationtype="city" multiplier="1.2" minavailable="2" />
+      <Price locationtype="research" multiplier="1.3" minavailable="1" />
+      <Price locationtype="military" multiplier="0.9" minavailable="5" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="0,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="592,304,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="0,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="coilgunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="coilgunbolt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammoexplosive_large" aliases="Extended Exploding Ammunition,Extended Explosive Ammunition Box,Extended Explosive Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <!--<Price locationtype="Outpost" buyprice="750" />-->
+    <!--<Price locationtype="Military" buyprice="600" />
+    <Price locationtype="City" buyprice="700" />-->
+    <Price baseprice="650" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="ic4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="ic4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="ic4block" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="ic4block" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="steel" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="112,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="592,384,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="112,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="coilgunboltexplosive" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="coilgunboltexplosive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammopiercing_large" aliases="Extended Piercing Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <!--<Price locationtype="Outpost" buyprice="580" />-->
+    <!--<Price locationtype="Military" buyprice="420" />
+    <Price locationtype="City" buyprice="520" />-->
+    <Price baseprice="500" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="224,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="592,464,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="224,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="coilgunboltpiercing" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="coilgunboltpiercing" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammophysicorium_large" aliases="Extended Physicorium Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <Price baseprice="600" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1.1" sold="false" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="steel" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="512,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="592,544,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="512,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="physicoriumbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="physicoriumbolt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammoboxheavy" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer" minamount="1" maxamount="1" spawnprobability="0.05" />
+    <PreferredContainer primary="ammocontainer" />
+    <!--<Price locationtype="Outpost" buyprice="450" />-->
+    <!--<Price locationtype="Military" buyprice="300" />-->
+    <!--<Price locationtype="City" buyprice="450" />-->
+    <Price baseprice="330" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="6" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="uex" mincondition="0.9" outcondition="0.5" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="aluminium" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="uex" mincondition="0.5" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="704,304,112,80" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
+        <SpawnItem identifiers="ek_coilgunboltheavy" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunboltheavy" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammoheavy_large" aliases="Extended HEFC Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <!--<Price locationtype="Outpost" buyprice="800" />-->
+    <!--<Price locationtype="Military" buyprice="650" />-->
+    <!--<Price locationtype="City" buyprice="800" />-->
+    <Price baseprice="660" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+      <Item identifier="uex" mincondition="0.1" copycondition="true" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="uex" mincondition="0.9" usecondition="false" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="624,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="704,384,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="624,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="ek_coilgunboltheavy" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunboltheavy" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunboltheavy" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" sourcerect="368,784,128,32" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="2">
+      <Attack structuredamage="12.5" itemdamage="15" severlimbsprobability="2" penetration="0.4">
+        <Affliction identifier="lacerations" strength="16" />
+        <Affliction identifier="explosiondamage" strength="8" />
+        <Affliction identifier="bleeding" strength="2" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-55" />
+      <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" delay="0.06" stackable="false" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="ekarmory_hdimpactsmall" particleamount="1" velocitymin="0" velocitymax="0" scalemin="4" scalemax="6" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-200" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="ekarmory_hdimpactmedium" particleamount="1" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2.5" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo1_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo2_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo3_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo4_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo5_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo6_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <Explosion range="325.0" structuredamage="2.5" stun="0.4" force="10.0" severlimbsprobability="0.5" flames="false" smoke="true" sparks="true" underwaterbubble="true">
+          <Affliction identifier="bleeding" strength="4" />
+          <Affliction identifier="lacerations" strength="15" />
+          <Affliction identifier="explosiondamage" strength="20" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <!--  <Item name="Debug Coilgun Ammunition Box" identifier="ek_coilgunammo_debug" scale="0.5" tags="coilgunequipment,coilgunammo" preferredcontainers="coilgunammocontainer" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="10">
+      <Item identifier="steel" copycondition="true"/>
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="344,197,117,89" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect"/>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+
+      <StatusEffect type="Always" target="This" condition="-0.5" disabledeltatime="true" comparison="Not">
+        <RequiredItem items="coilgunbolt" type="Contained" />
+        <SpawnItem identifiers="coilgunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+
+      <Containable items="coilgunbolt" />
+    </ItemContainer>
+  </Item>-->
+  <Item name="" identifier="ek_coilgunammohybrid" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer" minamount="1" maxamount="2" spawnprobability="0.1" />
+    <PreferredContainer primary="ammocontainer" />
+    <!--<Price locationtype="Outpost" buyprice="300" />
+    <Price locationtype="Military" buyprice="250" />
+    <Price locationtype="City" buyprice="300" />-->
+    <Price baseprice="275" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" minavailable="1" />
+      <Price locationtype="city" multiplier="1.2" minavailable="2" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="6" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.9" />
+      <Item identifier="titanium" mincondition="0.9" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titanium" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,512,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,512,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,512,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,512,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,512,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,512,112,88" maxcondition="0" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,64,112,88" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybrid" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybrid" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybrid" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybrid" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybrid_large" aliases="Extended Hybrid Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <!--<Price locationtype="Outpost" buyprice="420" />-->
+    <!--<Price locationtype="Military" buyprice="280" />
+    <Price locationtype="City" buyprice="380" />-->
+    <Price baseprice="325" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.95" />
+      <Item identifier="steel" mincondition="0.50" />
+      <Item identifier="steel" mincondition="0.96" />
+      <Item identifier="steel" mincondition="0.50" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,16,112,208" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,16,112,208" maxcondition="90" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,16,112,208" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,16,112,208" maxcondition="70" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,16,112,208" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,272,112,208" maxcondition="50" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,272,112,208" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,272,112,208" maxcondition="30" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,272,112,208" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,272,112,208" maxcondition="10" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,272,112,208" maxcondition="0" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,64,112,88" origin="0.5,0.5" />
+    <!--<ContainedSprite allowedcontainertags="coilgunequipment" texture="Mods/EK Armory/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="624,624,112,240" origin="0.5,0.5" />-->
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-30" handle1="-15,43" handle2="-15,43" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybrid" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybrid" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybrid" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybrid" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybrid" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="0,40,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="2">
+      <Attack structuredamage="14" itemdamage="20" severlimbsprobability="2" penetration="0.6">
+        <Affliction identifier="gunshotwound" strength="15" />
+        <Affliction identifier="lacerations" strength="20" />
+        <Affliction identifier="bleeding" strength="4" />
+        <Affliction identifier="stun" strength="0.4" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="2" scalemax="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-34" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact1.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact2.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact3.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact4.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <ParticleEmitter particle="ekarmory_hdimpactsmall" particleamount="1" velocitymin="0" velocitymax="0" scalemin="4" scalemax="6" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-200" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" delay="4">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridflak" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.1" />
+    <PreferredContainer primary="ammocontainer" />
+    <!--<Price locationtype="Outpost" buyprice="325" />
+    <Price locationtype="Military" buyprice="275" />
+    <Price locationtype="City" buyprice="325" />-->
+    <Price baseprice="325" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="2" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	42 + 65 (150)
+	40
+	11
+	80 ?
+	-->
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+      <!--<Item identifier="fpgacircuit" outcondition="0.5" mincondition="0.9"/>-->
+      <Item identifier="copper" outcondition="0.5" mincondition="0.9" />
+      <Item identifier="c4block" outcondition="0.5" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <!--<RequiredItem identifier="fpgacircuit" mincondition="0.5" usecondition="true"/>-->
+      <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="784,512,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="896,512,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1008,512,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1120,512,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,512,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,512,112,88" maxcondition="0" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="672,64,112,88" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridflak" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridflak" />
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridflak_large" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.035" />
+    <!--<Price locationtype="Outpost" buyprice="420" />-->
+    <!--<Price locationtype="Military" buyprice="325" />-->
+    <!--<Price locationtype="City" buyprice="400" />-->
+    <Price baseprice="400" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="2" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	42 + 65 (150)
+	42 + 65 (150)
+	80
+	22
+	160 ?
+	-->
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.9" />
+      <!--<Item identifier="fpgacircuit" mincondition="0.9"/>-->
+      <Item identifier="copper" mincondition="0.9" />
+      <Item identifier="c4block" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <!--<RequiredItem identifier="fpgacircuit" />-->
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="c4block" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="784,16,112,208" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="896,16,112,208" maxcondition="90" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1008,16,112,208" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1120,16,112,208" maxcondition="70" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,16,112,208" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="784,272,112,208" maxcondition="50" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="896,272,112,208" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1008,272,112,208" maxcondition="30" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1120,272,112,208" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,272,112,208" maxcondition="10" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,272,112,208" maxcondition="0" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="672,64,112,88" origin="0.5,0.5" />
+    <!--<ContainedSprite allowedcontainertags="coilgunequipment" texture="Mods/EK Armory/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="624,624,112,240" origin="0.5,0.5" />-->
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-30" handle1="-15,43" handle2="-15,43" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridflak" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridflak" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybridflak" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="672,32,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" impulsespread="0.3" maxtargetstohit="2" spread="20">
+      <Attack structuredamage="15" itemdamage="10" severlimbsprobability="0.5">
+        <Affliction identifier="gunshotwound" strength="15" />
+        <Affliction identifier="lacerations" strength="20" />
+        <Affliction identifier="bleeding" strength="7.5" />
+        <Affliction identifier="stun" strength="0.6" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="2" scalemax="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact1.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact2.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact3.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact4.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <ParticleEmitter particle="ekarmory_hdimpactsmall" particleamount="1" velocitymin="0" velocitymax="0" scalemin="4" scalemax="6" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-200" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true" delay="0.4">
+        <ParticleEmitter particle="ek_underwaterexplosionfix" particleamount="1" scalemin="1.7" scalemax="2.2" />
+        <ParticleEmitter particle="ekflakburstsmall" particleamount="1" scalemin="4" scalemax="4.5" startdelaymin="0.3" startdelaymax="0.35" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak1.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak2.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak3.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak4.ogg" selectionmode="Random" range="8000" />
+        <Explosion range="850.0" structuredamage="5" itemdamage="60" stun="2" force="10.0" severlimbsprobability="0.1" underwaterbubble="false" onlyoutside="true">
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="explosiondamage" strength="20" />
+          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="bleeding" strength="15" />
+        </Explosion>
+        <!-- Short range fragmentation if shell penetrates hull -->
+        <Explosion range="225.0" structuredamage="5" itemdamage="60" stun="2" force="10.0" severlimbsprobability="0.1" underwaterbubble="false" flames="false" onlyinside="true">
+          <Affliction identifier="burn" strength="12.5" />
+          <Affliction identifier="explosiondamage" strength="10" />
+          <Affliction identifier="lacerations" strength="15" />
+          <Affliction identifier="bleeding" strength="7.5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.05">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridflak_smartfuse" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <!--<Price locationtype="Outpost" buyprice="325" />
+    <Price locationtype="Military" buyprice="275" />
+    <Price locationtype="City" buyprice="325" />-->
+    <Price baseprice="375" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	42 + 65 (150)
+	40
+	11
+	80 ?
+	-->
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+      <Item identifier="fpgacircuit" outcondition="0.5" mincondition="0.9" />
+      <Item identifier="copper" outcondition="0.5" mincondition="0.9" />
+      <Item identifier="c4block" outcondition="0.5" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fpgacircuit" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1456,512,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1568,512,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1680,512,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1792,512,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1904,512,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,512,112,88" maxcondition="0" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1344,64,112,88" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridflak_smartfuse" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak_smartfuse" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridflak_smartfuse" />
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak_smartfuse" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridflak_smartfuse_large" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <!--<Price locationtype="Outpost" buyprice="420" />-->
+    <!--<Price locationtype="Military" buyprice="325" />-->
+    <!--<Price locationtype="City" buyprice="400" />-->
+    <Price baseprice="475" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="2" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	42 + 65 (150)
+	42 + 65 (150)
+	80
+	22
+	160 ?
+	-->
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.9" />
+      <Item identifier="fpgacircuit" mincondition="0.9" />
+      <Item identifier="copper" mincondition="0.9" />
+      <Item identifier="c4block" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="c4block" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1456,16,112,208" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1568,16,112,208" maxcondition="90" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1680,16,112,208" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1792,16,112,208" maxcondition="70" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1904,16,112,208" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1456,272,112,208" maxcondition="50" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1568,272,112,208" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1680,272,112,208" maxcondition="30" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1904,272,112,208" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,272,112,208" maxcondition="10" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,272,112,208" maxcondition="0" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1344,64,112,88" origin="0.5,0.5" />
+    <!--<ContainedSprite allowedcontainertags="coilgunequipment" texture="Mods/EK Armory/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="624,624,112,240" origin="0.5,0.5" />-->
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-30" handle1="-15,43" handle2="-15,43" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridflak_smartfuse" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak_smartfuse" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflak_smartfuse" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridflak_smartfuse" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybridflak_smartfuse" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="1344,32,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" impulsespread="0.1" maxtargetstohit="2" spread="10">
+      <Attack structuredamage="15" itemdamage="10" severlimbsprobability="0.5">
+        <Affliction identifier="gunshotwound" strength="15" />
+        <Affliction identifier="lacerations" strength="20" />
+        <Affliction identifier="bleeding" strength="7.5" />
+        <Affliction identifier="stun" strength="0.6" />
+      </Attack>
+      <!-- Arm proximity fuse -->
+      <StatusEffect type="OnActive" target="This" condition="-15" disabledeltatime="true" stackable="false" delay="0.2">
+        <Conditional condition="gt 90" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="2" scalemax="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact1.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact2.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact3.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_impact4.ogg" selectionmode="Random" range="1500" volume="1.0" />
+        <ParticleEmitter particle="ekarmory_hdimpactsmall" particleamount="1" velocitymin="0" velocitymax="0" scalemin="4" scalemax="6" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-200" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" disabledeltatime="true" stackable="false">
+        <ParticleEmitter particle="ek_underwaterexplosionfix" particleamount="1" scalemin="1.7" scalemax="2.2" />
+        <ParticleEmitter particle="ekflakburstsmall" particleamount="1" scalemin="4" scalemax="4.5" startdelaymin="0.3" startdelaymax="0.35" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak1.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak2.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak3.ogg" selectionmode="Random" range="8000" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_flak4.ogg" selectionmode="Random" range="8000" />
+        <Explosion range="850.0" structuredamage="5" itemdamage="60" stun="2" force="10.0" severlimbsprobability="0.1" underwaterbubble="false" onlyoutside="true">
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="explosiondamage" strength="20" />
+          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="bleeding" strength="15" />
+        </Explosion>
+        <!-- Short range fragmentation if shell penetrates hull -->
+        <Explosion range="225.0" structuredamage="5" itemdamage="60" stun="2" force="10.0" severlimbsprobability="0.1" underwaterbubble="false" flames="false" onlyinside="true">
+          <Affliction identifier="burn" strength="12.5" />
+          <Affliction identifier="explosiondamage" strength="10" />
+          <Affliction identifier="lacerations" strength="15" />
+          <Affliction identifier="bleeding" strength="7.5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.05">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <MotionSensor range="750" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+      <!-- Proximity Fuse Detonation -->
+      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" delay="0.15" stackable="false" checkconditionalalways="true" comparison="And">
+        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+        <Conditional Condition="lt 90" />
+      </StatusEffect>
+    </MotionSensor>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridap" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.035" />
+    <!--<Price locationtype="Outpost" buyprice="375" />
+    <Price locationtype="Military" buyprice="300" />
+    <Price locationtype="City" buyprice="375" />-->
+    <!--
+	20
+	
+	95/2 = 47.5
+	42
+	-->
+    <Price baseprice="375" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" minavailable="1" />
+      <Price locationtype="city" multiplier="1.2" minavailable="2" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.9" />
+      <Item identifier="titanium" mincondition="0.9" />
+      <Item identifier="uex" mincondition="0.9" outcondition="0.5" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titanium" />
+      <RequiredItem identifier="uex" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,1152,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,1152,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,1152,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,1152,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,1152,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,512,112,88" maxcondition="0" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,704,112,88" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridap" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridap" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridap" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridap" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridap_large" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.035" />
+    <!--<Price locationtype="Outpost" buyprice="500" />-->
+    <!--<Price locationtype="Military" buyprice="450" />-->
+    <!--<Price locationtype="City" buyprice="500" />-->
+    <Price baseprice="540" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.95" />
+      <Item identifier="steel" mincondition="0.50" />
+      <Item identifier="titanium" mincondition="0.96" />
+      <Item identifier="titanium" mincondition="0.50" />
+      <Item identifier="uex" mincondition="0.90" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titanium" />
+      <RequiredItem identifier="titanium" />
+      <RequiredItem identifier="uex" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,656,112,208" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,656,112,208" maxcondition="90" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,656,112,208" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,656,112,208" maxcondition="70" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,656,112,208" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="112,912,112,208" maxcondition="50" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="224,912,112,208" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="336,912,112,208" maxcondition="30" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="448,912,112,208" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="560,912,112,208" maxcondition="10" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,272,112,208" maxcondition="0" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,704,112,88" origin="0.5,0.5" />
+    <!--<ContainedSprite allowedcontainertags="coilgunequipment" texture="Mods/EK Armory/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="624,624,112,240" origin="0.5,0.5" />-->
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-30" handle1="-15,43" handle2="-15,43" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridap" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridap" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridap" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridap" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybridap" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="0,680,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="3">
+      <Attack structuredamage="40" itemdamage="35" severlimbsprobability="0.5" penetration="0.75">
+        <Affliction identifier="gunshotwound" strength="15" />
+        <Affliction identifier="lacerations" strength="18" />
+        <Affliction identifier="internaldamage" strength="12" />
+        <Affliction identifier="bleeding" strength="3" />
+        <Affliction identifier="stun" strength="0.6" />
+      </Attack>
+      <!-- Remove moloch -->
+      <!-- gunshotwound=25 lacerations=25 internaldamage=20 bleeding=20
+	  <StatusEffect type="OnUse" target="Limb" disabledeltatime="true">
+		<Conditional ishuman="false" />
+        <Affliction identifier="ek_piercing_coilgun_effect" amount="5000" />
+      </StatusEffect>
+	  -->
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="2" scalemax="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-21" />
+      <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" delay="0.06" stackable="false" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-500" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="500" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <Conditional condition="gt 75" />
+        <ParticleEmitter particle="ekarmory_hdimpactmedium" particleamount="1" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2.5" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe1.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe2.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe3.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe4.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe5.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <sound file="%ModDir%/Items/Weapons/ek_hybridammo_aphe6.ogg" selectionmode="Random" range="6000" volume="0.85" />
+        <Explosion range="150.0" structuredamage="25" itemdamage="25" force="10.0" severlimbsprobability="0.35" underwaterbubble="false">
+          <Affliction identifier="bleeding" strength="2" />
+          <Affliction identifier="lacerations" strength="20" />
+          <Affliction identifier="explosiondamage" strength="15" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" delay="4">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammo_laser" aliases="Coilgun Laser Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.02" />
+    <!--<Price locationtype="Research" buyprice="800" />
+    <Price locationtype="Military" buyprice="1000" />-->
+    <Price baseprice="880" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="0.9" minavailable="1" />
+      <Price locationtype="military" multiplier="1.3" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ek_laserparts" />
+      <Item identifier="steel" />
+      <Item identifier="aluminium" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="electrical" level="65" />
+      <RequiredItem identifier="ek_laserparts" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,896,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,816,112,88" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,1072,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+      <!--<StatusEffect type="OnContained" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" />
+	  <StatusEffect type="OnNotContained" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />-->
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false">
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="ek_coilgunbolt_laser" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_laser" />
+    </ItemContainer>
+    <!--<LightComponent LightColor="255,255,255,2" range="20" blinkfrequency="1" powerconsumption="0" IsOn="false" canbeselected="false" AllowInGameEditing="false">
+      <sprite texture="Mods/EK Armory/Lights/laser_coilgun_emitter_light.png" sourcerect="0,0,112,176" alpha="1" Flicker="0.5" Range="1" castshadows="false" />
+    </LightComponent>-->
+  </Item>
+  <!--
+  <Item name="" identifier="ek_coilgunbolt_laser" category="Misc" spritecolor="150,140,120,255" inventoryiconcolor="150,140,120,255" scale="0.5" hideinmenus="true">
+    <InventoryIcon texture="Mods/EK Armory/Items/InventoryIcons.png" sourcerect="384,384,64,64" />
+    <Sprite texture="weapons_ek.png" sourcerect="0,0,1,1" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="140.0" spread="0" >
+      <Attack structuredamage="2" itemdamage="2" stun="0.06" severlimbsprobability="0.05" targetforce="5">
+        <Affliction identifier="burn" strength="4" />
+        <Affliction identifier="explosiondamage" strength="3" />
+        <Affliction identifier="bleeding" strength="1" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" disabledeltatime="true" Condition="-5.0" >
+        <Conditional Condition="gt 96" />
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" disabledeltatime="true" delay="0.3" stackable="false">
+        <Conditional Condition="gt 50" />
+        <Use />
+      </StatusEffect>
+	  
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.2">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <ParticleEmitter particle="eklaserspark" copyentityangle="true" particleamount="6" anglemin="-360" anglemax="360" velocitymin="-250" velocitymax="-750" />
+        <ParticleEmitter particle="eklaserrifleflare" particleamount="1" startsizemin="2.0,2.0" startsizemax="2.5,2.5" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+	  
+    </Projectile>
+  </Item>
+  -->
+  <Item name="" identifier="ek_coilgunbolt_laser" category="Misc" spritecolor="150,140,120,255" inventoryiconcolor="150,140,120,255" scale="0.5" hideinmenus="true">
+    <InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="384,384,64,64" />
+    <Sprite texture="weapons_ek.png" sourcerect="0,0,1,1" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="eklaserrifletracer" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,255,100" scalemultiplier="1,1.5" />
+      <Attack structuredamage="2" itemdamage="2" stun="0.06" severlimbsprobability="0.05" targetforce="5">
+        <Affliction identifier="burn" strength="3" />
+        <Affliction identifier="explosiondamage" strength="2.3" />
+        <Affliction identifier="bleeding" strength="1" />
+      </Attack>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.2">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <ParticleEmitter particle="eklaserspark" copyentityangle="true" particleamount="6" anglemin="-360" anglemax="360" velocitymin="-250" velocitymax="-750" />
+        <ParticleEmitter particle="eklaserrifleflare" particleamount="1" startsizemin="2.0,2.0" startsizemax="2.5,2.5" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridtoxin" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.02" />
+    <Price baseprice="480" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="0.9" minavailable="1" />
+      <Price locationtype="military" multiplier="1.1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.1" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.9" />
+      <Item identifier="aluminium" />
+      <Item identifier="sufforin" mincondition="0.9" />
+      <Item identifier="cyanide" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredSkill identifier="medical" level="25" />
+      <RequiredItem identifier="steel" mincondition="0.9" usecondition="false" />
+      <!-- 20 -->
+      <RequiredItem identifier="aluminium" />
+      <!-- 65 -->
+      <RequiredItem identifier="sufforin" mincondition="0.9" usecondition="false" />
+      <!-- 200 -->
+      <RequiredItem identifier="cyanide" mincondition="0.9" usecondition="false" />
+      <!-- 200 -->
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="784,704,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="896,704,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1008,704,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1120,704,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,704,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="0,512,112,88" maxcondition="0" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="672,704,112,88" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridtoxin" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="0.6">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridtoxin" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridtoxin" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridtoxin" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybridtoxin" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="672,680,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="2">
+      <Attack structuredamage="14" itemdamage="10" severlimbsprobability="0.5" penetration="0.5">
+        <Affliction identifier="gunshotwound" strength="10" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="bleeding" strength="5" />
+        <Affliction identifier="stun" strength="0.4" />
+        <Affliction identifier="cyanidepoisoning" amount="4" />
+        <Affliction identifier="sufforinpoisoning" strength="4" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="2" scalemax="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-54" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="4" velocitymin="-10" velocitymax="-500" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="3" velocitymin="10" velocitymax="500" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-20" anglemax="20" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" delay="4">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohybridflare" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <Price baseprice="85">
+      <Price locationtype="outpost" multiplier="1.5" sold="false" />
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" />
+      <Price locationtype="military" multiplier="0.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <Deconstruct time="15">
+      <Item identifier="steel" />
+      <Item identifier="flashpowder" />
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="45" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="flashpowder" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="carbon" mincondition="0.9" usecondition="false" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="784,832,112,88" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="896,832,112,88" maxcondition="80" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1008,832,112,88" maxcondition="60" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1120,832,112,88" maxcondition="40" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="1232,832,112,88" maxcondition="20" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="672,832,112,88" maxcondition="0" />
+    <!--<ContainedSprite allowedcontainertags="coilgunammocontainer" texture="Mods/EK Armory/Items/Weapons/hybrid_coilgunammo.png" depth="0.54" sourcerect="672,704,112,88" origin="0.5,0.5" />-->
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true" stackable="false">
+        <RequiredItem items="ek_coilgunbolt_hybridflare" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true" stackable="false" delay="1.1">
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflare" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" disabledeltatime="true">
+        <Conditional condition="gt 99" />
+        <SpawnItem identifiers="ek_coilgunbolt_hybridflare" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolt_hybridflare" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolt_hybridflare" tags="decoy,light,provocative" category="Misc" scale="0.5" sonarsize="5" hideinmenus="true">
+    <Sprite texture="%ModDir%/Items/Weapons/hybrid_coilgunammo.png" sourcerect="672,808,88,24" depth="0.55" />
+    <Body width="160" height="10" density="15" />
+    <AiTarget sightrange="6000.0" maxsoundrange="8000" minsoundrange="0" fadeouttime="15" sonardisruption="0.4" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="2">
+      <Attack structuredamage="15" itemdamage="15" severlimbsprobability="0.5">
+        <Affliction identifier="gunshotwound" strength="10" />
+        <Affliction identifier="lacerations" strength="15" />
+        <Affliction identifier="burn" strength="10" />
+        <Affliction identifier="bleeding" strength="7.5" />
+        <Affliction identifier="stun" strength="0.6" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" condition="-50">
+        <ParticleEmitter particle="flare" particleamount="1" scalemin="2" scalemax="3.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-50" />
+      <StatusEffect type="OnBroken" target="This" disabledeltatime="true" stackable="false">
+        <Explosion range="500.0" structuredamage="10" itemdamage="150" stun="2" force="10.0" severlimbsprobability="0.1" underwaterbubble="false">
+          <Affliction identifier="burn" strength="35" />
+        </Explosion>
+        <sound file="%ModDir%/Items/Weapons/ek_flareshell_burst.ogg" range="6500" />
+        <SpawnItem identifier="ek_railgun_flare_effect" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohighvelocity" scale="0.5" tags="coilgunequipment,coilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" minamount="0" maxamount="2" spawnprobability="0.1" />
+    <!--<Price locationtype="Outpost" buyprice="450" />-->
+    <!--<Price locationtype="Military" buyprice="300" />-->
+    <!--<Price locationtype="City" buyprice="450" />-->
+    <Price baseprice="120" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="6" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="copper" mincondition="0.9" outcondition="0.5" />
+      <Item identifier="aluminium" mincondition="0.9" outcondition="0.5" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="aluminium" mincondition="1" usecondition="true" />
+      <RequiredItem identifier="aluminium" mincondition="0.5" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="704,464,112,80" origin="0.5,0.5" />
+    <Body width="115" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true" />
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
+        <SpawnItem identifiers="ek_coilgunbolthighvelocity" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolthighvelocity" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunammohighvelocity_large" aliases="Extended High-Velocity Ammunition" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <!--<Price locationtype="Outpost" buyprice="800" />-->
+    <!--<Price locationtype="Military" buyprice="650" />-->
+    <!--<Price locationtype="City" buyprice="800" />-->
+    <Price baseprice="260" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="copper" mincondition="0.9" />
+      <Item identifier="aluminium" mincondition="0.9" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="736,624,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="704,544,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Containers/containers_ek.png" depth="0.54" sourcerect="736,624,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="ek_coilgunbolthighvelocity" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_coilgunbolthighvelocity" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_coilgunbolthighvelocity" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,425,113,9" depth="0.55" />
+    <Body width="220" height="20" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="120.0" maxtargetstohit="2">
+      <Attack structuredamage="12.5" itemdamage="12.5" severlimbsprobability="0.5" penetration="0.6">
+        <Affliction identifier="lacerations" strength="18" />
+        <Affliction identifier="bleeding" strength="1" />
+      </Attack>
+      <!-- velocity jumping fix -->
+      <StatusEffect type="OnActive" target="This" disabledeltatime="true" stackable="false" condition="-1">
+        <Conditional condition="eq 100" />
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" disabledeltatime="true" delay="0.3" stackable="false">
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3.5">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-55" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.5" scalemax="0.75" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.5" scalemax="0.75" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+</Items>

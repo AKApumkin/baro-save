@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Duffel-Bag" identifier="Rucksack" category="Equipment" tags="mobilecontainer,smallitem,crate" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" fireproof="true" waterproof="true" description="" impactsoundtag="impact_soft" scale="0.33">
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="organicfiber" />
+    </Fabricate>
+    <Price baseprice="75" soldeverywhere="true">
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="8" />
+      <Price locationtype="military" multiplier="1.25" minavailable="8" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Item/Rucksack.png" sourcerect="5,220,228,146" origin="0.48511794,0.54991156" depth="0.56" />
+    <Sprite texture="%ModDir%/Item/Rucksack.png" sourcerect="5,220,228,146" origin="0.48511794,0.54991156" depth="0.56" />
+    <Body width="120" radius="45" density="20" friction="1.0" restitution="0.01" />
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="True" msg="ItemMsgPickUpSelect" />
+    <!--<MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="0,-80" handle1="0,50" handle2="0,50" holdangle="90" reload="1" range="50" combatpriority="5" msg="ItemMsgPickUpSelect">
+      <Attack stun="8" targetimpulse="50">
+        <Affliction identifier="stun" strength="8" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>-->
+    <!--<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.9" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Duffel Bag" texture="Mods/Rucksack 2.0/Item/Rucksack.png" limb="Torso" hidelimb="false" inherittexturescale="true" origin="0.5,0.56" sourcerect="6,240,219,109" depth="0.56" rotatedrawable="90" />
+    </Wearable>-->
+    <ItemContainer capacity="36" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="smallitem,mediumitem,depthchargeammo,coilgunammo,railgunammo" />
+    </ItemContainer>
+  </Item>
+  <Item name="Backpack" identifier="Backpack" category="Equipment" tags="mobilecontainer,smallitem,tool,clothing" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" fireproof="true" waterproof="true" description="" impactsoundtag="impact_soft" scale="0.3">
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="organicfiber" />
+    </Fabricate>
+    <Price baseprice="125" soldeverywhere="true">
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="8" />
+      <Price locationtype="military" multiplier="1.25" minavailable="8" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Item/Rucksack.png" sourcerect="23,376,222,228" origin="0.481989,0.4967918" depth="0.56" />
+    <Sprite texture="%ModDir%/Item/Rucksack.png" sourcerect="23,376,222,228" depth="0.56" origin="0.48949417,0.6261876" />
+    <Body width="120" radius="45" density="20" friction="1.0" restitution="0.01" />
+    <!--<Holdable slots="RightHand,LeftHand,Any" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="True" msg="ItemMsgPickUpSelect" />-->
+    <!--<MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="0,-80" handle1="0,50" handle2="0,50" holdangle="90" reload="1" range="50" combatpriority="5" msg="ItemMsgPickUpSelect">
+      <Attack stun="8" targetimpulse="50">
+        <Affliction identifier="stun" strength="8" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>-->
+    <Wearable slots="Any,Bag" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.9" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="BackpackWearable" texture="%ModDir%/Item/RucksackWearable.png" limb="Torso" hidelimb="false" inherittexturescale="true" inherittexturedepth="true" origin="0.7121546,0.44929218" sourcerect="77,57,129,134" depth="0.56" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+    </Wearable>
+    <ItemContainer capacity="36" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" />
+    </ItemContainer>
+  </Item>
+  <Item name="Waistbelt" identifier="Waistbelt" category="Equipment" tags="mobilecontainer,smallitem,tool,clothing" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" fireproof="true" waterproof="true" description="" impactsoundtag="impact_soft" scale="0.250">
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="organicfiber" />
+    </Fabricate>
+    <Price baseprice="50" soldeverywhere="true">
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="8" />
+      <Price locationtype="military" multiplier="1.25" minavailable="8" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Item/Rucksack.png" sourcerect="5,53,227,144" depth="0.56" origin="0.50086355,0.5007147" />
+    <Sprite texture="%ModDir%/Item/Rucksack.png" sourcerect="5,53,227,144" depth="0.56" origin="0.50086355,0.5007147" />
+    <Body width="120" radius="45" density="20" friction="1.0" restitution="0.01" />
+    <!--<Holdable slots="RightHand,LeftHand,Any" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="True" msg="ItemMsgPickUpSelect" />-->
+    <Wearable slots="Any,Bag" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="WaistBeltWearable" texture="%ModDir%/Item/WaistBeltWearable.png" limb="Torso" hidelimb="false" inherittexturescale="true" inherittexturedepth="true" origin="0.45,-0.04" sourcerect="69,41,118,128" depth="0.56" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+    </Wearable>
+    <ItemContainer capacity="16" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" />
+    </ItemContainer>
+  </Item>
+</Items>

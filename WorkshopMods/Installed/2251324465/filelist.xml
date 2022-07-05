@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Duffle Bag 2.0, Backpack &amp; WaistBelt" steamworkshopid="2251324465" corepackage="false" modversion="1.0.0" gameversion="0.13.0.11" installtime="1619307069" altnames="Rucksack 2.0">
+  <Item file="%ModDir%/Item/Rucksack.xml" />
+  <None file="%ModDir%/Item/Rucksack.png" />
+  <None file="%ModDir%/Item/RucksackWearable.png" />
+  <None file="%ModDir%/Item/WaistBeltWearable.png" />
+</contentpackage>

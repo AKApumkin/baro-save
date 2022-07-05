@@ -1,0 +1,29 @@
+This is an updated and a bit changed mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2201932912]Craftable Ammo[/url].
+
+- Updated to Barotrauma v0.13.3.11.
+- Changed the recipe costs again.
+
+The recipes take long to craft on purpose, so the players won't be incentivised to only craft.
+
+Recipes:
+Revolver Round (4 seconds / Weapons 40):
+	0.10	Copper
+	0.20	Lead
+	0.20	Flashpowder
+
+Shotgun Shell (4 seconds / Weapons 40):
+	0.20	Steel
+	0.20	Lead
+	0.10	Plastic
+	0.20	Flashpowder
+
+SMG Magazine (12 seconds / Weapons 40):
+	0.25	Copper
+	0.25	Steel
+	1.00	Lead
+	0.50	Plastic
+	0.50	Flashpowder
+
+Deconstructing SMG Magazine:
+	0.50	Plastic
+up to	1.00	Lead (depending on condition)

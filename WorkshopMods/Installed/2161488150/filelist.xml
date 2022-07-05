@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Visual Variety Pack" steamworkshopid="2161488150" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1649020621" altnames="VisualVarietyPack">
+  <Particles file="%ModDir%/Items/Weapons/Effects/WeaponParticlePrefabs.xml" />
+  <Structure file="%ModDir%/Content/Map/customwalls01.xml" />
+  <Structure file="%ModDir%/Items/Structures/decorative.xml" />
+  <Item file="%ModDir%/Items/Command/command_variant.xml" />
+  <Item file="%ModDir%/Items/ModObject/reactor_variant_01.xml" />
+  <Item file="%ModDir%/Items/Containers/containers_01.xml" />
+  <Item file="%ModDir%/Items/Electricity/poweritems.xml" />
+  <Item file="%ModDir%/Items/Misc/misc.xml" />
+  <Item file="%ModDir%/Items/Weapons/weaponsystems.xml" />
+  <Item file="%ModDir%/Items/Medbay/medbay_props.xml" />
+  <None file="%ModDir%/Preview.png" />
+  <None file="%ModDir%/Content/Map/bridge_walls.png" />
+  <None file="%ModDir%/Content/Map/bridge_walls_overlays.png" />
+  <None file="%ModDir%/Content/Map/cargo_frames.png" />
+  <None file="%ModDir%/Content/Map/medbay_walls.png" />
+  <None file="%ModDir%/Content/Map/electronics_walls.png" />
+  <None file="%ModDir%/Content/Map/reactor_walls.png" />
+  <None file="%ModDir%/Items/Command/command_consoles.png" />
+  <None file="%ModDir%/Items/Command/command_consoles_lights.png" />
+  <None file="%ModDir%/Items/Containers/containers_01.png" />
+  <None file="%ModDir%/Items/Electricity/electrical.png" />
+  <None file="%ModDir%/Items/Electricity/electrical_lights.png" />
+  <None file="%ModDir%/Items/Medbay/medbay props.png" />
+  <None file="%ModDir%/Items/Medbay/medbay props_lights.png" />
+  <None file="%ModDir%/Items/Misc/miscitems_lights.png" />
+  <None file="%ModDir%/Items/Misc/miscitems.png" />
+  <None file="%ModDir%/Items/ModObject/graphLine.png" />
+  <None file="%ModDir%/Items/ModObject/Meter.png" />
+  <None file="%ModDir%/Items/ModObject/Reactor.ogg" />
+  <None file="%ModDir%/Items/ModObject/ReactorOverheatAlarm.ogg" />
+  <None file="%ModDir%/Items/ModObject/reactor_variant_01.png" />
+  <None file="%ModDir%/Items/ModObject/reactor_leak_lights.png" />
+  <None file="%ModDir%/Items/ModObject/Sector.png" />
+  <None file="%ModDir%/Items/Structures/periscopes.png" />
+  <None file="%ModDir%/Items/Weapons/turrets_a.png" />
+  <None file="%ModDir%/Items/Weapons/weaponsystems_bckp.xml" />
+  <None file="%ModDir%/Items/Weapons/Effects/muzzle flashes.png" />
+  <None file="%ModDir%/Items/Weapons/Effects/turreted_coilgun_lightcone.png" />
+  <None file="%ModDir%/Content/Map/bulkhead_walls.png" />
+</contentpackage>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Fiber Plant -->
+  <!-- fiber plant seed -->
+  <Item name="" identifier="fiberplantseed" category="Material" Tags="smallitem,plantseed" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" maxstacksize="8" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5" outcondition="0.1">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="fiberplant" />
+    </Fabricate>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" target="This" condition="-0.5" />
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional condition="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <InventoryIcon texture="%ModDir%/Planting.png" sourcerect="1,1,48,48" />
+    <Sprite texture="%ModDir%/Planting.png" depth="0.2" sourcerect="1,1,48,48" origin="0.5,0.45" />
+    <Body width="48" height="48" density="5" />
+  </Item>
+  <!-- Elastin plant cutting -->
+  <Item name="" identifier="elastinplantseed" category="Material" Tags="smallitem,plantseed" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" maxstacksize="8" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5" outcondition="0.1">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="elastinplant" />
+    </Fabricate>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" target="This" condition="-0.5" />
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional condition="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <InventoryIcon texture="%ModDir%/Planting.png" sourcerect="1,50,48,48" />
+    <Sprite texture="%ModDir%/Planting.png" depth="0.2" sourcerect="1,50,48,48" origin="0.5,0.45" />
+    <Body width="48" height="48" density="5" />
+  </Item>
+  <!-- Slime culture -->
+  <Item name="" identifier="slimebacteriaseed" category="Material" Tags="smallitem,plantseed" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" maxstacksize="8" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5" outcondition="0.1">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="slimebacteria" />
+    </Fabricate>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" target="This" condition="-0.5" />
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional condition="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <InventoryIcon texture="%ModDir%/Planting.png" sourcerect="1,95,48,48" />
+    <Sprite texture="%ModDir%/Planting.png" depth="0.2" sourcerect="1,95,48,48" origin="0.5,0.45" />
+    <Body width="48" height="48" density="5" />
+  </Item>
+  <!-- Yeast plant sample -->
+  <Item name="" identifier="yeastshroomseed" category="Material" Tags="smallitem,plantseed" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" maxstacksize="8" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5" outcondition="0.1">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="yeastshroom" />
+    </Fabricate>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" target="This" condition="-0.5" />
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional condition="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <InventoryIcon texture="%ModDir%/Planting.png" sourcerect="1,142,48,48" />
+    <Sprite texture="%ModDir%/Planting.png" depth="0.2" sourcerect="1,142,48,48" origin="0.5,0.45" />
+    <Body width="48" height="48" density="5" />
+  </Item>
+  <!-- Poppy plant cutting -->
+  <Item name="" identifier="aquaticpoppyseed" category="Material" Tags="smallitem,plantseed" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" maxstacksize="8" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5" outcondition="0.1">
+      <RequiredSkill identifier="mechanical" level="10" />
+      <Item identifier="aquaticpoppy" />
+    </Fabricate>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" target="This" condition="-0.5" />
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional condition="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <InventoryIcon texture="%ModDir%/Planting.png" sourcerect="1,190,48,48" />
+    <Sprite texture="%ModDir%/Planting.png" depth="0.2" sourcerect="1,190,48,48" origin="0.5,0.45" />
+    <Body width="48" height="48" density="5" />
+  </Item>
+</Items>

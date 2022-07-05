@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Tadpole Raider (pvp)" steamworkshopid="2768897382" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1647358028">
+  <Submarine file="%ModDir%/Tadpole Raider (pvp).sub" />
+</contentpackage>

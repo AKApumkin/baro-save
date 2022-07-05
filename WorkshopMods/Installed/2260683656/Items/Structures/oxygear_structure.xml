@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <!--	Pralldämpfer - Varianten	-->
+  <oxygear_bumper name="" description="" identifier="oxygear_bumper_a" nameidentifier="oxygear_bumper" category="Misc" tags="oxygear" body="true" bodywidth="492" bodyheight="95" health="400" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_bumper_a_v2.png" sourcerect="0,0,492,95" depth="0.80" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_bumper_a_v2.png" color="60,60,60,255" sourcerect="0,0,492,95" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_bumper>
+  <oxygear_bumper name="" description="" identifier="oxygear_bumper_b" nameidentifier="oxygear_bumper" category="Misc" tags="oxygear" body="true" bodywidth="492" bodyheight="95" health="400" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_bumper_b_v2.png" sourcerect="0,0,492,95" depth="0.80" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_bumper_b_v2.png" color="60,60,60,255" sourcerect="0,0,492,95" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_bumper>
+  <oxygear_bumper name="" description="" identifier="oxygear_bumper_c" nameidentifier="oxygear_bumper" category="Misc" tags="oxygear" body="true" health="400" allowattachitems="true" resizehorizontal="true" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_bumper_c_v2.png" sourcerect="0,0,400,70" depth="0.80" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_bumper_c_v2.png" color="60,60,60,255" sourcerect="0,0,400,70" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_bumper>
+  <oxygear_bumper name="" description="" identifier="oxygear_bumper_c-v" nameidentifier="oxygear_bumper" category="Misc" tags="oxygear" body="true" health="400" allowattachitems="true" resizehorizontal="false" resizevertical="true" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_bumper_c-v_v2.png" sourcerect="0,0,70,400" depth="0.80" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_bumper_c-v_v2.png" color="60,60,60,255" sourcerect="0,0,70,400" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_bumper>
+  <oxygear_bumper name="" description="" identifier="oxygear_bumper_d" nameidentifier="oxygear_bumper" category="Misc" tags="oxygear" body="true" bodywidth="404" bodyheight="70" health="400" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_bumper_d_v2.png" sourcerect="0,0,404,70" depth="0.80" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_bumper_d_v2.png" color="60,60,60,255" sourcerect="0,0,404,70" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_bumper>
+  <!--	Spezialglas / Sockel - Varianten	-->
+  <oxygear_base name="" description="" identifier="oxygear_glass_base_01_h" nameidentifier="oxygear_glass_base" category="Misc" tags="glass,base,oxygear" health="250" body="true" bodywidth="96" bodyheight="22" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_base_01.png" sourcerect="3,76,96,22" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_base_01.png" color="60,60,60,255" sourcerect="3,76,96,22" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_base>
+  <oxygear_base name="" description="" identifier="oxygear_glass_base_01_v" nameidentifier="oxygear_glass_base" category="Misc" tags="glass,base,oxygear" health="250" body="true" bodywidth="22" bodyheight="96" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_base_01.png" sourcerect="100,2,22,96" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_base_01.png" color="60,60,60,255" sourcerect="100,2,22,96" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_base>
+  <oxygear_base name="" description="" identifier="oxygear_glass_base_02_h" nameidentifier="oxygear_glass_base" category="Misc" tags="glass,base,oxygear" health="250" body="true" bodywidth="90" bodyheight="18" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_base_02.png" sourcerect="3,80,90,18" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_base_02.png" color="60,60,60,255" sourcerect="3,80,90,18" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_base>
+  <oxygear_base name="" description="" identifier="oxygear_glass_base_02_v" nameidentifier="oxygear_glass_base" category="Misc" tags="glass,base,oxygear" health="250" body="true" bodywidth="18" bodyheight="90" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_base_02.png" sourcerect="100,8,18,90" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_base_02.png" color="60,60,60,255" sourcerect="100,8,18,90" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_base>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_01" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="595" bodyheight="90" bodyrotation="55" bodyoffset="7,5" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_01.png" sourcerect="0,0,355,474" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_01.png" color="60,60,60,255" sourcerect="0,0,355,474" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_02" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="655" bodyheight="100" bodyrotation="38" bodyoffset="7,7" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_02.png" sourcerect="0,0,504,412" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_02.png" color="60,60,60,255" sourcerect="0,0,504,412" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_03" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="430" bodyheight="80" bodyrotation="38" bodyoffset="7,7" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_03.png" sourcerect="0,0,336,269" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_03.png" color="60,60,60,255" sourcerect="0,0,336,269" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_04" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="665" bodyheight="100" bodyrotation="43" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_04.png" sourcerect="0,0,480,458" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_04.png" color="60,60,60,255" sourcerect="0,0,480,458" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_05" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="550" bodyheight="90" bodyrotation="14.5" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_05.png" sourcerect="0,0,512,224" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_05.png" color="60,60,60,255" sourcerect="0,0,512,224" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_06" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="350" bodyheight="90" bodyrotation="17.0" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_06.png" sourcerect="0,0,321,190" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_06.png" color="60,60,60,255" sourcerect="0,0,321,190" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_07" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="240" bodyheight="85" bodyrotation="51.0" bodyoffset="-8,-6" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_07.png" sourcerect="0,0,188,218" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_07.png" color="60,60,60,255" sourcerect="0,0,188,218" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_08" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="180" bodyheight="100" bodyrotation="32.0" bodyoffset="-5,-5" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_08.png" sourcerect="0,0,159,125" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_08.png" color="60,60,60,255" sourcerect="0,0,159,125" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_09" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="160" bodyheight="80" bodyrotation="34" bodyoffset="0,-5" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_09.png" sourcerect="0,0,98,156" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_09.png" color="60,60,60,255" sourcerect="0,0,98,156" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <oxygear_glass name="" description="" identifier="oxygear_glass_10" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" bodywidth="180" bodyheight="80" bodyrotation="28.0" bodyoffset="0,-7" allowattachitems="false" resizehorizontal="false" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_10.png" sourcerect="0,0,128,160" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_10.png" color="60,60,60,255" sourcerect="0,0,128,160" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <!-- Anpassbares Element Horizontal -->
+  <oxygear_glass name="" description="" identifier="oxygear_glass_horizontal" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" allowattachitems="false" resizehorizontal="true" resizevertical="false" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_horizontal.png" sourcerect="0,0,103,103" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_horizontal.png" color="60,60,60,255" sourcerect="0,0,103,103" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <!-- Anpassbares Element Vertikal -->
+  <oxygear_glass name="" description="" identifier="oxygear_glass_vertical" nameidentifier="oxygear_glass" category="Misc" tags="glass,oxygear" health="200" body="true" allowattachitems="false" resizehorizontal="false" resizevertical="true" castshadow="false" noaitarget="false" scale="0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_vertical.png" sourcerect="0,0,103,103" depth="0.11" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_glass_vertical.png" color="60,60,60,255" sourcerect="0,0,103,103" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_glass>
+  <!-- "Glas" Hintergrund -->
+  <oxygear_glass name="" description="" identifier="oxygear_glass_bg" nameidentifier="oxygear_glass" category="Misc" tags="wall,glass,oxygear" allowattachitems="true" resizehorizontal="true" resizevertical="true" width="20" height="20" color="60,60,60,150" texturescale="0.5,0.5">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_glass_background.png" sourcerect="0,0,195,193" depth="0.98" origin="0.5,0.5" premultiplyalpha="false" />
+  </oxygear_glass>
+  <!-- Hülle - Cap Horizontal -->
+  <oxygear_hull name="" description="" identifier="oxygear_hull_01_h" nameidentifier="oxygear_hull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" bodywidth="80" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_hull_cap_h.png" sourcerect="0,0,75,79" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_hull_cap_h.png" color="60,60,60,255" sourcerect="0,0,75,79" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_hull>
+  <!-- Hülle - Cap Vertikal -->
+  <oxygear_hull name="" description="" identifier="oxygear_hull_01_v" nameidentifier="oxygear_hull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" bodywidth="80" allowattachitems="true" resizehorizontal="false" resizevertical="false" castshadow="true" noaitarget="true" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_hull_cap_v.png" sourcerect="0,0,79,75" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_hull_cap_v.png" color="60,60,60,255" sourcerect="0,0,79,75" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" />
+  </oxygear_hull>
+  <!-- Moderne Hülle -->
+  <!-- Horizontal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_h" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="585" height="96" bodywidth="" bodyheight="72" bodyrotation="0.00" bodyoffset="0,-12" resizehorizontal="true" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_h.png" sourcerect="0,0,585,96" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_h.png" sourcerect="0,0,585,96" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Horizontal 5° -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_h_5" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="247" height="91" bodywidth="252" bodyheight="72" bodyrotation="5.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_5.png" sourcerect="0,0,247,91" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_5.png" sourcerect="0,0,247,91" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Horizontal 15° -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_h_15" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="249" height="127" bodywidth="254" bodyheight="72" bodyrotation="15.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_15.png" sourcerect="0,0,249,127" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_15.png" sourcerect="0,0,249,127" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Horizontal 25° -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_h_25" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="243" height="161" bodywidth="248" bodyheight="72" bodyrotation="25.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_25.png" sourcerect="0,0,243,161" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_25.png" sourcerect="0,0,243,161" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Horizontal 45° -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_h_45" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="211" height="211" bodywidth="250" bodyheight="72" bodyrotation="45.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_45.png" sourcerect="0,0,211,211" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_h_45.png" sourcerect="0,0,211,211" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Vertikal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_v" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="96" height="585" bodywidth="72" bodyheight="" bodyrotation="0.00" bodyoffset="12,0" resizehorizontal="false" resizevertical="true" allowattachitems="true" castshadow="true" noaitarget="false" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_v.png" sourcerect="0,0,96,585" depth="0.10" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_v.png" sourcerect="0,0,96,585" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap - Horizontal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_cap_h" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="40" height="102" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="0.7">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_h.png" sourcerect="0,0,40,102" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_h.png" sourcerect="0,0,40,102" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap - Horizontal / Groß -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_cap_gr_h" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="60" height="102" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="0.7">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_gr_h.png" sourcerect="0,0,60,102" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_gr_h.png" sourcerect="0,0,60,102" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap - Vertikal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_cap_v" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="102" height="40" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="0.7">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_v.png" sourcerect="0,0,102,40" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_v.png" sourcerect="0,0,102,40" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap - Vertikal / Groß -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_cap_gr_v" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="102" height="60" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="0.7">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_gr_v.png" sourcerect="0,0,102,60" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_cap_gr_v.png" sourcerect="0,0,102,60" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap Variante 2 - Horizontal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_scap_h" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="34" height="80" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_scap_h.png" sourcerect="0,0,34,80" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_scap_h.png" sourcerect="0,0,34,80" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Cap Variante 2 - Vertikal -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_scap_v" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="80" height="34" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="1.0">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_scap_v.png" sourcerect="0,0,80,34" depth="0.09" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_scap_v.png" sourcerect="0,0,80,34" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+  <!-- Verbindung - Rund -->
+  <oxygear_hull name="" description="" identifier="oxygear_mhull_joint" nameidentifier="oxygear_modernhull" category="Misc" tags="shell,hull,oxygear" health="200" body="true" width="202" height="202" bodywidth="" bodyheight="" bodyrotation="0.00" bodyoffset="0,0" resizehorizontal="false" resizevertical="false" allowattachitems="true" castshadow="true" noaitarget="true" scale="0.45">
+    <sprite texture="%ModDir%/Items/Structures/oxygear_mhull_joint.png" sourcerect="0,0,202,202" depth="0.066" origin="0.5,0.5" canflipx="true" canflipy="true" />
+    <backgroundsprite texture="%ModDir%/Items/Structures/oxygear_mhull_joint.png" sourcerect="0,0,202,202" depth="0.85" origin="0.5,0.5" canflipx="true" canflipy="true" color="60,60,60,255" />
+  </oxygear_hull>
+</prefabs>

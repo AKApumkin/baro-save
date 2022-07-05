@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Salvaged ORCA Undersuit" identifier="orcaundersuit" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This armored Undersuit has been renewed using Standard Issue Coalition Body Armor and Uniforms. Can NOT protect from Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.08" />
+    <Price baseprice="300">
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+      <Price locationtype="research" multiplier="1" minavailable="1" />
+      <Price locationtype="military" multiplier="1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1" minavailable="1" />
+    </Price>
+    <Deconstruct time="10" />
+    <InventoryIcon name="Salvaged ORCA Undersuit" texture="orcavest.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Salvaged ORCA Undersuit" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="17,16,200,83" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="securityofficer_torso_female_2.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="securityofficer_torso_female_2.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="securityofficer_torso_female_2.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="securityofficer_torso_female_2.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="securityofficer_torso_female_2.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="securityofficer_legs_female_2.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="securityofficer_legs_female_2.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="securityofficer_legs_female_2.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="securityofficer_legs_female_2.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="securityofficer_legs_female_2.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="securityofficer_legs_female_2.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="securityofficer_legs_female_2.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+  <Item name="Salvaged ORCA Undersuit, Dark Orange" identifier="orcaundersuitdo" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This armored Undersuit has been renewed using Standard Issue Coalition Body Armor and Uniforms. Can NOT protect from Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.2" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.08" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.05" />
+    <Price baseprice="300">
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+      <Price locationtype="research" multiplier="1" minavailable="1" />
+      <Price locationtype="military" multiplier="1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1" minavailable="1" />
+    </Price>
+    <Deconstruct time="10" />
+    <InventoryIcon name="Salvaged ORCA Undersuitdarkorange" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Salvaged ORCA Undersuitdarkorange" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="230,113,204,82" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitfemtorsodo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitfemtorsodo.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitfemtorsodo.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitfemtorsodo.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitfemtorsodo.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitfemlegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitfemlegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitfemlegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitfemlegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitfemlegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitfemlegsdo.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitfemlegsdo.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+  <Item name="Heavy X-ORCA Suit" identifier="orcasuitheavy" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.08" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.005" />
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.05" minavailable="1" />
+      <Price locationtype="military" multiplier="1.10" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="orcaundersuit" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy X-ORCA Suit" texture="orcavest.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="456,95,208,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorso.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorso.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorso.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorso.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorso.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegs.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegs.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegs.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegs.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegs.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegs.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegs.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.78" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.35" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.75" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.72" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Heavy M-ORCA Suit, Dark Orange" identifier="orcasuitheavydo" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.08" />
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" minavailable="1" />
+      <Price locationtype="military" multiplier="1.10" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.05" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="orcaundersuitdo" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy ORCA Suit, Dark Orange" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit, Dark Orange" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="18,101,212,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorsodo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorsodo.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorsodo.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorsodo.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorsodo.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegsdo.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegsdo.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.78" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Insignia 1 Heavy M-ORCA Suit, Dark Orange" identifier="orcasuitheavydorank1" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.10" sold="false" />
+      <Price locationtype="mine" multiplier="1.05" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="orcasuitheavydo" />
+      <RequiredItem identifier="redpaint" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy M-ORCA Suit, Dark Orange (Rank 1)" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit, Dark Orange (Rank 1)" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="18,101,212,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorsodorank1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorsodorank1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorsodorank1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorsodorank1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorsodorank1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegsdo.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegsdo.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.78" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Insignia 2 Heavy M-ORCA Suit, Dark Orange" identifier="orcasuitheavydorank2" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.10" sold="false" />
+      <Price locationtype="mine" multiplier="1.05" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="orcasuitheavydo" />
+      <RequiredItem identifier="redpaint" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy M-ORCA Suit, Dark Orange (Rank 2)" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit, Dark Orange (Rank 2)" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="18,101,212,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorsodorank2.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorsodorank2.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorsodorank2.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorsodorank2.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorsodorank2.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegsdo.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegsdo.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.78" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Insignia 3 Heavy M-ORCA Suit, Dark Orange" identifier="orcasuitheavydorank3" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.10" sold="false" />
+      <Price locationtype="mine" multiplier="1.05" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="orcasuitheavydo" />
+      <RequiredItem identifier="redpaint" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy M-ORCA Suit, Dark Orange (Rank 3)" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit, Dark Orange (Rank 3)" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="18,101,212,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorsodorank3.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorsodorank3.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorsodorank3.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorsodorank3.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorsodorank3.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegsdo.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegsdo.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.78" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Insignia Special Heavy M-ORCA Suit, Dark Orange" identifier="orcasuitheavydorankspec" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Reinforced Combat Suit has been renewed using Standard Issue Coalition Diving Suits and Body Armor. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="450" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.10" sold="false" />
+      <Price locationtype="mine" multiplier="1.05" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="orcasuitheavydo" />
+      <RequiredItem identifier="redpaint" />
+    </Fabricate>
+    <Deconstruct time="30" />
+    <InventoryIcon name="Heavy M-ORCA Suit, Dark Orange (Rank Special)" texture="orcavestdo.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Heavy ORCA Suit, Dark Orange (Rank Special)" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="18,101,212,95" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="orcasuitheavytorsodorankspec.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="orcasuitheavytorsodorankspec.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="orcasuitheavytorsodorankspec.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="orcasuitheavytorsodorankspec.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="orcasuitheavytorsodorankspec.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegsdo.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegsdo.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegsdo.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegsdo.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegsdo.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegsdo.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegsdo.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.78" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Horizons X-AMCP Suit v.0.8" identifier="orcasuitpowered" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Refurbished X-AMCP, (Experimental-Advanced Mechanical Counter Pressure), Suit has seen better days but remains fully functional. Capable of withstanding Heavy Water Pressure." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.006" />
+    <Price baseprice="600" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="1.15" minavailable="1" />
+      <Price locationtype="military" multiplier="1" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct time="10" />
+    <InventoryIcon name="Horizons X-AMCP Suit v.0.8" texture="orcavest.png" sourcerect="189,196,67,60" origin="0.5198739,0.5755753" />
+    <Sprite name="Horizons X-AMCP Suit v.0.8" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="455,95,195,83" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Security Officer's Uniform 2 Torso" texture="xamcpsuittorso.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Arm" texture="xamcpsuittorso.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Arm" texture="xamcpsuittorso.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Lower Arm" texture="xamcpsuittorso.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Lower Arm" texture="xamcpsuittorso.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Waist" texture="orcasuitheavylegs.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Thigh" texture="orcasuitheavylegs.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Thigh" texture="orcasuitheavylegs.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Leg" texture="orcasuitheavylegs.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Leg" texture="orcasuitheavylegs.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Right Shoe" texture="orcasuitheavylegs.png" limb="RightFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Security Officer's Uniform 2 Left Shoe" texture="orcasuitheavylegs.png" limb="LeftFoot" sound="%ModDir%/Sounds/Footsteps/Armor/Poweredfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.75" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="4000.0" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true"></StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="Salvaged Modular Vest" identifier="sabervest" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Lightweight Modular Combat Vest. Can be worn to provide a small amount of protection from Firearms. Used as a Framework for O.R.C.A (Omni-protective Radiation-resistant Combined Armor) Sets." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="2" spawnprobability="0.18" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.12" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.08" />
+    <Price baseprice="375" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" minavailable="1" />
+      <Price locationtype="military" multiplier="1.10" minavailable="2" />
+      <Price locationtype="mine" multiplier="1.15" minavailable="1" />
+    </Price>
+    <Deconstruct time="12">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="134,68,64,64" origin="0.5,0.5" />
+    <Sprite texture="sabervest.png" sourcerect="13,45,103,158" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Salvaged Modular Vest" texture="sabervest.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="Light ORCA Vest" identifier="orcavest" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Armored Vest has been renewed using Standard Issue Coalition Body Armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.01" />
+    <Price baseprice="480" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.05" minavailable="1" />
+      <Price locationtype="military" multiplier="1.10" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.05" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="32">
+      <RequiredSkill identifier="weapons" level="42" />
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="sabervest" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="carbon" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="1,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavest.png" sourcerect="13,45,103,158" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.9" damagesound="LimbArmor" />
+      <sprite name="Salvaged ORCA Vest" texture="orcavestwearable.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="Light ORCA Vest, Dark Orange" identifier="orcavestdo" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This Armored Vest has been renewed using Standard Issue Coalition Body Armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.01" />
+    <Price baseprice="480" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.05" minavailable="1" />
+      <Price locationtype="military" multiplier="1.10" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.05" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="32">
+      <RequiredSkill identifier="weapons" level="42" />
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="sabervest" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="carbon" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="64,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestdo.png" sourcerect="13,45,103,158" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.9" damagesound="LimbArmor" />
+      <sprite name="Salvaged ORCA Vestdo" texture="orcavestwearabledo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="Modified X-ORCA Vest" identifier="orcavestmod" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This ORCA Vest has been heavily modified. A Batterycell has been integrated into the Vest; Reactive Armor plating reinforces weak spots and existing armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.001" />
+    <Price baseprice="575" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.20" sold="false" />
+      <Price locationtype="mine" multiplier="1.10" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="45" />
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="orcavest" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="batterycell" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="steel" />
+      <Item identifier="steel" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="128,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestmodified.png" sourcerect="0,42,116,166" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.16" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.87" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.8" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.03" setvalue="true" disabledeltatime="true" />
+      <sprite name="Modified ORCA Vest" texture="orcavestmodifiedwearable.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="Modified M-ORCA Vest, Dark Orange" identifier="orcavestmoddo" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. This ORCA Vest has been heavily modified. A Batterycell has been integrated into the Vest; Lightweight Composite Laminate Padding reinforces weak spots and existing armor. A Sturdy Chest Rig has been implemented, allowing stowage of small items." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.001" />
+    <Price baseprice="575" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.20" sold="false" />
+      <Price locationtype="mine" multiplier="1.10" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="45" />
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="orcavestdo" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="batterycell" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="steel" />
+      <Item identifier="carbon" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="195,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestmodifieddo.png" sourcerect="0,42,116,166" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.17" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.83" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.85" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.05" setvalue="true" disabledeltatime="true" />
+      <sprite name="Modified ORCA Vest, Dark Orange" texture="orcavestmodifiedwearabledo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+    </Wearable>
+    <ItemContainer capacity="4" depth="0.5">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox" />
+    </ItemContainer>
+  </Item>
+  <Item name="Modified X-ORCA Vest (Light)" identifier="orcavestmodwlight" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Reactive Armor plating reinforces weak spots and existing armor. A small Spotlight's been attatched to the Vest." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <Price baseprice="605" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.15" sold="false" />
+      <Price locationtype="military" multiplier="1.20" sold="false" />
+      <Price locationtype="mine" multiplier="1.10" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="orcavestmod" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <Deconstruct time="44">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="lightcomponent" />
+      <Item identifier="steel" />
+      <Item identifier="steel" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="128,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestmodifiedwlight.png" sourcerect="0,42,112,166" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.16" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.87" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.8" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.85" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.03" setvalue="true" disabledeltatime="true" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.12,0.08" absoluteoffset="-960,-36" style="ItemUI" />
+        <TickBox text="Vest Light" IsOn="true">
+          <StatusEffect type="OnUse" target="This" IsOn="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+        </TickBox>
+      </CustomInterface>
+      <sprite name="Modified ORCA Vest (Light)" texture="orcavestmodifiedwearablewlight.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true">
+        <LightComponent range="240.0" lightcolor="100,214,255,205" powerconsumption="10" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.005, 0.49" size="1.0,1.8" />
+        </LightComponent>
+      </sprite>
+    </Wearable>
+  </Item>
+  <Item name="Heavy X-ORCA Vest" identifier="orcavestheavy" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Heavy Reactive Armor plating reinforces weak spots and existing armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <Price baseprice="650" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.20" minavailable="1" />
+      <Price locationtype="military" multiplier="1.15" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.10" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="48" />
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="orcavestmod" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titanium" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="carbon" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="340,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestheavy.png" sourcerect="0,42,117,159" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.16" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.14" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.85" setvalue="true" disabledeltatime="true" />
+      <sprite name="Heavy ORCA Vest" texture="orcavestheavywearable.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="Heavy X-ORCA Vest (Light)" identifier="orcavestheavywlight" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Heavy Reactive Armor plating reinforces weak spots and existing armor. A small Spotlight's been attached to the Vest." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <Price baseprice="680" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.20" minavailable="1" />
+      <Price locationtype="military" multiplier="1.15" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.10" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="orcavestheavy" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <Deconstruct time="34">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="lightcomponent" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="340,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestheavywlight.png" sourcerect="0,42,118,160" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.16" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.14" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.85" setvalue="true" disabledeltatime="true" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.12,0.08" absoluteoffset="-960,-36" style="ItemUI" />
+        <TickBox text="Vest Light" IsOn="true">
+          <StatusEffect type="OnUse" target="This" IsOn="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+        </TickBox>
+      </CustomInterface>
+      <sprite name="Heavy ORCA Vest (Light)" texture="orcavestheavywearablewlight.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true">
+        <LightComponent range="240.0" lightcolor="100,214,255,205" powerconsumption="10" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.005, 0.49" size="1.0,1.8" />
+        </LightComponent>
+      </sprite>
+    </Wearable>
+  </Item>
+  <Item name="Modified M-ORCA Assault Vest, Dark Orange (Assault Collar)" identifier="orcavestheavywassaultcollardo" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; An Armored Assault Collar Bolsters the Vest's Defense." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <Price baseprice="750" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.20" sold="false" />
+      <Price locationtype="military" multiplier="1.15" sold="false" />
+      <Price locationtype="mine" multiplier="1.10" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredSkill identifier="mechanical" level="28" />
+      <RequiredSkill identifier="electrical" level="18" />
+      <RequiredItem identifier="orcavestmoddo" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <Deconstruct time="34">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="lightcomponent" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="269,3,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestheavywassaultcollardo.png" sourcerect="-1,41,122,160" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.93" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.18" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.14" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.63" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.96" setvalue="true" disabledeltatime="true" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.12,0.08" absoluteoffset="-960,-36" style="ItemUI" />
+        <TickBox text="Vest Light" IsOn="true">
+          <StatusEffect type="OnUse" target="This" IsOn="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+        </TickBox>
+      </CustomInterface>
+      <sprite name="Modified ORCA Assault Vest, Dark Orange (Assault Collar)" texture="orcavestheavywearablewassaultcollardo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5">
+        <LightComponent range="240.0" lightcolor="100,214,255,205" powerconsumption="10" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.005, 0.477" size="1.0,1.8" />
+        </LightComponent>
+      </sprite>
+    </Wearable>
+  </Item>
+  <Item name="Heavy X-ORCA Vest, Dark Orange" identifier="orcavestheavydo" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Heavy Reactive Armor plating reinforces weak spots and existing armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.001" />
+    <Price baseprice="650" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.20" minavailable="1" />
+      <Price locationtype="military" multiplier="1.15" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.10" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="orcavestheavy" />
+      <RequiredItem identifier="redpaint" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="2,67,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestheavydo.png" sourcerect="0,42,116,158" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.16" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.14" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.09" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.85" setvalue="true" disabledeltatime="true" />
+      <sprite name="Heavy ORCA Vest, Dark Orange" texture="orcavestheavywearabledo.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="Super Heavy X-ORCA Vest" identifier="orcavestsuperheavy" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Advanced Reactive Armor plating reinforces weak spots and existing armor." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="1" spawnprobability="0.001" />
+    <Price baseprice="750" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.35" minavailable="1" />
+      <Price locationtype="military" multiplier="1.2" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct time="50">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="66,67,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestsuperheavy.png" sourcerect="0,36,119,165" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.12" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.08" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.45" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.75" setvalue="true" disabledeltatime="true" />
+      <sprite name="Super Heavy ORCA Vest" texture="orcavestsuperheavywearable.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="Super Heavy X-ORCA Vest (Light)" identifier="orcavestsuperheavywlight" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="A Piece of an O.R.C.A; (Omni-protective Radiation-resistant Combined Armor) Set. A Batterycell has been integrated into the Vest; Advanced Reactive Armor plating reinforces weak spots and existing armor. A small Spotlight's been attached to the Vest." impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <Price baseprice="780" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="1.15" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="orcavestsuperheavy" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <Deconstruct time="54">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="lightcomponent" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="carbon" />
+      <Item identifier="lithium" />
+      <Item identifier="zinc" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/armoricons.png" sourcerect="66,67,64,64" origin="0.5,0.5" />
+    <Sprite texture="orcavestsuperheavywlight.png" sourcerect="0,36,117,165" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.12" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.08" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.45" damagesound="LimbArmor" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.75" setvalue="true" disabledeltatime="true" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.12,0.08" absoluteoffset="-960,-36" style="ItemUI" />
+        <TickBox text="Vest Light" IsOn="true">
+          <StatusEffect type="OnUse" target="This" IsOn="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+        </TickBox>
+      </CustomInterface>
+      <sprite name="Super Heavy ORCA Vest (Light)" texture="orcavestsuperheavywearablewlight.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true">
+        <LightComponent range="240.0" lightcolor="100,214,255,205" powerconsumption="10" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.005, 0.49" size="1.0,1.8" />
+        </LightComponent>
+      </sprite>
+    </Wearable>
+  </Item>
+</Items>

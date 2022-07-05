@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="(PVP Shuttle) Raider" steamworkshopid="2287199248" corepackage="false" modversion="1.0.0" gameversion="0.10.6.2" installtime="1605428738">
+  <Submarine file="%ModDir%/(PVP Shuttle) Raider..sub" />
+</contentpackage>

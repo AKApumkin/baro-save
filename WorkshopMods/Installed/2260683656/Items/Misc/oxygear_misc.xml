@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="oxygear_lightbox_v2_futurama" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_futurama.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_marvin" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_marvin.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_lincler" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_lincler.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_motoko" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_motoko.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_phantogram" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_phantogram.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_solace" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_solace.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_l_max" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_l_max.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_l_vincent" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_l_vincent.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_l_james" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_l_james.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_l_kowalski" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_l_kowalski.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_vaultgirl" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_vaultgirl.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_amagumo" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_amagumo.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_rel" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_rel.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_hitagi" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_hitagi.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_asuka" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_asuka.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_yoko" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_yoko.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_lightbox_v2_calm" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false">
+    <sprite texture="oxygear_lightbox_v2_calm.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Lightbox Template
+	<Item name="" identifier="oxygear_lightbox_v2_XOXO" nameidentifier="oxygear_lightbox" tags="oxygear" category="Decorative" width="150" height="200" texturescale="1.0,1.0" scale="0.5" noninteractable="false" >
+
+			<sprite texture="oxygear_lightbox_v2_XOXO.png" sourcerect="0,0,143,189" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" canflipx="false" canflipy="false" />
+
+			<LightComponent range="38.0" lightcolor="255,234,181,200" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false" >
+				<LightTexture texture="Mods/OxyGear/Lights/oxygear_lightbox_v2_light.png" depth="0.81" origin="0.5,0.5" />
+			</LightComponent>
+
+			<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10" >
+				<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+				<RequiredItem items="screwdriver" type="Equipped" />
+				<input name="toggle" displayname="connection.togglestate" />
+				<input name="set_state" displayname="connection.setstate" />
+			</ConnectionPanel>
+
+	</Item>
+	-->
+  <Item name="" identifier="oxygear_chair" tags="oxygear,chair" category="Decorative" width="247" height="310" texturescale="1.0,1.0" scale="0.5" canflipx="true" canflipy="false" noninteractable="false" allowattachitems="true" impactsoundtag="impact_metal_light">
+    <StaticBody width="247" height="310" />
+    <sprite texture="oxygear_chair.png" sourcerect="0,0,247,310" depth="0.1" premultiplyalpha="false" origin="0.5,0.5" />
+    <!--		UserPos definiert wie nah sich der Charakter am Objekt befinden muss um es zu benutzen	-->
+    <Controller UserPos="15,20" direction="Right" hidehud="false" canbeselected="true">
+      <!--			  Körperteil		Position   X , Y		Körperteil während des sitzens nutzbar	-->
+      <limbposition limb="Head" position="100,-20" allowusinglimb="true" />
+      <limbposition limb="Torso" position="105,-155" allowusinglimb="false" />
+      <limbposition limb="Waist" position="130,-165" allowusinglimb="false" />
+      <limbposition limb="RightHand" position="185,-145" allowusinglimb="true" />
+      <limbposition limb="LeftHand" position="185,-145" allowusinglimb="true" />
+      <limbposition limb="RightFoot" position="210,-285" allowusinglimb="false" />
+      <limbposition limb="LeftFoot" position="210,-285" allowusinglimb="false" />
+    </Controller>
+  </Item>
+  <!--	... ich hasse Stühle - nie wieder! 	-->
+  <!--	... sag niemals nie! ^^* 	-->
+  <Item name="" identifier="oxygear_stool" nameidentifier="" tags="oxygear,chair,stool" category="Decorative" texturescale="1.0,1.0" scale="0.5" canflipy="false" allowattachitems="true">
+    <StaticBody width="96" height="119" />
+    <sprite texture="oxygear_stool.png" sourcerect="0,0,96,119" depth="0.1" premultiplyalpha="false" origin="0.5,0.5" />
+    <!-- Abstände in Y-Koordinaten (Ausgangspunkt ist die Hüfte/null) = 120, 55,  0, 2x -25, 2x -130 -->
+    <Controller UserPos="-10,30" direction="Left" hidehud="false" canbeselected="true">
+      <limbposition limb="Head" position="35,150" allowusinglimb="false" />
+      <limbposition limb="Torso" position="40,85" allowusinglimb="false" />
+      <limbposition limb="Waist" position="45,30" allowusinglimb="false" />
+      <limbposition limb="RightHand" position="10,5" allowusinglimb="true" />
+      <limbposition limb="LeftHand" position="10,5" allowusinglimb="true" />
+      <limbposition limb="RightFoot" position="-10,-100" allowusinglimb="false" />
+      <limbposition limb="LeftFoot" position="-10,-100" allowusinglimb="false" />
+    </Controller>
+  </Item>
+  <Item name="" identifier="oxygear_ladder" tags="ladder,oxygear" resizevertical="true" scale="0.5" allowrotatingineditor="false">
+    <Upgrade gameversion="0.9.700.0" spritedepth="0.51" />
+    <Upgrade gameversion="0.10.0.0" rectwidth="11" scale="0.5" />
+    <sprite texture="%ModDir%/Items/Misc/oxygear_ladder.png" depth="0.51" sourcerect="0,0,35,240" />
+    <Ladder canbeselected="true" msg="ItemMsgClimbSelect">
+      <BackgroundSprite texture="%ModDir%/Items/Misc/oxygear_ladder.png" depth="0.05" sourcerect="0,0,35,240" origin="0.25,0.0" />
+    </Ladder>
+    <trigger x="-26" y="10" width="90" />
+  </Item>
+</Items>

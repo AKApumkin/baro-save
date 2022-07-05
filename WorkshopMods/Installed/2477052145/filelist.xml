@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="[AH]Yamaja" steamworkshopid="2477052145" corepackage="false" modversion="1.0.0" gameversion="0.13.3.11" installtime="1621192161">
+  <Submarine file="%ModDir%/[AH]Yamaja.sub" />
+</contentpackage>

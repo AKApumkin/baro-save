@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved XP Rates" steamworkshopid="2652506080" corepackage="false" modversion="1.0.1" gameversion="0.17.12.0" installtime="1650484954" expectedhash="45FBBD5E14CA8AFB3B64697F2B70F686">
+  <SkillSettings file="%ModDir%/SkillSettings.xml" />
+</contentpackage>

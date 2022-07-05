@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="ek_chaingunammo_large" aliases="Extended Chaingun Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="500">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="lead" mincondition="0.1" copycondition="true" />
+      <Item identifier="lead" mincondition="0.1" copycondition="true" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="0,176,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="0,80,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="turretammosource" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="0,176,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="chaingunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="chaingunbolt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_chaingunammophysicorium_large" aliases="Extended Chaingun Physicorium Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="800" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1.1" sold="false" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredItem identifier="steel" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="physicorium" mincondition="0.9" usecondition="false" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="physicorium" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="112,176,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="112,80,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="turretammosource" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="112,176,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="chaingunboltphysicorium" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="chaingunboltphysicorium" />
+    </ItemContainer>
+  </Item>
+  <!-- Custom Ammo Types -->
+  <Item name="" identifier="ek_chaingunammoexplosive" aliases="Chaingun Explosive Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="500" soldeverywhere="false">
+      <!-- 479 -->
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="2" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	18
+	20
+	400
+	41
+	-->
+    <Deconstruct time="10">
+      <Item identifier="lead" mincondition="0.1" copycondition="true" />
+      <Item identifier="steel" mincondition="0.1" copycondition="true" />
+      <Item identifier="ic4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="ic4block" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="224,0,112,80" origin="0.5,0.5" />
+    <Body width="170" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
+        <SpawnItem identifiers="ek_chaingunboltexplosive" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_chaingunboltexplosive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_chaingunammoexplosive_large" aliases="Extended Chaingun Explosive Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="1000" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1.1" sold="false" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="lead" mincondition="0.1" copycondition="true" />
+      <Item identifier="lead" mincondition="0.1" copycondition="true" />
+      <Item identifier="ic4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="ic4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="ic4block" />
+      <RequiredItem identifier="ic4block" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="224,176,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="224,80,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="turretammosource" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="224,176,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="ek_chaingunboltexplosive" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_chaingunboltexplosive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_chaingunboltexplosive" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="144,436,112,9" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="100" spread="11.5" removeonhit="true">
+      <Attack structuredamage="12.5" itemdamage="12" severlimbsprobability="0.1" penetration="0.35">
+        <Affliction identifier="gunshotwound" strength="12" />
+        <Affliction identifier="bleeding" strength="1.5" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="50" initialdelay="0.05" colormultiplier="225,255,180,175" />
+      </StatusEffect>
+      <!-- a 2 second lifetime after being fired -->
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="2">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" copyentityangle="true" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2.0" scalemax="3.0" />
+        <ParticleEmitter particle="weldspark" copyentityangle="true" anglemin="-40" anglemax="40" particleamount="8" velocitymin="-300" velocitymax="-800" scalemin="1" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="500" scalemin="0.4" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <Explosion range="300.0" structuredamage="5" force="10.0" itemdamage="10" severlimbsprobability="0.5" underwaterbubble="false" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="40" />
+        </Explosion>
+        <ParticleEmitter particle="ek_underwaterexplosionfix" particleamount="1" scalemin="1.5" scalemax="2.0" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="ek_chaingunammoheavy" aliases="Chaingun HEFC Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="450" soldeverywhere="false">
+      <!-- 324 -->
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1.3" sold="false" />
+      <Price locationtype="military" multiplier="0.9" minavailable="2" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <!--
+	150
+	22
+	160
+	42
+	-->
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="copper" mincondition="0.1" copycondition="true" />
+      <Item identifier="c4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="c4block" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="336,0,112,80" origin="0.5,0.5" />
+    <Body width="170" height="10" density="15" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
+        <SpawnItem identifiers="ek_chaingunboltheavy" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_chaingunboltheavy" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_chaingunammoheavy_large" aliases="Extended Chaingun HEFC Ammunition" scale="0.5" tags="chaingunequipment,chaingunammo,extendedcoilgunammo,crate,ammobox" category="Equipment" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <Price baseprice="900" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false" />
+      <Price locationtype="city" multiplier="1.2" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1.1" sold="false" />
+      <Price locationtype="mine" multiplier="1.2" sold="false" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.1" copycondition="true" />
+      <Item identifier="copper" mincondition="0.1" copycondition="true" />
+      <Item identifier="copper" mincondition="0.1" copycondition="true" />
+      <Item identifier="c4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="c4block" mincondition="0.1" copycondition="true" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="c4block" />
+      <RequiredItem identifier="c4block" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="336,176,112,176" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="crateshelf,ammocontainer" allowedcontaineridentifiers="crateshelf,ammocontainer" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="336,80,112,80" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="turretammosource" texture="%ModDir%/Items/Containers/containers_chaingunammo_ek.png" depth="0.54" sourcerect="336,176,112,240" origin="0.5,0.5" />
+    <Body width="100" height="160" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+        <SpawnItem identifiers="ek_chaingunboltheavy" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <Containable identifiers="ek_chaingunboltheavy" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ek_chaingunboltheavy" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="144,436,112,9" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="100.0" spread="11.5" maxtargetstohit="2">
+      <Attack structuredamage="10" itemdamage="15" severlimbsprobability="2" penetration="0.4">
+        <Affliction identifier="gunshotwound" strength="16" />
+        <Affliction identifier="explosiondamage" strength="8" />
+        <Affliction identifier="bleeding" strength="2" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="50" initialdelay="0.05" colormultiplier="240,200,50" />
+      </StatusEffect>
+      <!-- a 2 second lifetime after being fired -->
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="2">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-55" />
+      <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" delay="0.06" stackable="false" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-25" anglemax="25" particleamount="3" velocitymin="-10" velocitymax="-300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-30" anglemax="30" particleamount="4" velocitymin="10" velocitymax="300" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-60" anglemax="60" particleamount="3" velocitymin="50" velocitymax="300" scalemin="1" scalemax="2" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-25" anglemax="25" particleamount="4" velocitymin="-900" velocitymax="-50" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="ekarmory_hdimpactmedium" particleamount="1" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2.5" />
+        <ParticleEmitter particle="ek_underwaterexplosionfix" particleamount="1" scalemin="1.5" scalemax="2.0" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo1_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo2_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo3_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo4_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo5_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <sound file="%ModDir%/Items/Weapons/ek_heavyammo6_mono.ogg" selectionmode="Random" range="8000" volume="0.75" />
+        <Explosion range="325.0" structuredamage="2.5" stun="0.4" force="10.0" severlimbsprobability="0.5" flames="false" smoke="true" sparks="true" underwaterbubble="false">
+          <Affliction identifier="bleeding" strength="4" />
+          <Affliction identifier="lacerations" strength="15" />
+          <Affliction identifier="explosiondamage" strength="20" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+</Items>

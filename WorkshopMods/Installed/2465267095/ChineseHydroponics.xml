@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <entityname.planter>大号种植箱</entityname.planter>
+  <entitydescription.planter>模拟样本的生长环境，需通电使用，定期维护</entitydescription.planter>
+  <entityname.fiberplantseed>活性纤维植物样本</entityname.fiberplantseed>
+  <entitydescription.fiberplantseed>需要在大号种植箱才能生长，易失水死亡</entitydescription.fiberplantseed>
+  <entityname.elastinplantseed>弹性纤维植物样本</entityname.elastinplantseed>
+  <entitydescription.elastinplantseed>需要在大号种植箱才能生长，易失水死亡</entitydescription.elastinplantseed>
+  <entityname.aquaticpoppyseed>水培罂粟样本</entityname.aquaticpoppyseed>
+  <entitydescription.aquaticpoppyseed>需要在大号种植箱才能生长，易失水死亡</entitydescription.aquaticpoppyseed>
+  <entityname.slimebacteriaseed>史莱姆变形细菌样本</entityname.slimebacteriaseed>
+  <entitydescription.slimebacteriaseed>需要在大号种植箱才能生长，易失水死亡</entitydescription.slimebacteriaseed>
+  <entityname.yeastshroomseed>水生酵母菌样本</entityname.yeastshroomseed>
+  <entitydescription.yeastshroomseed>需要在大号种植箱才能生长，易失水死亡</entitydescription.yeastshroomseed>
+</infotexts>

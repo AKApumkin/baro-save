@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="oxygear_divsuitlocker" tags="container,divingsuitcontainer,divingsuitcontainerwindow,divingsuitcontaineroxygear,oxygear" category="Misc" pickdistance="100" scale="0.5">
+    <Sprite texture="oxygear_divsuitlocker_empty_v2.png" depth="0.84" sourcerect="0,0,99,338" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="0,5" iteminterval="0,0" autofill="False" canbeselected="true" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.40,0.30" anchor="Center" minsize="400,300" maxsize="400,300" style="ItemUI" />
+      <!-- Vanilla-Suit Override entfernt, dadruch keine Sprites für eingelegte Vanilla-Suits möglich. (divingsuit,abyssdivingsuit,combatdivingsuit) -->
+      <Containable items="oxygear_divingsuit" />
+    </ItemContainer>
+    <LightComponent range="19.0" lightcolor="75,125,175,100" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_divsuitlocker_light.png" depth="0.81" origin="0.5,0.62" />
+      <!-- [BACKUP] lightcolor="90,60,30,95" / LightTexture depth="0.81" origin="0.5,0.5" /> -->
+    </LightComponent>
+    <LightComponent range="20.0" lightcolor="50,70,100,95" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" depth="0.81" origin="0.50,2.24" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="oxygear_locker" tags="container,locker,oxygear" category="Misc" linkable="true" pickdistance="150" showcontentsintooltip="true" scale="0.5" waterproof="true" fireproof="true">
+    <Sprite texture="oxygear_locker_v2.png" depth="0.84" sourcerect="0,0,99,338" origin="0.5,0.5" />
+    <ItemContainer hideitems="true" drawinventory="true" capacity="20" autofill="False" canbeselected="true" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.30,0.40" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+    <LightComponent range="20.0" lightcolor="50,70,100,95" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" depth="0.81" origin="0.50,2.24" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="oxygear_locker_b" nameidentifier="oxygear_locker" tags="container,locker,oxygear" category="Misc" linkable="true" pickdistance="150" showcontentsintooltip="true" scale="0.5" waterproof="true" fireproof="true">
+    <Sprite texture="oxygear_locker_b_v2.png" depth="0.84" sourcerect="0,0,99,338" origin="0.5,0.5" />
+    <ItemContainer hideitems="true" drawinventory="true" capacity="20" autofill="False" canbeselected="true" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.30,0.40" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+    <LightComponent range="20.0" lightcolor="50,70,100,95" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" depth="0.81" origin="0.50,2.24" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="oxygear_supplies" tags="container,suppliescontainer,oxygear" category="Misc" linkable="true" pickdistance="150" showcontentsintooltip="true" scale="0.5" waterproof="true" fireproof="true">
+    <Sprite texture="oxygear_supplies_v1.png" depth="0.84" sourcerect="0,0,117,129" origin="0.5,0.5" />
+    <ItemContainer hideitems="true" drawinventory="true" capacity="8" slotsperrow="4" autofill="False" canbeselected="true" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.25,0.35" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+    <!--	Padding = left,top,right,bottom	/ Default ScrollSpeed = 20			-->
+    <ItemLabel Padding="9,1,9,11" Scrollable="true" ScrollSpeed="25" TextColor="1,1,1,1" TextScale="1" TextAlignment="Center" Text="label.supplies" canbeselected="false">
+      <LightComponent range="30.0" lightcolor="50,70,100,95" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+        <LightTexture texture="%ModDir%/Lights/oxygear_supplies_light.png" depth="0.81" origin="0.5,0.5" />
+      </LightComponent>
+    </ItemLabel>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="set_text" displayname="connection.set_text" fallbackdisplayname="connection.setoutput" />
+      <input name="toggle" displayname="connection.togglestate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="oxygear_cargo" tags="container,oxygear" category="Misc" linkable="true" pickdistance="150" showcontentsintooltip="true" scale="0.5" waterproof="true" fireproof="true">
+    <Sprite texture="oxygear_cargostorage.png" depth="0.84" sourcerect="0,0,189,185" origin="0.5,0.5" />
+    <ItemContainer hideitems="true" drawinventory="true" capacity="8" slotsperrow="4" canbeselected="true" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.25,0.35" anchor="Center" style="ItemUI" />
+      <Containable items="crate,coilgunequipment,coilgunammo,railgunequipment,railgunammo,depthchargeammo,alienartifact,toolbox" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="oxygear_weaponholder" tags="weaponholder,oxygear" category="Misc" linkable="false" pickdistance="50" showcontentsintooltip="true" scale="0.5" waterproof="false" fireproof="false">
+    <!-- Platte -->
+    <Sprite texture="oxygear_weaponholder_01.png" depth="0.85" sourcerect="0,0,86,86" canflipx="false" origin="0.5,0.5" />
+    <!-- Halter -->
+    <DecorativeSprite texture="oxygear_weaponholder_02.png" depth="0.5" sourcerect="0,0,122,31" canflipx="false" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="46,-47" iteminterval="0,0" itemrotation="90" containedspritedepth="0.84" autofill="False" canbeselected="true" msg="ItemMsgInteractSelect">
+      <!-- Zugriffsberechtigung -->
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.40,0.30" anchor="Center" minsize="400,300" maxsize="400,300" style="ItemUI" />
+      <Containable items="weapon,tool" />
+    </ItemContainer>
+  </Item>
+</Items>

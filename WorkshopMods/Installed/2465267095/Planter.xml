@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="planter" category="Material" Tags="planter,mediumitem" scale="0.6" isshootable="true">
+    <PreferredContainer primary="storagecab" minamount="0" maxamount="1" spawnprobability="0.05" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.05" />
+    <Price locationtype="Research" buyprice="300" />
+    <Deconstruct time="20">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+      <Item identifier="silicon" />
+      <Item identifier="lightcomponent" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="electrical" level="40" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="silicon" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Planting.png" sourcerect="108,6,112,145" depth="0.71" />
+    <Body width="94" height="126" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem identifier="wrench" type="Equipped" />
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.60" setvalue="true" />
+      <StatusEffect type="InWater" target="This" condition="-0.1"></StatusEffect>
+    </Holdable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem identifier="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="480" ShowRepairUIThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="electrical" level="45" />
+      <RequiredItem identifier="screwdriver" type="equipped" />
+      <ParticleEmitter particle="smoke" particlespersecond="1" scalemin="0.5" scalemax="1" mincondition="15.0" maxcondition="35.0" />
+      <ParticleEmitter particle="smoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+    </Repairable>
+    <LightComponent AllowInGameEditing="false" lightcolor="255,255,255,55" canbeselected="false" powerconsumption="5.0" range="55" IsOn="true" castshadows="true">
+      <sprite texture="%ModDir%/PlanterLight.png" depth="0.7" alpha="0.5" />
+      <StatusEffect type="OnActive" target="Contained" targetidentifiers="plantseed" Condition="0.66">
+        <Conditional Condition="lt 100" />
+      </StatusEffect>
+      <!-- spawn the plant at 100 condition -->
+      <!-- fiberplant -->
+      <StatusEffect type="OnActive" target="This,Contained" targetidentifiers="fiberplantseed" comparison="And" delay="0.2">
+        <RequiredItem identifier="fiberplantseed" type="Contained" />
+        <Conditional Condition="eq 100" />
+        <SpawnItem identifier="fiberplant" spawnposition="ThisInventory" />
+        <SpawnItem identifier="fiberplant" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- elastinplant -->
+      <StatusEffect type="OnActive" target="This,Contained" targetidentifiers="elastinplantseed" comparison="And" delay="0.2">
+        <RequiredItem identifier="elastinplantseed" type="Contained" />
+        <Conditional Condition="eq 100" />
+        <SpawnItem identifier="elastinplant" spawnposition="ThisInventory" />
+        <SpawnItem identifier="elastinplant" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- poppyplant -->
+      <StatusEffect type="OnActive" target="This,Contained" targetidentifiers="aquaticpoppyseed" comparison="And" delay="0.2">
+        <RequiredItem identifier="aquaticpoppyseed" type="Contained" />
+        <Conditional Condition="eq 100" />
+        <SpawnItem identifier="aquaticpoppy" spawnposition="ThisInventory" />
+        <SpawnItem identifier="aquaticpoppy" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- yeastplant -->
+      <StatusEffect type="OnActive" target="This,Contained" targetidentifiers="yeastshroomseed" comparison="And" delay="0.2">
+        <RequiredItem identifier="yeastshroomseed" type="Contained" />
+        <Conditional Condition="eq 100" />
+        <SpawnItem identifier="yeastshroom" spawnposition="ThisInventory" />
+        <SpawnItem identifier="yeastshroom" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- slimeplant -->
+      <StatusEffect type="OnActive" target="This,Contained" targetidentifiers="slimebacteriaseed" comparison="And" delay="0.2">
+        <RequiredItem identifier="slimebacteriaseed" type="Contained" />
+        <Conditional Condition="eq 100" />
+        <SpawnItem identifier="slimebacteria" spawnposition="ThisInventory" />
+        <SpawnItem identifier="slimebacteria" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- 删除种子 -->
+      <StatusEffect type="OnActive" target="Contained" targetidentifiers="plantseed">
+        <Conditional Condition="eq 100" />
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+    <Powered powerconsumption="50" currpowerconsumption="50" isactive="true">
+      <!-- increase seed condition at a set rate -->
+      <StatusEffect type="OnFire" target="This,Contained" targetidentifiers="plant,plantseed">
+        <Remove />
+      </StatusEffect>
+    </Powered>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="55,-55" containedspritedepth="0.75" slotsperrow="1" allowuioverlap="true">
+      <Containable identifiers="plantseed,plant" />
+      <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
+    </ItemContainer>
+  </Item>
+</Items>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="OxyGear" path="Mods/OxyGear/filelist.xml" corepackage="false" gameversion="0.10.5.1" steamworkshopid="2260683656" installtime="1602975653">
+
+
+		<Item file="Mods/OxyGear/Items/Containers/oxygear_container.xml" />
+
+		<None file="Mods/OxyGear/Items/Containers/oxygear_divsuitlocker_empty_v2.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_divsuitlocker_light.png" />
+
+		<None file="Mods/OxyGear/Items/Containers/oxygear_locker_v2.png" />
+		<None file="Mods/OxyGear/Items/Containers/oxygear_locker_b_v2.png" />
+
+		<None file="Mods/OxyGear/Items/Containers/oxygear_supplies_v1.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_supplies_light.png" />
+
+		<None file="Mods/OxyGear/Items/Containers/oxygear_cargostorage.png" />
+
+		<None file="Mods/OxyGear/Items/Containers/oxygear_weaponholder_01.png" />
+		<None file="Mods/OxyGear/Items/Containers/oxygear_weaponholder_02.png" />
+
+
+		<Item file="Mods/OxyGear/Items/Electricity/oxygear_electronic.xml" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_o2station_v3.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_o2station_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_navterminal_v4.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_navterminal_v4_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_wall-fabricator_v2.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_wall-fabricator_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_buzzer.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_floodlight_01.png" />
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_floodlight_02.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_floodlight_lightcone.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_textpanel.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_textpanel_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_textpanel_s.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_textpanel_s_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_engine_v2.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_engine_v2_light.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_light_led_h.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_light_led_h_active.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_light_neon.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_light_neon_active.png" />
+
+		<None file="Mods/OxyGear/Lights/oxygear_light_neon_s_active.png" />
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_light_neon_s.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_light_spot.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_light_spot_active.png" />
+
+		<None file="Mods/OxyGear/Items/Electricity/oxygear_light_em.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_light_em_active.png" />
+
+
+		<Item file="Mods/OxyGear/Items/Diving/oxygear_override_divsuit.xml" />
+
+		<None file="Mods/OxyGear/Items/Diving/divsuit_contained.png" />
+
+		<None file="Mods/OxyGear/Items/Diving/divsuit_helmet.png" />
+		<None file="Mods/OxyGear/Lights/divsuit_helmet_light.png" />
+		<None file="Mods/OxyGear/Items/Diving/divsuit_torso.png" />
+		<None file="Mods/OxyGear/Items/Diving/divsuit_legs.png" />
+		<None file="Mods/OxyGear/Items/Diving/divsuit_item.png" />
+		<None file="Mods/OxyGear/Items/Diving/divsuit_icon.png" />
+
+
+		<Item file="Mods/OxyGear/Items/Diving/oxygear_divegear.xml" />
+
+		<None file="Mods/OxyGear/Items/Diving/oxygear_scooter_v2.png" />
+		<None file="Mods/OxyGear/Lights/oxygear_scooter_light.png" />
+
+
+		<Item file="Mods/OxyGear/Items/Misc/oxygear_misc.xml" />
+
+		<None file="Mods/OxyGear/Lights/oxygear_lightbox_light.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_futurama.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_marvin.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_lincler.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_kusanagi.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_phantogram.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_solace.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_max.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_vincent.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_james.png" />
+		<None file="Mods/OxyGear/Items/Misc/oxygear_lightbox_kowalski.png" />
+
+		<None file="Mods/OxyGear/Items/Misc/oxygear_chair.png" />
+
+
+		<Structure file="Mods/OxyGear/Items/Structures/oxygear_structure.xml" />
+
+		<None file="Mods/OxyGear/Items/Structures/oxygear_bumper_a_v2.png" />
+		<None file="Mods/OxyGear/Items/Structures/oxygear_bumper_b_v2.png" />
+		<None file="Mods/OxyGear/Items/Structures/oxygear_bumper_c_v2.png" />
+		<None file="Mods/OxyGear/Items/Structures/oxygear_bumper_c-v_v2.png" />
+		<None file="Mods/OxyGear/Items/Structures/oxygear_bumper_d_v2.png" />
+
+
+		<Text file="Mods/OxyGear/Texts/English/OxyGear_English.xml" />
+
+		<Text file="Mods/OxyGear/Texts/German/OxyGear_German.xml" />
+
+
+		<None file="Mods/OxyGear/Sounds/oxygear_buzzer.ogg" />
+		<None file="Mods/OxyGear/Sounds/oxyscooter_warning.ogg" />
+
+
+</contentpackage>

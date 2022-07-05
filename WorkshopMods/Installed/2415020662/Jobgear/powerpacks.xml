@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Xa-PAK" identifier="powerpack" category="Equipment" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.35" fireproof="true" waterproof="true" description="Experimental Powered Assault Kit. This Strange piece of Hardware is surprisingly lightweight. It appears to be a Mobile Power Source that can be attached to a set of Armor. Several pouch like containers line the sides of the structure, allowing stowage of small items." impactsoundtag="impact_soft">
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.006" />
+    <Deconstruct time="45">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="thorium" />
+      <Item identifier="uranium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="carbon" />
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <Price baseprice="690" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Jobgear/powerpack.png" sourcerect="64,48,112,112" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Jobgear/powerpack.png" sourcerect="64,48,112,112" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="20" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearable.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="12" depth="0.5">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox" />
+    </ItemContainer>
+    <Upgrade gameversion="0.10.0.0" scale="0.35" />
+  </Item>
+  <Item name="Xa-PAK, Dark" identifier="powerpackdo" category="Equipment" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.35" fireproof="true" waterproof="true" description="Experimental Powered Assault Kit. This Strange piece of Hardware is surprisingly lightweight. It appears to be a Mobile Power Source that can be attached to a set of Armor. Several pouch like containers line the sides of the structure, allowing stowage of small items." impactsoundtag="impact_soft">
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.006" />
+    <Deconstruct time="45">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="thorium" />
+      <Item identifier="uranium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="carbon" />
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <Price baseprice="690" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Jobgear/powerpackdo.png" sourcerect="64,48,112,112" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Jobgear/powerpackdo.png" sourcerect="64,48,112,112" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="20" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearabledo.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="12" depth="0.5">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox" />
+    </ItemContainer>
+    <Upgrade gameversion="0.10.0.0" scale="0.35" />
+  </Item>
+  <Item name="Test" identifier="jump" category="Equipment" Tags="mediumitem,provocative" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+    <PreferredContainer primary="extinguisherholder" spawnprobability="1.0" />
+    <PreferredContainer secondary="engcab,reactorcab" />
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="sodium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
+    <Body width="30" height="100" density="5" />
+    <Holdable slots="RightHand+LeftHand" controlpose="false" aimpos="40,-20" handle1="-2,30" msg="ItemMsgPickUpSelect" />
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false">
+      <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
+      <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+    </RepairTool>
+    <Propulsion force="-500" usablein="water" particles="bubbles" />
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Test2" identifier="jump2" category="Equipment" Tags="mediumitem,provocative" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+    <PreferredContainer primary="extinguisherholder" spawnprobability="1.0" />
+    <PreferredContainer secondary="engcab,reactorcab" />
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="sodium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
+    <Body width="30" height="100" density="5" />
+    <Holdable slots="" controlpose="false" aimpos="40,-20" handle1="-2,30" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearabledo.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false">
+      <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
+      <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+    </RepairTool>
+    <Propulsion force="-200" usablein="water" particles="bubbles" />
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Test3" identifier="jump3" category="Equipment" Tags="mediumitem,provocative" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+    <PreferredContainer primary="extinguisherholder" spawnprobability="1.0" />
+    <PreferredContainer secondary="engcab,reactorcab" />
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="sodium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
+    <Body width="30" height="100" density="5" />
+    <Holdable slots="Any,RightHand" aimpos="0,0" handle1="0,0" handle2="0,0" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearabledo.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false">
+      <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
+      <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+    </RepairTool>
+    <Propulsion force="400" usablein="water" particles="bubbles" />
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Test4" identifier="jump4" category="Equipment" Tags="mediumitem" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+    <PreferredContainer primary="extinguisherholder" spawnprobability="1.0" />
+    <PreferredContainer secondary="engcab,reactorcab" />
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="sodium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
+    <Body width="30" height="100" density="5" />
+    <Holdable slots="Any,Bag" aimpos="0,0" handle1="0,0" handle2="0,0" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearabledo.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false">
+      <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
+      <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+    </RepairTool>
+    <Propulsion force="400" usablein="water" particles="bubbles" />
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Test5" identifier="jump5" category="Equipment" Tags="mediumitem" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+    <PreferredContainer primary="extinguisherholder" spawnprobability="1.0" />
+    <PreferredContainer secondary="engcab,reactorcab" />
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="4" />
+      <Price locationtype="research" multiplier="1" minavailable="2" />
+      <Price locationtype="military" multiplier="1" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="sodium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
+    <Body width="30" height="100" density="5" />
+    <Holdable slots="Any,Bag" aimpos="0,0" handle1="0,0" handle2="0,0" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+      <sprite name="powerpacktest" texture="%ModDir%/Jobgear/powerpackwearabledo.png" sourcerect="62,52,194,144" limb="Torso" inherittexturescale="true" inherittexturedepth="true" origin="0.50029135,0.49528915" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <RepairTool extinguishamount="60.0" range="75" barrelpos="21,25" repairthroughholes="true" hititems="false">
+      <ParticleEmitter particle="extinguisher" velocitymin="50.0" velocitymax="60.0" particlespersecond="20" />
+      <StatusEffect type="OnUse" targettype="This" Condition="-1.0" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="800.0" loop="true" />
+    </RepairTool>
+    <Propulsion force="400" usablein="water" particles="bubbles" />
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Items>

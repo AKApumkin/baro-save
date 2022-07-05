@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config language="None" verboselogging="false" savedebugconsolelogs="false" subeditorundobuffer="32" maxautosaves="8" autosaveintervalseconds="300" subeditorbackground="#0D2545" enablesplashscreen="true" pauseonfocuslost="true" aimassistamount="0.5" enablemouselook="true" chatopen="true" crewmenuopen="true" campaigndisclaimershown="false" editordisclaimershown="false" showoffensiveserverprompt="true" tutorialskipwarning="true" corpsedespawndelay="600" corpsespersubdespawnthreshold="5" usedualmodesockets="true" disableingamehints="false" enablesubmarineautosave="true" quickstartsub="">
+  <graphicssettings width="0" height="0" vsync="true" compresstextures="true" framelimit="300" displaymode="BorderlessWindowed" particlelimit="1500" specularity="true" chromaticaberration="true" losmode="Transparent" hudscale="1" inventoryscale="1" lightmapscale="1" textscale="1" radialdistortion="true" />
+  <graphicsmode width="0" height="0" vsync="true" compresstextures="true" framelimit="300" displaymode="BorderlessWindowed" particlelimit="1500" specularity="true" chromaticaberration="true" losmode="Transparent" hudscale="1" inventoryscale="1" lightmapscale="1" textscale="1" radialdistortion="true" />
+  <audio musicvolume="0.3" soundvolume="0.5" voicechatvolume="0.5" voicechatcutoffprevention="0" microphonevolume="5" muteonfocuslost="false" dynamicrangecompressionenabled="true" usedirectionalvoicechat="true" voipattenuationenabled="true" voicesetting="PushToTalk" audiooutputdevice="" voicecapturedevice="" noisegatethreshold="0" uselocalvoicebydefault="false" disablevoicechatfilters="false" />
+  <contentpackages>
+    <!--Backwards compatibility-->
+    <core name="Vanilla 0.9" />
+    <!--Vanilla-->
+    <corepackage path="Content/ContentPackages/Vanilla.xml" />
+    <regularpackages />
+  </contentpackages>
+  <serverfilters />
+  <player name="" tags="" HairIndex="-1" BeardIndex="-1" MoustacheIndex="-1" FaceAttachmentIndex="-1" HairColor="#000000" FacialHairColor="#000000" SkinColor="#000000" />
+  <ignoredhints identifiers="" />
+  <debugconsolemapping />
+  <tutorials />
+  <keymapping Select="PrimaryMouse" Use="E" Aim="SecondaryMouse" Up="W" Down="S" Left="A" Right="D" Attack="R" Run="LeftShift" Crouch="LeftControl" InfoTab="Tab" Chat="T" RadioChat="R" CrewOrders="C" Ragdoll="Space" Health="H" Grab="G" SelectNextCharacter="Z" SelectPreviousCharacter="X" Voice="V" LocalVoice="B" Deselect="SecondaryMouse" Shoot="PrimaryMouse" Command="MiddleMouse" ToggleInventory="Q" TakeOneFromInventorySlot="LeftControl" TakeHalfFromInventorySlot="LeftShift" NextFireMode="MouseWheelUp" PreviousFireMode="MouseWheelDown" />
+  <inventorykeymapping slot0="D1" slot1="D2" slot2="D3" slot3="D4" slot4="D5" slot5="D6" slot6="D7" slot7="D8" slot8="D9" slot9="D0" />
+</config>

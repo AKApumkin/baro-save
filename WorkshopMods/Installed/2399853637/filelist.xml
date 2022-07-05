@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Craftable Ammo Updated" steamworkshopid="2399853637" corepackage="false" modversion="1.0.0" gameversion="0.14.6.0" installtime="1627731045">
+  <Item file="%ModDir%/Content/Items/ammo.xml" />
+</contentpackage>

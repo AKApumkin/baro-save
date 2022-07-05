@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Retrievable Harpoons" steamworkshopid="2617666169" corepackage="false" modversion="1.0.0" gameversion="0.1500.5.0" installtime="1633260168">
+  <Item file="%ModDir%/RetrievableHarpoonItems.xml" />
+  <None file="%ModDir%/Harpoons.png" />
+</contentpackage>

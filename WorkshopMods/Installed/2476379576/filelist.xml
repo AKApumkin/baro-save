@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Medical Headset" steamworkshopid="2476379576" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1647822506">
+  <Item file="%ModDir%/MedHeadset/MedHeadset.xml" />
+  <None file="%ModDir%/MedHeadset/baromedhead.png" />
+  <None file="%ModDir%/MedHeadset/MedInventoryIconAtlas.png" />
+  <None file="%ModDir%/medheadpreview.png" />
+</contentpackage>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="[PVP specialization] ISABEL" steamworkshopid="2795024741" corepackage="false" modversion="1.0.0" gameversion="0.16.7.0" installtime="1650240846" altnames="ISABEL">
+  <Submarine file="%ModDir%/ISABEL.sub" />
+  <Submarine file="%ModDir%/ISABEL_Drone.sub" />
+  <Submarine file="%ModDir%/[EN]-ISABEL.sub" />
+</contentpackage>

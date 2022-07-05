@@ -1,0 +1,1017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Sauerstoff-Nachfüllstation -->
+  <Item name="" identifier="oxygear_o2station" tags="container,oxygentankcontainer,oxygear" category="Machine" pickdistance="100" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_o2station_v3.png" sourcerect="0,0,99,338" depth="0.84" origin="0.5,0.5" />
+    <OxygenGenerator generatedamount="50.0" powerconsumption="50.0" minvoltage="0.3" canbeselected="false" vulnerabletoemp="false">
+      <StatusEffect type="OnActive" targettype="Contained" targets="oxygentank" Condition="2.0" />
+    </OxygenGenerator>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="6" maxstacksize="1" slotsperrow="3" itempos="27,-93" iteminterval="22.5,-92" itemsperrow="3" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgOxygenRefill">
+      <GuiFrame relativesize="0.25,0.35" anchor="Center" style="ItemUI" />
+      <Containable items="oxygensource" />
+    </ItemContainer>
+    <LightComponent range="25.0" lightcolor="50,70,100,100" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_o2station_light.png" depth="0.81" origin="0.5,0.5" />
+    </LightComponent>
+    <LightComponent range="20.0" lightcolor="41,65,4,200" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.1" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" depth="0.81" origin="0.5,2.24" size="1.0,1.00" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <!--	Brzzzt!		-->
+      <RequiredSkill identifier="electrical" level="50" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="50.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="10" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" Msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.05" mindeteriorationdelay="200" maxdeteriorationdelay="800" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="15">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <!--	Urp!		-->
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Fabrikator -->
+  <Item name="" identifier="oxygear_wall-fabricator" tags="fabricator,oxygear" category="Machine" scale="0.45" linkable="true" allowedlinks="deconstructor,locker" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_fabricator_v3.png" sourcerect="0,0,247,350" depth="0.80" />
+    <aitarget sightrange="0" soundrange="600" fadeouttime="2" />
+    <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+      <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="600.0" loop="true" />
+      <poweronsound file="Content/Items/PowerOnLight1.ogg" range="400" loop="false" />
+      <StatusEffect type="InWater" target="This" condition="-0.5" />
+    </Fabricator>
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+    <!-- Tasten-Interface zur Aktivierung/Deaktivierung -->
+    <CustomInterface canbeselected="true">
+      <GuiFrame relativesize="0.10,0.15" anchor="BottomCenter" style="ItemUI" absoluteoffset="-20,0" />
+      <Button text="On">
+        <StatusEffect type="OnUse" targettype="This" isOn="true" IsActive="true" />
+      </Button>
+      <Button text="Off">
+        <StatusEffect type="OnUse" targettype="This" isOn="false" IsActive="false" />
+      </Button>
+    </CustomInterface>
+    <!-- Bildschirm -->
+    <LightComponent range="55.0" lightcolor="0,144,188,122" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_fabricator_light_a.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_fabricator_light_a.png" sourcerect="0,0,247,350" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- Betrieb - Status (Grün) -->
+    <LightComponent range="55.0" lightcolor="0,155,25,100" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_fabricator_light_b.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_fabricator_light_b.png" sourcerect="0,0,247,350" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" Msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="180" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Navigations-Terminal -->
+  <Item name="" identifier="oxygear_navterminal" tags="command,navterminal,oxygear" category="Machine" scale="0.5" linkable="true" allowedlinks="statusmonitor" DisplaySideBySideWhenLinked="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_navterminal_v5.png" depth="0.82" sourcerect="0,0,171,296" origin="0.5,0.5" />
+    <StaticBody width="171" height="296" />
+    <Steering minvoltage="0.5" canbeselected="true" powerconsumption="10" linkuitocomponent="Sonar" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.55,0.59" anchor="CenterLeft" style="OuterGlow" color="0,0,0,0.8" relativeoffset="0.125,-0.075" />
+      <StatusEffect type="InWater" target="This" condition="-0.5" />
+      <poweronsound file="Content/Items/PowerOnLight1.ogg" range="1000" loop="false" />
+      <MaintainPosIndicator texture="Content/Items/Command/NavUI.png" sourcerect="50,0,60,61" />
+      <MaintainPosOriginIndicator texture="Content/Items/Command/NavUI.png" sourcerect="0,0,50,54" />
+      <SteeringIndicator texture="Content/Items/Command/NavUI.png" sourcerect="0,135,362,16" origin="0,0.5" />
+    </Steering>
+    <aitarget sightrange="200" soundrange="10000" staticsight="true" fadeouttime="5" />
+    <Sonar canbeselected="true" powerconsumption="100" displaybordersize="-0.1">
+      <GuiFrame relativesize="0.55,0.59" anchor="CenterLeft" relativeoffset="0.125,-0.075" />
+      <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
+      <sound file="Content/Items/Command/SonarPing2.ogg" type="OnUse" range="1000.0" />
+      <StatusEffect type="OnUse">
+        <sound file="Content/Items/Command/SonarPingFar.ogg" type="OnUse" range="6000.0" />
+      </StatusEffect>
+      <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+      <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+      <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+      <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+      <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+      <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+      <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+      <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+      <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
+      <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
+      <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
+      <icon identifier="artifact" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,414,8,8" origin="0.5,0.5" />
+      <icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5" />
+    </Sonar>
+    <CustomInterface canbeselected="true">
+      <GuiFrame relativesize="0.20,0.40" anchor="CenterRight" pivot="TopRight" relativeoffset="0.1125,0" style="ItemUI" />
+      <Button text="Signal out #1" connection="signal_out1" />
+      <Button text="Signal out #2" connection="signal_out2" />
+      <Button text="Signal out #3" connection="signal_out3" />
+      <Button text="Signal out #4" connection="signal_out4" />
+      <Button text="Signal out #5" connection="signal_out5" />
+      <Button text="Signal out #6" connection="signal_out6" />
+    </CustomInterface>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.4,0.5" minsize="450,550" maxsize="500,700" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <output name="velocity_x_out" displayname="connection.velocityxout" />
+      <output name="velocity_y_out" displayname="connection.velocityyout" />
+      <input name="velocity_in" displayname="connection.steeringvelocityin" />
+      <input name="transducer_in" displayname="connection.sonartransducerin" />
+      <output name="toggle_docking" displayname="connection.toggledocking" />
+      <output name="signal_out1" displayname="connection.signaloutx~[num]=1" />
+      <output name="signal_out2" displayname="connection.signaloutx~[num]=2" />
+      <output name="signal_out3" displayname="connection.signaloutx~[num]=3" />
+      <output name="signal_out4" displayname="connection.signaloutx~[num]=4" />
+      <output name="signal_out5" displayname="connection.signaloutx~[num]=5" />
+      <output name="signal_out6" displayname="connection.signaloutx~[num]=6" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="electricalrepairsheader" msg="ItemMsgRepairScrewdriver" hudpriority="10" deteriorationspeed="0.125" mindeteriorationdelay="280" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+    <!--	Deko-Licht	-->
+    <LightComponent range="43.0" lightcolor="0,144,188,122" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_navterminal_light.png" depth="0.80" origin="0.5,0.5" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_navterminal_light.png" sourcerect="0,0,171,296" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <!-- Navigations-Statusmonitor -->
+  <Item name="" identifier="oxygear_statusmonitor" tags="command,statusmonitor,oxygear" aliases="MiniMap" category="Machine" scale="0.5" linkable="true" allowedlinks="navterminal" DisplaySideBySideWhenLinked="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_statusmonitor.png" sourcerect="0,0,94,148" depth="0.8" origin="0.5,0.5" />
+    <StaticBody width="94" height="148" />
+    <LightComponent range="25.0" lightcolor="0,144,188,122" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_statusmonitor_light.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_statusmonitor_light.png" sourcerect="0,0,94,148" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <MiniMap MinVoltage="0.5" PowerConsumption="100" canbeselected="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.5,0.5" anchor="CenterRight" style="ItemUI" />
+      <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
+      <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
+    </MiniMap>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <AlternativeLayout anchor="CenterRight" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="water_data_in" displayname="connection.waterdatain" />
+      <input name="oxygen_data_in" displayname="connection.oxygendatain" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="electricalrepairsheader" msg="ItemMsgRepairScrewdriver" hudpriority="10" deteriorationspeed="0.15" mindeteriorationdelay="220" maxdeteriorationdelay="680" MinDeteriorationCondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!--	Beleuchtung	- START		-->
+  <Item name="" nameidentifier="oxygear_light" identifier="oxygear_light_led_h" Tags="smallitem,light,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_light_led_h.png" sourcerect="0,0,94,26" depth="0.80" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="215,255,255,150" range="800.0" powerconsumption="5" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_light_led_h_active.png" sourcerect="0,0,94,26" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" nameidentifier="oxygear_light" identifier="oxygear_light_spot" Tags="smallitem,light,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_light_spot.png" sourcerect="0,0,31,31" depth="0.80" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="215,255,255,150" range="800.0" powerconsumption="5" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_light_spot_active.png" sourcerect="0,0,31,31" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" nameidentifier="oxygear_light" identifier="oxygear_light_neon" Tags="smallitem,light,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_light_neon.png" sourcerect="0,0,223,34" depth="0.80" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="225,255,255,150" range="800.0" powerconsumption="5" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_light_neon_active.png" sourcerect="0,0,223,34" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" nameidentifier="oxygear_light" identifier="oxygear_light_neon_s" Tags="smallitem,light,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_light_neon_s.png" sourcerect="0,0,120,34" depth="0.80" origin="0.5,0.5" />
+    <Body radius="15" density="15" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="225,255,255,150" range="600.0" powerconsumption="2" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_light_neon_s_active.png" sourcerect="0,0,120,34" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Flutlicht / Suchscheinwerfer -->
+  <Item name="" identifier="oxygear_floodlight" description="" tags="searchlight,oxygear" aliases="Floodlight" category="Machine" focusonselected="true" offsetonselected="650" linkable="false" Scale="0.5" castshadow="true" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_floodlight_01.png" depth="0.70" sourcerect="0,0,68,80" />
+    <StaticBody width="60" radius="60" />
+    <!--	Position des Scheinwerfergehäuses auf dem Träger wird über "barrelpos" definiert!		-->
+    <Turret canbeselected="true" linkable="false" barrelpos="35,23" rotationlimits="180,360" powerconsumption="1000.0" showchargeindicator="false" showprojectileindicator="false" springstiffnesslowskill="35" springstiffnesshighskill="35" springdampinglowskill="5" springdampinghighskill="5" rotationspeedlowskill="1.5" rotationspeedhighskill="1.5" reload="999999999">
+      <BarrelSprite texture="%ModDir%/Items/Electricity/oxygear_floodlight_02.png" depth="0.69" sourcerect="0,0,88,64" origin="0.5, 0.75" />
+      <!--	Test: drawbehindsubs zusätzlich aktivieren? - testen... -->
+      <LightComponent AllowIngameEditing="false" IsOn="true" powerconsumption="0.1" range="2500" drawbehindsubs="false" castshadows="true" ignorecontinuoustoggle="true" LightColor="1.0,1.0,1.0,1.0" Flicker="0.0">
+        <LightTexture texture="%ModDir%/Lights/oxygear_floodlight_lightcone.png" origin="0.0,0.5" size="1.0,1.0" />
+      </LightComponent>
+      <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+      <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+      <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+    </Turret>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_light" displayname="connection.setlight" />
+      <input name="set_color" displayname="connection.setcolor" />
+      <!--	Brzzzt!		-->
+      <RequiredSkill identifier="electrical" level="50" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="50.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="10" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <AiTarget maxsightrange="2000" maxsoundrange="500" fadeouttime="2" />
+  </Item>
+  <!-- Statuslicht (Röhre) -->
+  <Item name="" nameidentifier="oxygear_signallight" identifier="oxygear_light_em" Tags="smallitem,light,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="false" damagedbyexplosions="false" explosiondamagemultiplier="0.0">
+    <Sprite texture="oxygear_light_em.png" sourcerect="0,0,84,17" depth="0.80" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="255,25,0,255" range="250.0" powerconsumption="0" IsOn="false" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="1.0">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_light_em_active.png" sourcerect="0,0,84,17" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <!-- Optionaler Stromanschluß für "Normalbetrieb", dabei den Wert "powerconsumption" beachten!  -->
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Positionslicht (Außenbeleuchtung) -->
+  <Item name="" nameidentifier="oxygear_signallight" identifier="oxygear_positionlight" Tags="smallitem,light,oxygear" category="Electrical" scale="0.4" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="false" damagedbyexplosions="false" explosiondamagemultiplier="0.0">
+    <Sprite texture="oxygear_positionlight.png" sourcerect="0,0,30,16" depth="0.80" origin="0.5,0.5" />
+    <Body radius="15" density="15" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="0,144,188,122" range="150.0" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" blinkfrequency="0.3" drawbehindsubs="true">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_positionlight_active.png" sourcerect="0,0,30,16" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <!-- Optionaler Stromanschluß für "Normalbetrieb", dabei den Wert "powerconsumption" beachten!  -->
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Frontscheinwerfer -->
+  <Item name="" identifier="oxygear_frontlight" description="" tags="frontlight,oxygear" aliases="Frontlight" category="Electrical" linkable="false" Scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_frontlight.png" depth="0.099" sourcerect="0,0,142,80" />
+    <StaticBody width="142" height="80" />
+    <LightComponent AllowIngameEditing="false" IsOn="false" powerconsumption="100.0" range="1000" drawbehindsubs="false" castshadows="false" ignorecontinuoustoggle="true" LightColor="1.0,1.0,1.0,1.0" Blinkfrequency="0.0" Flicker="0.0" Flickerspeed="0.0">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.01,0.5" size="1.0,1.0" />
+      <Sprite texture="%ModDir%/Lights/oxygear_frontlight_active_a.png" sourcerect="0,0,142,80" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <LightComponent AllowIngameEditing="false" IsOn="true" powerconsumption="0.0" range="22" drawbehindsubs="false" castshadows="false" ignorecontinuoustoggle="true" LightColor="0,144,188,122" Blinkfrequency="0.0" Flicker="0.1" Flickerspeed="0.2">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.9,0.4" />
+      <Sprite texture="%ModDir%/Lights/oxygear_frontlight_active_b.png" sourcerect="0,0,142,80" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_light" displayname="connection.setlight" />
+      <!--	Brzzzt!	*Light*	-->
+      <RequiredSkill identifier="electrical" level="50" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="50.0" stun="0" force="50.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="2" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <AiTarget maxsightrange="1000" maxsoundrange="0" fadeouttime="2" />
+  </Item>
+  <!-- Flurlicht -->
+  <Item name="" nameidentifier="oxygear_floorlight" identifier="oxygear_floorlight" Tags="smallitem,light,oxygear" category="Electrical" scale="0.4" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_floorlight.png" sourcerect="0,0,89,30" depth="0.80" origin="0.5,0.5" />
+    <Body radius="89" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="215,255,255,255" range="110.0" powerconsumption="2" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="%ModDir%/Lights/oxygear_floorlight_light.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_floorlight_active.png" sourcerect="0,0,89,30" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Flurlicht (Kompakte Version mit unterem Lichtkegel) -->
+  <Item name="" nameidentifier="oxygear_floorlight" identifier="oxygear_floorlight_s" Tags="smallitem,light,oxygear" category="Electrical" scale="0.4" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_floorlight_s.png" sourcerect="0,0,89,21" depth="0.80" origin="0.5,0.5" />
+    <Body radius="89" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent allowingameediting="false" lightcolor="215,255,255,255" range="120.0" powerconsumption="1" IsOn="true" castshadows="true" flicker="0.0" flickerspeed="0.0" blinkfrequency="0.0">
+      <LightTexture texture="%ModDir%/Lights/oxygear_floorlight_s_light.png" origin="0.5,0.95" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_floorlight_s_active.png" sourcerect="0,0,89,21" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!--	Beleuchtung - ENDE		-->
+  <!-- Akustischer Alarm -->
+  <Item name="" identifier="oxygear_buzzer" Tags="smallitem,sound,oxygear" category="Electrical" scale="0.5" noninteractable="false" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.1">
+    <Sprite texture="oxygear_buzzer.png" depth="0.8" sourcerect="0,0,42,31" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent canbeselected="false" lightcolor="0,0,0,0" range="0" powerconsumption="0" IsOn="false" castshadows="false">
+      <sound file="%ModDir%/Sounds/oxygear_buzzer.ogg" type="OnActive" range="1500.0" loop="true" volume="0.7" />
+      <!-- Wird im Inventar deaktiviert. -->
+      <StatusEffect type="OnContained" target="This" IsActive="false" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <!--	Brzzzt!		-->
+      <RequiredSkill identifier="electrical" level="50" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="50.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="10" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="tin" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="tin" />
+    </Fabricate>
+    <Price baseprice="50">
+      <Price locationtype="outpost" multiplier="1" />
+      <Price locationtype="city" multiplier="0.9" />
+      <Price locationtype="research" multiplier="1.25" />
+      <Price locationtype="military" multiplier="1" />
+      <Price locationtype="mine" multiplier="1" />
+    </Price>
+  </Item>
+  <!-- Laufschrift -->
+  <Item name="" identifier="oxygear_textpanel" category="Misc" tags="oxygear,ticker" noninteractable="false">
+    <Sprite texture="oxygear_textpanel.png" depth="0.80" sourcerect="0,0,150,25" />
+    <!--	Padding = left,top,right,bottom	/ Default ScrollSpeed = 20			-->
+    <ItemLabel Padding="7,7,7,3" Scrollable="true" ScrollSpeed="25" TextColor="1,1,1,1" TextScale="1" Text="OxyGear®">
+      <LightComponent allowingameediting="false" IsOn="true" range="75.0" lightcolor="75,125,175,200" castshadows="false" powerconsumption="0" blinkfrequency="0.0" flicker="0.1" flickerspeed="0.2">
+        <LightTexture texture="%ModDir%/Lights/oxygear_textpanel_light.png" depth="0.81" origin="0.5,0.5" />
+      </LightComponent>
+    </ItemLabel>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="set_text" displayname="connection.set_text" fallbackdisplayname="connection.setoutput" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_light" displayname="connection.setlight" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Laufschrift - Kompakte Ausführung -->
+  <Item name="" identifier="oxygear_textpanel_s" nameidentifier="oxygear_textpanel" category="Misc" tags="oxygear,ticker" noninteractable="false">
+    <Sprite texture="oxygear_textpanel_s.png" depth="0.80" sourcerect="0,0,75,25" />
+    <!--	Padding = left,top,right,bottom	/ Default ScrollSpeed = 20			-->
+    <ItemLabel Padding="7,7,7,3" Scrollable="true" ScrollSpeed="25" TextColor="1,1,1,1" TextScale="1" Text="OxyGear®">
+      <LightComponent allowingameediting="false" IsOn="true" range="37.0" lightcolor="75,125,175,200" castshadows="false" powerconsumption="0" blinkfrequency="0.0" flicker="0.1" flickerspeed="0.2">
+        <LightTexture texture="%ModDir%/Lights/oxygear_textpanel_s_light.png" depth="0.81" origin="0.5,0.5" />
+      </LightComponent>
+    </ItemLabel>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="set_text" displayname="connection.set_text" fallbackdisplayname="connection.setoutput" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_light" displayname="connection.setlight" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Antrieb -->
+  <Item name="" identifier="oxygear_engine" tags="engine,oxygear" category="Machine" Scale="0.5" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_engine_v2.png" depth="0.8" sourcerect="0,0,885,300" canflipx="true" origin="0.5,0.5" />
+    <StaticBody width="885" height="300" />
+    <trigger x="355" y="-15" width="510" height="270" />
+    <aitarget sightrange="500" soundrange="10000" staticsight="true" fadeouttime="5" />
+    <Engine minvoltage="0.5" powerconsumption="2000.0" maxforce="3000" canbeselected="true" propellerpos="-400,0" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.2,0.18" minsize="450,200" anchor="Center" style="ItemUI" />
+      <StatusEffect type="InWater" target="This" condition="-1.0" />
+      <sound file="Content/Items/Engine/Engine.ogg" type="OnActive" range="7500.0" volumeproperty="CurrentVolume" loop="true" />
+      <sound file="Content/Items/Engine/EngineBroken.ogg" type="Always" range="15000.0" volumeproperty="CurrentBrokenVolume" loop="true" />
+      <poweronsound file="Content/Items/PowerOnHeavy1.ogg" range="3000" loop="false" />
+      <propellerdamage damagerange="100" targetforce="1000" severlimbsprobability="1.0">
+        <Affliction identifier="internaldamage" strength="100" />
+        <Affliction identifier="bleeding" strength="100" />
+        <Affliction identifier="stun" strength="2.0" />
+      </propellerdamage>
+      <LightComponent allowingameediting="false" IsOn="true" range="220.0" lightcolor="255,150,5,205" castshadows="false" powerconsumption="0.1" blinkfrequency="0.0" flicker="0.2" flickerspeed="0.3">
+        <LightTexture texture="%ModDir%/Lights/oxygear_engine_v2_light.png" depth="0.79" origin="0.5,0.5" />
+      </LightComponent>
+    </Engine>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" severlimbsprobability="1.0">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="set_force" displayname="connection.setforce" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <!-- <output name="state_out" displayname="connection.stateout" />	Ohne Funktion -->
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.20" mindeteriorationdelay="200" maxdeteriorationdelay="400" mindeteriorationcondition="0" RepairThreshold="75" fixDurationHighSkill="15" fixDurationLowSkill="40">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,200" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="66" />
+      <RequiredItem items="wrench" type="equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" severlimbsprobability="1.0">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Batterielader v3 -->
+  <Item name="" identifier="oxygear_batteryloader" category="Electrical" tags="chargingdock,oxygear" noninteractable="false" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <!-- Gehäuse -->
+    <Sprite texture="oxygear_batteryloader_v3.png" depth="0.78" sourcerect="0,0,119,109" canflipx="false" canflipy="false" />
+    <!-- Hintergrund -->
+    <DecorativeSprite texture="oxygear_batteryloader_v3_bg.png" depth="0.80" sourcerect="0,0,119,109" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hideitems="false" uilabel="ChargingDock" autofill="False" itempos="24,-57" iteminterval="23,0" itemrotation="-90" containedspritedepth="0.79">
+      <!-- (Inaktiv) Zugangsberechtigung
+						<RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+						-->
+      <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+      <Containable identifier="loadable" />
+    </ItemContainer>
+    <Powered isOn="true" IsActive="true" powerconsumption="200" currpowerconsumption="200">
+      <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
+      <!--	Aufladegeschwindigkeit wird über "Condition" definiert	-->
+      <StatusEffect type="OnActive" targettype="Contained" targets="loadable" Condition="6.0">
+        <!-- 	the statuseffect targets the contained item (a battery cell that's being charged), 
+											but the conditional targets the container (this object(component) )			-->
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetitemcomponent="Powered" />
+      </StatusEffect>
+      <!-- Tasten-Interface zur Aktivierung/Deaktivierung -->
+      <CustomInterface canbeselected="true">
+        <GuiFrame relativesize="0.10,0.15" anchor="BottomCenter" style="ItemUI" absoluteoffset="-20,0" />
+        <Button text="On">
+          <StatusEffect type="OnUse" targettype="This" isOn="true" IsActive="true" />
+        </Button>
+        <Button text="Off">
+          <StatusEffect type="OnUse" targettype="This" isOn="false" IsActive="false" />
+        </Button>
+      </CustomInterface>
+    </Powered>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <!--	Brzzzt!	[Mod.]	-->
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="100.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="15" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <!-- Status-Licht - Grün -->
+    <LightComponent range="30.0" lightcolor="0,155,25,100" powerconsumption="0.1" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_batteryloader_light_a.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_batteryloader_light_a.png" sourcerect="0,0,119,109" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- Status-Licht - Orange -->
+    <LightComponent range="30.0" lightcolor="200,100,0,200" powerconsumption="0.1" IsOn="false" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_batteryloader_light_b.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_batteryloader_light_b.png" sourcerect="0,0,119,109" alpha="1.0" origin="0.5,0.5" />
+      <!-- Licht wird aktiviert, sobald die Spannung über 1 liegt -->
+      <IsActive targetitemcomponent="Powered" targetcontainer="true" Voltage="gt 1.0" />
+    </LightComponent>
+    <Repairable selectkey="Action" header="electricalrepairsheader" msg="ItemMsgRepairScrewdriver" hudpriority="10" deteriorationspeed="0.025" RepairThreshold="80" mindeteriorationdelay="300" maxdeteriorationdelay="600" MinDeteriorationCondition="0" fixDurationHighSkill="5" fixDurationLowSkill="15">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Com-Hub -->
+  <Item name="" identifier="oxygear_comhub" category="Electrical" Tags="oxygear,hub,signal" scale="0.5" isshootable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_comhub.png" depth="0.8" sourcerect="0,0,100,200" origin="0.5,0.5" />
+    <StaticBody width="100" height="200" density="100" />
+    <RelayComponent IsOn="true" IsActive="true" canbeselected="true" allowingameediting="true" MinVoltage="0.5" PowerConsumption="10.0" maxPower="4000.0" OverloadVoltage="2.5" vulnerabletoemp="false" canbeoverloaded="false" FireProbability="0.10">
+      <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="BottomCenter" style="ItemUI" />
+      <!-- Zugangsberechtigung über ID Karte -->
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <!-- Interface zur Aktivierung der Signale	-->
+      <CustomInterface canbeselected="true">
+        <GuiFrame relativesize="0.20,0.40" anchor="Center" style="ItemUI" />
+        <Button text="Signal out #1" connection="signal_out1" />
+        <Button text="Signal out #2" connection="signal_out2" />
+        <Button text="Signal out #3" connection="signal_out3" />
+        <Button text="Signal out #4" connection="signal_out4" />
+        <Button text="Signal out #5" connection="signal_out5" />
+        <!-- <Button text="Signal out #6" connection="signal_out6" /> -->
+      </CustomInterface>
+      <!-- Tasten-Interface zur Aktivierung/Deaktivierung -->
+      <CustomInterface canbeselected="true">
+        <GuiFrame relativesize="0.10,0.15" anchor="BottomCenter" style="ItemUI" absoluteoffset="-20,0" />
+        <Button text="On">
+          <StatusEffect type="OnUse" targettype="This" isOn="true" IsActive="true" />
+        </Button>
+        <Button text="Off">
+          <StatusEffect type="OnUse" targettype="This" isOn="false" IsActive="false" />
+        </Button>
+      </CustomInterface>
+      <!-- Interface zur Aktivierung/Deaktivierung des ComHubs
+							<CustomInterface canbeselected="true" >
+								<GuiFrame relativesize="0.10,0.14" anchor="BottomCenter" style="ItemUI" absoluteoffset="-20,0" />
+								<TickBox text="Powered" >
+									<StatusEffect type="OnUse" targettype="This" IsOn="true" />
+									<StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+								</TickBox>
+							</CustomInterface>
+							-->
+      <poweronsound file="Content/Items/PowerOnLight1.ogg" range="400" loop="false" />
+      <StatusEffect type="InWater" target="This" condition="-0.5" />
+    </RelayComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" allowingameediting="false" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.3,0.6" minsize="400,400" maxsize="600,1200" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <!--	Power-Eingang	-->
+      <input name="power_in" displayname="connection.powerin" />
+      <!--	Signal-Eingänge	-->
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="signal_in1" displayname="connection.signalinx~[num]=1" />
+      <input name="signal_in2" displayname="connection.signalinx~[num]=2" />
+      <input name="signal_in3" displayname="connection.signalinx~[num]=3" />
+      <input name="signal_in4" displayname="connection.signalinx~[num]=4" />
+      <input name="signal_in5" displayname="connection.signalinx~[num]=5" />
+      <!--	Power-Ausgänge	-->
+      <output name="power_out" displayname="connection.powerout" />
+      <output name="power_out" displayname="connection.powerout" />
+      <!--	Zwei zusätzliche Power-Ausgänge	-->
+      <output name="power_out" displayname="connection.powerout" />
+      <output name="power_out" displayname="connection.powerout" />
+      <!--	Signal-Ausgänge	-->
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+      <output name="signal_out1" displayname="connection.signaloutx~[num]=1" />
+      <output name="signal_out2" displayname="connection.signaloutx~[num]=2" />
+      <output name="signal_out3" displayname="connection.signaloutx~[num]=3" />
+      <output name="signal_out4" displayname="connection.signaloutx~[num]=4" />
+      <output name="signal_out5" displayname="connection.signaloutx~[num]=5" />
+      <!--	Brzzzt!	[Mod.]	-->
+      <RequiredSkill identifier="electrical" level="55" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="100.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="15" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <!-- Bildschirm -->
+    <LightComponent range="25.0" lightcolor="0,144,188,122" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_comhub_light_a.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_comhub_light_a.png" sourcerect="0,0,100,200" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- Betrieb - Status (Grün) -->
+    <LightComponent range="25.0" lightcolor="0,155,25,240" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_comhub_light_b.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_comhub_light_b.png" sourcerect="0,0,100,200" alpha="1.0" origin="0.5,0.5" />
+      <IsActive targetitemcomponent="PowerTransfer" />
+    </LightComponent>
+    <!-- Überladung - Status (Orange) -->
+    <LightComponent range="25.0" lightcolor="200,100,0,240" powerconsumption="0.01" IsOn="false" castshadows="false" flicker="0.1" flickerspeed="0.2" blinkfrequency="0.5" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_comhub_light_c.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_comhub_light_c.png" sourcerect="0,0,100,200" alpha="1.0" origin="0.5,0.5" />
+      <IsActive targetitemcomponent="PowerTransfer" overload="eq True" />
+    </LightComponent>
+    <Repairable selectkey="Action" header="electricalrepairsheader" msg="ItemMsgRepairScrewdriver" hudpriority="10" deteriorationspeed="0.05" RepairThreshold="80" mindeteriorationdelay="200" maxdeteriorationdelay="800" MinDeteriorationCondition="0" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Distributor -->
+  <Item name="" identifier="oxygear_distributor" tags="junctionbox,oxygear" category="Electrical" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_distributor.png" sourcerect="0,0,100,160" origin="0.5,0.5" canflipx="false" canflipy="false" depth="0.8" />
+    <PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect" allowingameediting="true" MinVoltage="0.5" maxPower="2500.0" OverloadVoltage="2.5" vulnerabletoemp="false" canbeoverloaded="true" FireProbability="0.15">
+      <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" />
+      <StatusEffect type="InWater" target="This" condition="-0.25">
+        <Conditional currPowerConsumption="lt -10" />
+      </StatusEffect>
+    </PowerTransfer>
+    <ConnectionPanel selectkey="Action" canbeselected="true" allowingameediting="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.3" minsize="200,300" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <!--	Signal-Eingänge
+							<input name="power_in" displayname="connection.powerin" />
+							<input name="set_state" displayname="connection.setstate" />
+							<input name="toggle" displayname="connection.togglestate" />
+							-->
+      <!--	Signal-Ausgänge	-->
+      <output name="power_out" displayname="connection.powerout" />
+      <!--
+							<output name="power_out" displayname="connection.powerout" />
+							<output name="power_out" displayname="connection.powerout" />
+							<output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+							-->
+      <!--	Brzzzt!	[Mod.]	-->
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="100.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="15" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </ConnectionPanel>
+    <!-- Betrieb - Status (Grün) -->
+    <LightComponent range="25.0" lightcolor="0,155,25,100" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_distributor_light_a.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_distributor_light_a.png" sourcerect="0,0,100,160" alpha="1.0" origin="0.5,0.5" />
+      <IsActive targetitemcomponent="PowerTransfer" />
+    </LightComponent>
+    <!-- Überladung - Status (Orange) -->
+    <LightComponent range="25.0" lightcolor="200,100,0,200" powerconsumption="0.01" IsOn="false" castshadows="false" flicker="0.1" flickerspeed="0.2" blinkfrequency="0.5" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_distributor_light_b.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_distributor_light_b.png" sourcerect="0,0,100,160" alpha="1.0" origin="0.5,0.5" />
+      <IsActive targetitemcomponent="PowerTransfer" overload="eq True" />
+    </LightComponent>
+    <Repairable selectkey="Action" header="electricalrepairsheader" msg="ItemMsgRepairScrewdriver" hudpriority="10" deteriorationspeed="0.10" mindeteriorationdelay="200" maxdeteriorationdelay="800" mindeteriorationcondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Sauerstoff-Generator -->
+  <Item name="" identifier="oxygear_oxygenerator" tags="oxygengenerator,oxygear" category="Machine" linkable="true" allowedlinks="vent" damagedbyexplosions="true" explosiondamagemultiplier="0.2" scale="0.7" pickdistance="50">
+    <Sprite texture="oxygear_o2generator.png" depth="0.8" origin="0.5,0.5" sourcerect="0,0,233,228" canflipx="false" canflipy="false" />
+    <trigger />
+    <OxygenGenerator generatedAmount="500.0" powerconsumption="1000.0" minvoltage="0.5" canbeselected="true" msg="ItemMsgInteractSelect">
+      <poweronsound file="Content/Items/PowerOnLight2.ogg" range="1500" loop="false" />
+      <sound file="Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="1000.0" volumeproperty="CurrFlow" volume="0.001" loop="true" />
+      <StatusEffect type="OnFire" target="This" Condition="-0.5" />
+      <StatusEffect type="OnActive" targettype="Contained" targets="oxygentank" Condition="1.5" />
+      <StatusEffect type="OnBroken" targettype="This" disabledeltatime="true">
+        <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="8000" selectionmode="All" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" range="8000" />
+        <Explosion range="50" stun="0" force="3.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+      </StatusEffect>
+    </OxygenGenerator>
+    <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hideitems="true" msg="ItemMsgOxygenRefill">
+      <GuiFrame relativesize="0.25,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="oxygentank" />
+    </ItemContainer>
+    <!-- Konsole / Status -->
+    <LightComponent range="80.0" lightcolor="0,155,25,120" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_o2generator_light.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_o2generator_light.png" sourcerect="0,0,233,228" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="toggle" displayname="connection.togglestate" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.12" mindeteriorationdelay="200" maxdeteriorationdelay="900" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="15" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- OxyGear Automatische Hybrid-Pumpe -->
+  <Item name="" identifier="oxygear_hybridpump" tags="pump,hybrid,oxygear" linkable="true" category="Machine" scale="0.4" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_hybridpump.png" depth="0.8" sourcerect="0,0,150,69" origin="0.5,0.5" />
+    <!-- Die Fördermenge wird über "MaxFlow" definiert. "FlowPercentage" legt die Betriebsleistung fest. (-100 = maximales Abpumpen)  -->
+    <Pump canbeselected="false" allowingameediting="false" MaxFlow="200" FlowPercentage="-100" PowerConsumption="100.0" MinVoltage="0.3" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.2" minsize="420,220" anchor="Center" style="ItemUI" />
+      <sound file="Content/Items/Pump/Pump.ogg" type="OnActive" range="500.0" volumeproperty="CurrFlow" volume="0.005" loop="true" />
+      <sound file="Content/Items/Pump/PumpBroken.ogg" type="Always" range="500.0" volumeproperty="CurrentBrokenVolume" volume="0.004" loop="true" />
+      <PumpInEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="180" anglemax="180" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="0.6" />
+      <PumpInEmitter particle="watersplash" particlespersecond="50" position="7,-51" anglemin="180" anglemax="180" velocitymin="200" velocitymax="400" scalemin="0.5" scalemax="0.6" />
+      <PumpOutEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="0.6" />
+      <!-- Wassererkennung für automatische Abschaltung [WICHTIG: "isOn" statt "IsActive" nutzen, da sonst die Reparaturen abgebrochen werden!] -->
+      <StatusEffect type="InWater" target="This" targetitemcomponent="Pump" IsOn="true" delay="0.5" />
+      <StatusEffect type="NotInWater" target="This" targetitemcomponent="Pump" IsOn="false" delay="2.5" />
+    </Pump>
+    <!-- Wassersensor -->
+    <WaterDetector IsActive="true" canbeselected="false" allowingameediting="false" Output="1" FalseOutput="0" />
+    <!-- Automatik-Modus - Status (Orange) -->
+    <LightComponent range="30.0" lightcolor="200,100,0,240" powerconsumption="0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false" blinkfrequency="0.2">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_hybridpump_light.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_hybridpump_light.png" sourcerect="0,0,150,69" alpha="1.0" origin="0.5,0.5" />
+      <!-- Voraussetzung für Aktivierung -->
+      <IsActive targetitemcomponent="Pump" IsActive="eq false" />
+    </LightComponent>
+    <!-- Betrieb - Status (Grün) -->
+    <LightComponent range="30.0" lightcolor="0,155,25,240" powerconsumption="0.01" IsOn="false" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_pump_light.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_pump_light.png" sourcerect="0,0,150,69" alpha="1.0" origin="0.5,0.5" />
+      <!-- Voraussetzung für Aktivierung -->
+      <IsActive targetitemcomponent="Pump" isOn="true" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.30" minsize="400,300" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <!-- Auf ein Neues! <output name="signal_out" displayname="connection.signalout" /> -->
+      <output name="signal_out" displayname="entityname.waterdetector" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.2" mindeteriorationdelay="120" maxdeteriorationdelay="360" MinDeteriorationCondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- OxyGear Pumpe -->
+  <Item name="" identifier="oxygear_pump" tags="pump,oxygear" linkable="true" category="Machine" scale="0.4" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Sprite texture="oxygear_pump.png" depth="0.8" sourcerect="0,0,150,69" origin="0.5,0.5" />
+    <!-- Die Fördermenge wird über "MaxFlow" definiert. "FlowPercentage" legt die Leistung fest. (-100 = maximales Abpumpen)  -->
+    <Pump canbeselected="true" MaxFlow="200" FlowPercentage="-100" PowerConsumption="80.0" MinVoltage="0.3" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.2" minsize="420,220" anchor="Center" style="ItemUI" />
+      <sound file="Content/Items/Pump/Pump.ogg" type="OnActive" range="500.0" volumeproperty="CurrFlow" volume="0.005" loop="true" />
+      <sound file="Content/Items/Pump/PumpBroken.ogg" type="Always" range="500.0" volumeproperty="CurrentBrokenVolume" volume="0.004" loop="true" />
+      <PumpInEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="180" anglemax="180" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="0.6" />
+      <PumpInEmitter particle="watersplash" particlespersecond="50" position="7,-51" anglemin="180" anglemax="180" velocitymin="200" velocitymax="400" scalemin="0.5" scalemax="0.6" />
+      <PumpOutEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="0.6" />
+      <!-- Wassererkennung für automatische Abschaltung [WICHTIG: "isOn" statt "IsActive" nutzen, da sonst die Reparaturen abgebrochen werden!] -->
+      <StatusEffect type="NotInWater" target="This" IsOn="false" delay="2.5" />
+    </Pump>
+    <!-- Betrieb - Status (Grün) -->
+    <LightComponent range="30.0" lightcolor="0,155,25,240" powerconsumption="0.01" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.2" allowingameediting="false">
+      <!-- Licht Radius -->
+      <LightTexture texture="%ModDir%/Lights/oxygear_pump_light.png" origin="0.5,0.5" alpha="1.0" />
+      <!-- Licht Objekt/Gehäuse -->
+      <sprite texture="%ModDir%/Lights/oxygear_pump_light.png" sourcerect="0,0,150,69" alpha="1.0" origin="0.5,0.5" />
+      <!-- Voraussetzung für Aktivierung -->
+      <IsActive targetitemcomponent="Pump" isOn="true" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="70" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_active" displayname="connection.setstate" />
+      <input name="set_speed" displayname="connection.setpumpingspeed" />
+      <input name="set_targetlevel" displayname="connection.settargetwaterlevel" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" msg="ItemMsgRepairWrench" hudpriority="10" deteriorationspeed="0.15" mindeteriorationdelay="160" maxdeteriorationdelay="420" MinDeteriorationCondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+</Items>

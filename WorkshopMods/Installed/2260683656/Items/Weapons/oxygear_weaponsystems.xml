@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Ladevorrichtung für Gaussgeschütz -->
+  <Item name="" identifier="oxygear_coilgunloader" tags="coilgunequipment,coilgunammosource,coilgunammocontainer,oxygear" category="Machine" linkable="true" allowedlinks="coilgun" damagedbyexplosions="true" explosiondamagemultiplier="0.2" scale="0.5">
+    <!-- Gehäuse -->
+    <Sprite texture="oxygear_coilgunloader.png" depth="0.8" sourcerect="0,0,270,188" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <!-- Halter -->
+    <DecorativeSprite texture="oxygear_coilgunloader_holder.png" depth="0.78" sourcerect="0,0,228,31" origin="0.5,-0.35" canflipx="false" canflipy="false" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.145" mindeteriorationdelay="100" maxdeteriorationdelay="400" MinDeteriorationCondition="0" RepairThreshold="75" fixDurationHighSkill="10" fixDurationLowSkill="30" msg="ItemMsgRepairWrench" hudpriority="10">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="InWater" target="This" condition="-0.25" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+    <ItemContainer autofill="false" hideitems="false" drawinventory="true" capacity="2" maxstacksize="1" slotsperrow="2" itempos="79,-122" iteminterval="111.5,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+      <GuiFrame relativesize="0.40,0.30" anchor="Center" minsize="400,300" maxsize="400,300" style="ItemUI" />
+      <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <Containable items="coilgunammo" />
+      <!-- when the coilgun is fired, it triggers this statuseffect, causing contained ammunition boxes to spawn new ammo -->
+      <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem items="coilgunammo" type="Contained" />
+        <Use />
+      </StatusEffect>
+    </ItemContainer>
+    <!-- Deko-Licht - Rot -->
+    <LightComponent range="67.0" lightcolor="150,20,0,95" powerconsumption="0.0" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_coilgunloader_light_a.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_coilgunloader_light_a.png" sourcerect="0,0,270,188" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- Deko-Licht - Grün -->
+    <LightComponent range="67.0" lightcolor="0,155,25,95" powerconsumption="0.0" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_coilgunloader_light_b.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_coilgunloader_light_b.png" sourcerect="0,0,270,188" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <!-- Ultrakapazitator für Bordbewaffnung -->
+  <Item name="" description="" identifier="oxygear_supercapacitor" tags="supercapacitor,oxygear" category="Electrical" Scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <!-- Gehäuse -->
+    <Sprite texture="oxygear_supercapacitor.png" depth="0.8" sourcerect="0,0,110,150" canflipx="false" canflipy="false" />
+    <!-- Display-Blende -->
+    <DecorativeSprite texture="oxygear_supercapacitor_blend.png" depth="0.78" sourcerect="0,0,60,19" origin="0.5,3.52" canflipx="false" canflipy="false" />
+    <!-- Kapazitator-Eigenschaften / Ladebalken (Oben/Links) -->
+    <!--
+				[MaxRechargeSpeed] Aus der Sauce:
+				"How fast the device can be recharged. For example, a recharge speed of 100 kW and a capacity of 1000 kW*min would mean it takes 10 minutes to fully charge the device."
+			
+			-->
+    <PowerContainer capacity="40.0" maxrechargespeed="40.0" maxoutput="4000000.0" canbeselected="true" indicatorposition="30,13" indicatorsize="52,10" ishorizontal="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
+    </PowerContainer>
+    <!-- Deko-Licht - Grün -->
+    <LightComponent range="27.0" lightcolor="0,155,25,240" powerconsumption="0.1" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_supercapacitor_light.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_supercapacitor_light.png" sourcerect="0,0,110,150" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <RequiredSkill identifier="electrical" level="70" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <output name="power_out" displayname="connection.powerout" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="set_rate" displayname="connection.batterysetrechargespeed" />
+      <output name="charge_%" displayname="connection.batterychargepercentage" />
+      <output name="charge" displayname="connection.batterychargestatusout" />
+      <output name="charge_rate" displayname="connection.batteryrechargespeedout" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.145" mindeteriorationdelay="100" maxdeteriorationdelay="400" mindeteriorationcondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="30" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <RequiredSkill identifier="electrical" level="55" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+      <StatusEffect type="InWater" target="This" condition="-0.5" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
+  <!-- Gaussgeschütz -->
+  <Item name="" description="" identifier="oxygear_coilgun" Tags="turret,oxygear" category="Machine" linkable="true" allowedlinks="coilgunequipment" interactthroughwalls="true" interactdistance="10" focusonselected="true" offsetonselected="750" spritecolor="1.0,1.0,1.0,1.0" Scale="0.5">
+    <Sprite texture="%ModDir%/Items/Weapons/oxygear_coilgun_base.png" depth="0.01" sourcerect="0,0,168,186" canflipy="false" />
+    <StaticBody width="90" radius="90" />
+    <aitarget maxsightrange="3000" maxsoundrange="8000" fadeouttime="5" />
+    <!--	Position der Zentrierscheibe/Geschützlauf wird über "barrelpos" definiert!		/	Vanilla: "reload="0.25"		-->
+    <Turret canbeselected="false" characterusable="false" linkable="true" showchargeindicator="true" showprojectileindicator="true" barrelpos="84,55" rotationlimits="180,360" powerconsumption="1000.0" recoildistance="50" reload="0.22" springstiffnesslowskill="2" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
+      <RequiredSkill identifier="weapons" level="50" />
+      <!-- Position   X , Y -->
+      <RailSprite texture="%ModDir%/Items/Weapons/oxygear_coilgun_rail.png" depth="0.011" sourcerect="0,0,120,236" origin="0.5,0.82" />
+      <BarrelSprite texture="%ModDir%/Items/Weapons/oxygear_coilgun_barrel.png" depth="0.012" sourcerect="0,0,103,299" origin="0.5,0.82" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+      <LightComponent LightColor="235,245,255,255" Flicker="0.0" range="2500" IsOn="true" drawbehindsubs="false" castshadows="true" ignorecontinuoustoggle="true">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0,0.5" size="1.0,1.0" />
+      </LightComponent>
+      <ParticleEmitter particle="muzzleflashcoilgun" particleamount="1" velocitymin="50" velocitymax="150" />
+      <StatusEffect type="OnUse" target="This">
+        <Explosion range="1000.0" structuredamage="0" force="0.01" camerashake="5.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+      <sound file="Content/Items/Weapons/Coilgun1.ogg" range="10000" type="OnUse" />
+      <sound file="Content/Items/Weapons/Coilgun2.ogg" range="10000" type="OnUse" />
+      <sound file="Content/Items/Weapons/Coilgun3.ogg" range="10000" type="OnUse" />
+      <sound file="Content/Items/Weapons/Coilgun4.ogg" range="10000" type="OnUse" />
+      <sound file="Content/Items/Weapons/Coilgun5.ogg" range="10000" type="OnUse" />
+      <sound file="Content/Items/Weapons/Coilgun6.ogg" range="10000" type="OnUse" />
+      <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+      <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+      <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+    </Turret>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+      <input name="toggle_light" displayname="connection.togglelight" />
+      <input name="set_light" displayname="connection.setlight" />
+    </ConnectionPanel>
+    <!-- Dekolicht -->
+    <LightComponent range="42.0" lightcolor="150,20,0,145" powerconsumption="0.0" IsOn="true" castshadows="false" flicker="0.1" flickerspeed="0.5" allowingameediting="false" ignorecontinuoustoggle="true">
+      <LightTexture texture="%ModDir%/Lights/oxygear_coilgun_base_light.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_coilgun_base_light.png" sourcerect="0,0,168,186" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <!-- Periskop für Bordbewaffnung / Kameras -->
+  <Item name="" description="" identifier="oxygear_periscope" tags="periscope,oxygear" category="Machine" type="Controller" disableitemusagewhenselected="true" requireaimtouse="false" requireaimtosecondaryuse="false" scale="0.5" isshootable="true">
+    <Sprite texture="%ModDir%/Items/Weapons/oxygear_periscope_v2.png" depth="0.6" sourcerect="0,0,98,202" origin="0.5,0.5" canflipx="true" canflipy="false" />
+    <Controller UserPos="-20.0, -50.0" direction="Right" canbeselected="true" msg="ItemMsgInteractSelect">
+      <limbposition limb="Head" position="-25,-130" />
+      <limbposition limb="Torso" position="-27,-195" />
+      <limbposition limb="LeftHand" position="66,-170" />
+      <limbposition limb="RightHand" position="66,-170" />
+    </Controller>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <output name="position_out" displayname="connection.turretaimingout" fallbackdisplayname="inputtype.aim" />
+      <output name="trigger_out" displayname="connection.turrettriggerout" fallbackdisplayname="inputtype.shoot" />
+    </ConnectionPanel>
+    <!-- Dekolicht -->
+    <LightComponent IsOn="true" range="25.0" lightcolor="150,20,0,155" powerconsumption="0.0" allowingameediting="false" ignorecontinuoustoggle="false" flicker="0.2" flickerspeed="0.5" blinkfrequency="0.0" castshadows="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_periscope_v2_light.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_periscope_v2_light.png" sourcerect="0,0,98,202" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <!-- Ladevorrichtung für Schienengeschütz -->
+  <Item name="" identifier="oxygear_railgunloader" tags="railgunequipment,railgunammosource,oxygear" category="Machine" linkable="true" allowedlinks="railgun" damagedbyexplosions="true" explosiondamagemultiplier="0.2" scale="0.5">
+    <!-- Gehäuse -->
+    <Sprite texture="oxygear_railgunloader.png" depth="0.8" sourcerect="0,0,270,248" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <!-- Halter -->
+    <DecorativeSprite texture="oxygear_railgunloader_holder.png" depth="0.78" sourcerect="0,0,270,248" origin="0.5,0.5" canflipx="false" canflipy="false" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.145" mindeteriorationdelay="100" maxdeteriorationdelay="400" MinDeteriorationCondition="0" RepairThreshold="75" fixDurationHighSkill="10" fixDurationLowSkill="30" msg="ItemMsgRepairWrench" hudpriority="10">
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="InWater" target="This" condition="-0.25" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+    <ItemContainer autofill="false" hideitems="false" drawinventory="true" capacity="4" maxstacksize="1" slotsperrow="4" itempos="141,-99" iteminterval="0,-33.5" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+      <GuiFrame relativesize="0.3,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="railgunammo" />
+    </ItemContainer>
+    <!-- Deko-Licht - Rot -->
+    <LightComponent range="67.0" lightcolor="150,20,0,95" powerconsumption="0.0" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_railgunloader_light_a.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_railgunloader_light_a.png" sourcerect="0,0,270,248" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- Deko-Licht - Grün -->
+    <LightComponent range="67.0" lightcolor="0,155,25,95" powerconsumption="0.0" IsOn="true" castshadows="false" flicker="0.2" flickerspeed="0.5" allowingameediting="false">
+      <LightTexture texture="%ModDir%/Lights/oxygear_railgunloader_light_b.png" depth="0.81" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Lights/oxygear_railgunloader_light_b.png" sourcerect="0,0,270,248" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+</Items>

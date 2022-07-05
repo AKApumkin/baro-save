@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Shoebox Shuttle" steamworkshopid="2563583733" corepackage="false" modversion="1.0.0" gameversion="0.15.22.1" installtime="1641840912">
+  <Submarine file="%ModDir%/Shoebox Shuttle.sub" />
+</contentpackage>

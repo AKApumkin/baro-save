@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Voyage 2 Uranus" steamworkshopid="2808852685" corepackage="false" modversion="1.0.1" gameversion="0.17.16.0" installtime="1654397635" expectedhash="EA3278EBE1EB0CC8E8ECF44F6A23A0C6">
+  <Submarine file="%ModDir%/Voyage 2 Uranus.sub" />
+</contentpackage>

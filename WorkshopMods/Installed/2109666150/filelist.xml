@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="GunLights (Deprecated)" steamworkshopid="2109666150" corepackage="false" modversion="1.0.0" gameversion="0.12.0.2" installtime="1613077418" altnames="GunLights">
+  <Item file="%ModDir%/weapons.xml" />
+  <None file="%ModDir%/weapons_new.png" />
+</contentpackage>

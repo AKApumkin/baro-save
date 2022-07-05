@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Performance Fix" steamworkshopid="2701251094" corepackage="false" modversion="1.0.5" gameversion="0.17.16.0" installtime="1653945077" expectedhash="ACEB486E7E4B2D2F1C5F2328B503502B">
+  <Other file="%ModDir%/Lua/defaultconfig.lua" />
+  <Other file="%ModDir%/Lua/Autorun/init.lua" />
+  <Other file="%ModDir%/Lua/ForcedAutorun/init.lua" />
+  <Other file="%ModDir%/Lua/performancefix.lua" />
+  <Other file="%ModDir%/Lua/performancefix_gui.lua" />
+  <Other file="%ModDir%/Lua/MultiLineTextBox.lua" />
+</contentpackage>
